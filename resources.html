@@ -1,6 +1,414 @@
----
-layout: page
-title: titles.resources
----
-{% translate_file resources.html %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Resources - OmegaT</title>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="/omegat-website/favicon.png">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/omegat-website/css/omegat.css"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/omegat-website/js/omegat.js"></script>
+
+  <meta name="description" content="OmegaT is a free translation memory application written in Java. It is a tool intended for professional translators.">
+
+  <link rel="canonical" href="http://localhost:4000/omegat-website/resources.html">
+  <link rel="alternate" type="application/rss+xml" title="Omegat - The Free Translation Memory Tool" href="/omegat-website/feed.xml">
+  
+  
+</head>
+
+
+
+  <body id="page">
+
+        <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"/>
+            <span class="icon-bar"/>
+            <span class="icon-bar"/>
+          </button>
+          <a class="navbar-brand" href="/omegat-website/">
+            <img alt="OmegaT" class="logo-omegat" src="/omegat-website/img/omegat.svg" height="80" width="80"/>
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="download">Download</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><a href="contact">Contact</a></li>
+            <li><a href="resources">Resources</a></li>
+            <li><a href="about">About</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Languages<span class="caret"/> <span class="sr-only">(current)</span></a>
+              <ul class="dropdown-menu languages">
+                <li><a href="/omegat-website/ar/">&#x628;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</a></li>
+                <li><a href="/omegat-website/ca/">Catal&#xE0;</a></li>
+                <li><a href="/omegat-website/cz/">&#x10C;e&#x161;tina</a></li>
+                <li><a href="/omegat-website/de/">Deutsch</a></li>
+                <li><a href="/omegat-website/el/">&#x395;&#x3BB;&#x3BB;&#x3B7;&#x3BD;&#x3B9;&#x3BA;&#x3AC;</a></li>
+                <li><a href="/omegat-website/"   >English</a></li>
+                <li><a href="/omegat-website/es/">Espa&#xF1;ol</a></li>
+                <li><a href="/omegat-website/fr/">Fran&#xE7;ais</a></li>
+                <li><a href="/omegat-website/gl/">Galego</a></li>
+                <li><a href="/omegat-website/id/">Bahasa Indonesia</a></li>
+                <li><a href="/omegat-website/ia/">Interlingua</a></li>
+                <li><a href="/omegat-website/it/">Italiano</a></li>
+                <li><a href="/omegat-website/ko/">&#xD55C;&#xAD6D;&#xC5B4;</a></li>
+                <li><a href="/omegat-website/hu/">Magyar</a></li>
+                <li><a href="/omegat-website/ja/">&#x65E5;&#x672C;&#x8A9E;</a></li>
+                <li><a href="/omegat-website/nl/">Nederlands</a></li>
+                <li><a href="/omegat-website/pl/">Polski</a></li>
+                <li><a href="/omegat-website/br/">Portugu&#xEA;s (Brazil)</a></li>
+                <li><a href="/omegat-website/pt/">Portugu&#xEA;s (Portugal)</a></li>
+                <li><a href="/omegat-website/ru/">&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</a></li>
+                <li><a href="/omegat-website/sq/">Shqip</a></li>
+                <li><a href="/omegat-website/sk/">Sloven&#x10D;ina</a></li>
+                <li><a href="/omegat-website/si/">Sloven&#x161;&#x10D;ina</a></li>
+                <li><a href="/omegat-website/hr/">Srpskohrvatski</a></li>
+                <li><a href="/omegat-website/fi/">Suomi</a></li>
+                <li><a href="/omegat-website/sv/">Svenska</a></li>
+                <li><a href="/omegat-website/zh_CN/">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</a></li>
+                <li><a href="/omegat-website/zh_TW/">&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</a></li>
+              </ul>
+            </li>
+            <!--
+            <li>
+              <a href="#page-download">Download v.<span id="last-version">4.1.1</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"/></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Action</a>
+                </li>
+                <li>
+                  <a href="#">Another action</a>
+                </li>
+                <li>
+                  <a href="#">Something else here</a>
+                </li>
+                <li role="separator" class="divider"/>
+                <li>
+                  <a href="#">Separated link</a>
+                </li>
+                <li role="separator" class="divider"/>
+                <li>
+                  <a href="#">One more separated link</a>
+                </li>
+              </ul>
+            </li>
+            -->
+          </ul>
+          <!--
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search"/>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">Link</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"/></a>
+              <ul class="dropdown-menu">
+                <li role="separator" class="divider"/>
+                <li>
+                  <a href="#">Separated link</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          -->
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="jumbotron jumbo-page titles-resources"><h1>Resources</h1></div>
+        
+    <div class="container">
+<h2>Other OmegaT resources</h2>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td><a href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-tokenizers/">Tokenizers plug-in</a></td>
+
+		<td>Provides recognition of inflected forms in fuzzy matches and glossary hits. A <a href="./howtos/tokenizer.php">HowTo describing the tokenizers plug-in</a> is also available.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><a href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-LanguageTool/">LanguageTool plug-in</a></td>
+
+		<td>Checks for language errors (style, grammar, etc.).</td>
+
+    </tr>
+
+    <tr>
+
+      <td><a href="http://sourceforge.net/projects/omegat-plugins/files/OmegaT-Scripting/">Scripting plug-in</a></td>
+
+		<td>Enables external scripts to access OmegaT's functionality. (Not to be confused with the "Text Export" feature, which also enables scripts to be used with OmegaT, but on a more basic level.)</td>
+
+    </tr>
+
+    <tr>
+
+      <td><a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Okapi Filters Plugin</a></td>
+
+		<td>Provides filters for handling further file formats, including Trados TTX.</td>
+
+    </tr>
+
+
+    <tr>
+
+      <td><a href="http://wiki.apertium.org/wiki/Apertium-OmegaT">Apertium Plugin</a></td>
+
+		<td>Integrates the Apertium machine translation functionality into OmegaT.</td>
+
+    </tr>
+
+
+  </tbody>
+
+</table>
+
+<p>Important: in order to use the plug-ins, you may need to install a more recent version of OmegaT.    </p>
+
+
+
+<h3>Utilities</h3>
+
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td><a href="../resources/aligner.zip">"Aligner" aligner utility</a></td>
+
+		<td>Written in Python. Contributed by Dmitri Gabinski.</td>
+
+		</tr>
+
+<tr>
+
+      <td><a href="http://www.bligner.org">"Bligner" aligner utility</a></td>
+
+      <td>Written in Python/Perl. Contributed by Didier Briel.</td>
+
+</tr>
+
+    <tr>
+
+      <td><a href="../resources/TMXMerger.zip">TMXMerger</a></td>
+
+<td>Java command-line script for merging two or more TMX files. Contributed by Henry Pijffers.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><a href="../resources/TMXCleaner-1.0.RC1.zip">TMXCleaner</a></td>
+
+      <td>Java command-line script for removing "superfluous"
+translation units from a TMX file: deletes all TUs without target
+segment or in which the target segment is identical to the source
+segment. Contributed by Henry Pijffers.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><a href="../resources/toxic.zip">Toxic</a></td>
+
+		<td>Utility for converting Trados TagEditor (TTX) files to an intermediate format, enabling them to be translated in OmegaT. This collection of scripts may be useful to scripters with a knowledge of tcl/tk. Other users are advised to use the <a href="http://okapiframework.org/wiki/index.php?title=Okapi_Filters_Plugin_for_OmegaT">Okapi Filters Plugin</a> instead. Toxic was contributed by Marc Prior.</td>
+
+    </tr>
+    <tr>
+
+      <td><a href="../resources/toxic_windows.zip">Toxic for Windows</a></td>
+
+		<td>Windows executable version of Toxic.</td>
+
+    </tr>
+    <tr>
+
+      <td><a href="../resources/toxic_linux.zip">Toxic for Linux</a></td>
+
+		<td>Linux binary version of Toxic.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><a href="../resources/toxic_scripts.zip">Toxic scripts</a></td>
+
+		<td>Script versions of Toxic. Platform-independent; require tcl/tk.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><a href="../omegatk/stripper.zip">Stripper</a></td>
+
+		<td>Script for extracting text for translation from plain-text files (e.g. computer source code) for translation in OmegaT. Requires tcl/tk. Contributed by Marc Prior.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><a href="../omegatk/tkount.zip">TKount</a></td>
+
+		<td>TKount text counting utility. Requires tcl/tk, Abiword and pdftotext. Has been tested on Linux. Contributed by Marc Prior.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><a href="../omegatk/ondiloto.zip">Ondiloto</a></td>
+
+		<td>ONline DIctionary LOokup TOol. Requires Linux, w3m and tcl/tk (both generally supplied with Linux). Contributed by Marc Prior.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><a href="./howtos/priorview.html">Priorview</a></td>
+
+		<td>Tcl/tk utility providing a formatted layout preview of translated files. Contributed by Marc Prior.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><a href="../resources/WF.zip">Wordfast TMX file converter</a></td>
+
+		<td>Converts translation memories in TMX format generated by
+Wordfast to a form which can be read by OmegaT. Contributed by Dmitri Gabinski. </td>
+
+    </tr>
+
+  </tbody>
+
+</table>
+
+<h3>Miscellaneous resources</h3>
+    
+<table>
+
+  <tbody>
+
+    <tr>
+
+      <td><a href="../training/translation_memory_training_course.zip">Training course</a> </td>
+
+      <td>OmegaT training course. Consists of a model
+student's&nbsp;manual with instructions to trainers for adaptation, and
+sample resources.</td>
+
+    </tr>
+
+    <tr>
+
+		<td><a href="../resources/icons.zip">Icons</a></td>
+
+		<td>Selection of alternative icons for use with OmegaT.</td>
+
+    </tr>
+
+	<tr>
+
+	<td><a href="../resources/sample_texts_1.0.zip">Sample
+			texts</a></td>
+
+		<td>For testing and demonstrating OmegaT.</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h3>Localization resources</h3>
+	
+<table>
+
+  <tbody>
+
+    <tr>
+
+		<td><a href="../resources/tmx_repository.zip">Localization TMX repository</a></td>
+
+
+		<td>TMX files of localizations of the OmegaT documentation and of this site, for use by localizers.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><a href="../resources/omt_website.zip">This web site</a></td>
+
+      <td>The files of this site, in a convenient package for those wishing to localize it.</td>
+
+    </tr>
+  
+  </tbody>
+
+</table>
+</div>
+
+
+
+
+    <footer class="container-fluid text-center">
+  <a href="#page" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"/>
+  </a>
+  <div class="container-fluid">
+          <div class="row">
+          <div class="col-sm-2 social-links">
+    <h4>Connect</h4>
+    <ul>
+      <li><a href="https://sourceforge.net/projects/omegat/"><img       src="/omegat-website/img/sourceforge.svg" height="24"/> Sourceforge</a></li>
+      <li><a href="github.com/omegat-org/"><img                         src="/omegat-website/img/github.svg" height="24"/> Github</a></li>
+      <li><a href="https://twitter.com/OmegaTOfficial"><img             src="/omegat-website/img/twitter.svg" height="24"/> Twitter</a></li>
+      <li><a href="https://www.facebook.com/OmegaTOfficial"><img        src="/omegat-website/img/facebook.svg" height="24"/> Facebook</a></li>
+    </ul>
+  </div>
+  </div>
+  </div>
+  <p>Copyright &#xA9; 2017 - <a href="/omegat-website">omegat.org</a></p>
+</footer>
+
+
+  </body>
+
+</html>
 

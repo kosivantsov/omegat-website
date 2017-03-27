@@ -1,6 +1,368 @@
----
-layout: page
-title: titles.dl_overview
----
-{% translate_file dl_overview.html %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Download Overview - OmegaT</title>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="/omegat-website/favicon.png">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/omegat-website/css/omegat.css"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/omegat-website/js/omegat.js"></script>
+
+  <meta name="description" content="OmegaT is a free translation memory application written in Java. It is a tool intended for professional translators.">
+
+  <link rel="canonical" href="http://localhost:4000/omegat-website/download.html">
+  <link rel="alternate" type="application/rss+xml" title="Omegat - The Free Translation Memory Tool" href="/omegat-website/feed.xml">
+  
+  
+</head>
+
+
+
+  <body id="page">
+
+        <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"/>
+            <span class="icon-bar"/>
+            <span class="icon-bar"/>
+          </button>
+          <a class="navbar-brand" href="/omegat-website/">
+            <img alt="OmegaT" class="logo-omegat" src="/omegat-website/img/omegat.svg" height="80" width="80"/>
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="download">Download</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><a href="contact">Contact</a></li>
+            <li><a href="resources">Resources</a></li>
+            <li><a href="about">About</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Languages<span class="caret"/> <span class="sr-only">(current)</span></a>
+              <ul class="dropdown-menu languages">
+                <li><a href="/omegat-website/ar/">&#x628;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</a></li>
+                <li><a href="/omegat-website/ca/">Catal&#xE0;</a></li>
+                <li><a href="/omegat-website/cz/">&#x10C;e&#x161;tina</a></li>
+                <li><a href="/omegat-website/de/">Deutsch</a></li>
+                <li><a href="/omegat-website/el/">&#x395;&#x3BB;&#x3BB;&#x3B7;&#x3BD;&#x3B9;&#x3BA;&#x3AC;</a></li>
+                <li><a href="/omegat-website/"   >English</a></li>
+                <li><a href="/omegat-website/es/">Espa&#xF1;ol</a></li>
+                <li><a href="/omegat-website/fr/">Fran&#xE7;ais</a></li>
+                <li><a href="/omegat-website/gl/">Galego</a></li>
+                <li><a href="/omegat-website/id/">Bahasa Indonesia</a></li>
+                <li><a href="/omegat-website/ia/">Interlingua</a></li>
+                <li><a href="/omegat-website/it/">Italiano</a></li>
+                <li><a href="/omegat-website/ko/">&#xD55C;&#xAD6D;&#xC5B4;</a></li>
+                <li><a href="/omegat-website/hu/">Magyar</a></li>
+                <li><a href="/omegat-website/ja/">&#x65E5;&#x672C;&#x8A9E;</a></li>
+                <li><a href="/omegat-website/nl/">Nederlands</a></li>
+                <li><a href="/omegat-website/pl/">Polski</a></li>
+                <li><a href="/omegat-website/br/">Portugu&#xEA;s (Brazil)</a></li>
+                <li><a href="/omegat-website/pt/">Portugu&#xEA;s (Portugal)</a></li>
+                <li><a href="/omegat-website/ru/">&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</a></li>
+                <li><a href="/omegat-website/sq/">Shqip</a></li>
+                <li><a href="/omegat-website/sk/">Sloven&#x10D;ina</a></li>
+                <li><a href="/omegat-website/si/">Sloven&#x161;&#x10D;ina</a></li>
+                <li><a href="/omegat-website/hr/">Srpskohrvatski</a></li>
+                <li><a href="/omegat-website/fi/">Suomi</a></li>
+                <li><a href="/omegat-website/sv/">Svenska</a></li>
+                <li><a href="/omegat-website/zh_CN/">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</a></li>
+                <li><a href="/omegat-website/zh_TW/">&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</a></li>
+              </ul>
+            </li>
+            <!--
+            <li>
+              <a href="#page-download">Download v.<span id="last-version">4.1.1</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"/></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Action</a>
+                </li>
+                <li>
+                  <a href="#">Another action</a>
+                </li>
+                <li>
+                  <a href="#">Something else here</a>
+                </li>
+                <li role="separator" class="divider"/>
+                <li>
+                  <a href="#">Separated link</a>
+                </li>
+                <li role="separator" class="divider"/>
+                <li>
+                  <a href="#">One more separated link</a>
+                </li>
+              </ul>
+            </li>
+            -->
+          </ul>
+          <!--
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search"/>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">Link</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"/></a>
+              <ul class="dropdown-menu">
+                <li role="separator" class="divider"/>
+                <li>
+                  <a href="#">Separated link</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          -->
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="jumbotron jumbo-page titles-dl_overview"><h1>Download Overview</h1></div>
+        
+    <div class="container">
+		
+<h3>Download links</h3>
+
+<p>Links are provided below to the various versions of OmegaT. For more information, read on under "Detailed descriptions".</p>
+
+<table>
+
+<tr>
+
+<td><b>Standard versions</b><br/>
+(Currently version: 
+3.6.0 update 5)
+</td>
+
+<td>
+
+<p>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Windows.exe/download">Windows</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Windows_without_JRE.exe/download">Windows without JRE</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Mac_Signed.zip/download">Mac OS X Signed</a> (preferred<a href="#about_signing">*</a>)<br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Mac.zip/download">Mac OS X Unsigned</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Linux.tar.bz2/download">Linux with 32-bit JRE</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Linux_64.tar.bz2/download">Linux with 64-bit JRE</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Without_JRE.zip/download">Cross-platform without JRE</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Source.zip/download">Source code</a><br/></p>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td><b>Latest versions</b><br/>
+(Currently version: 
+4.1.1)
+</td>
+
+<td>
+
+<p>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows.exe/download">Windows with 32-bit JRE</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows_64.exe/download">Windows with 64-bit JRE</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows_without_JRE.exe/download">Windows without JRE</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Mac_Signed.zip/download">Mac OS X Signed</a> (preferred<a href="#about_signing">*</a>)<br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Mac.zip/download">Mac OS X Unsigned</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Linux.tar.bz2/download">Linux with 32-bit JRE</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Linux_64.tar.bz2/download">Linux with 64-bit JRE</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Without_JRE.zip/download">Cross-platform without JRE</a><br/>
+
+<a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Source.zip/download">Source code</a><br/></p>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td><b>Web Start versions</b></td>
+
+<td>
+
+<p><a
+href="http://omegat.sourceforge.net/webstart/OmegaT.jnlp">Web Start Standard</a><br/>
+
+
+<a
+href="http://omegat.sourceforge.net/webstart-dev/OmegaT.jnlp">Web Start Latest</a><br/></p>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td><b>Legacy versions</b></td>
+
+<td><p><a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Legacy/">Older, superseded versions</a></p></td>
+
+</tr>
+
+<tr>
+
+<td><b>Trunk source</b></td>
+
+<td><p>The <a href="https://sourceforge.net/p/omegat/svn/HEAD/tarball?path=/trunk">/trunk</a> version is a cutting-edge, "alpha" version, still in development.</p>
+<p>You must build this yourself. For pre-built binaries, see Nightly Builds below.</p></td>
+
+</tr>
+
+<tr>
+
+<td><b>Nightly builds</b></td>
+
+<td><p><a href="https://omegat.ci.cloudbees.com/job/omegat-trunk/">From trunk</a></p></td>
+
+</tr>
+
+</table>
+
+
+<h2>Detailed descriptions</h2>
+
+<p>Note that the categories are not mutually exclusive. A version may be "Standard, without JRE, for Windows", or "Latest, with JRE, for Linux", etc.</p>
+
+<h3>Standard version</h3>
+
+<p>The Standard version has usually been in use for some time and is therefore proven. Its documentation, at least in English, is usually reasonably up to date. It will however lack some of the features of the "Latest" version.</p>
+
+<h3>Latest version</h3>
+
+<p>The Latest version is a more recent version than the Standard version and includes new features not present in the latter. The Latest version will usually be reasonably stable and usable, but may have some bugs. Documentation, particularly of new features, will be less comprehensive than that of the Standard version. Users who already have some experience with OmegaT often prefer the Latest version.</p>
+
+<h3>Platform (operating system)</h3>
+
+<p>Platform-specific versions of OmegaT are provided for Windows, Linux and Mac OS X. A platform-indpendent version is also available which will run on any operating system capable of running a suitable version of the Java Runtime Environment.</p>
+
+<h3>With/without JRE</h3>
+
+<p>In order to run, OmegaT requires&nbsp;the Java Runtime Environment (JRE) to be installed on your computer.</p>
+
+<p>If you are confident that a suitable version of the JRE is already installed on your computer, you can download a version of OmegaT without the JRE. The download will be faster, and the installation will require less
+space on your hard drive. In this case, do not select the Default version; select a different version (e.g. Standard or Latest), then select a version marked "Java not included".</p>
+
+<p>If you install the OmegaT version with JRE even though the JRE is already installed on your computer, OmegaT's JRE will be installed separately and will not conflict with it. It is therefore always safe to install the version of OmegaT with JRE. If you are unsure whether or not you have a suitable version of the JRE, select a version with JRE (or the Default version). </p>
+
+<p>Mac OS X users: the JRE is installed on Mac OS X by default; there is therefore no version for Mac OS X with the JRE.</p>
+
+<p>Linux users: most Linux distributions are supplied with a Java Runtime Environment, but some open-source implementations do not work properly with OmegaT (although this may not be immediately apparent). If you are relatively new to Linux, we advise you to select an OmegaT version with the JRE included. More experienced Linux users may prefer to install the Oracle (formerly Sun) JRE at system level.
+</p>
+
+<h3 id="about_signing">Signed/Unsigned</h3>
+
+<p>Mac OS X has a feature called Gatekeeper that increases security by making it difficult to run unsigned programs. OmegaT for Mac OS X is available in both signed and unsigned versions; they are functionally identical, but the signed version is preferred as it is recognized by the system as being published by a known developer.</p>
+
+<p>There may be a delay in publishing signed versions. Users in a hurry can use the unsigned version instead; if you have difficulty launching the app, see <a href="https://support.apple.com/kb/ph14369">how to open an app from an unidentified developer</a>.</p>
+
+<h3>Web Start version</h3>
+
+<p>The Web Start version offers an alternative means of installing OmegaT on your computer.</p>
+
+<p>With this version, future updates will be installed automatically.</p>
+
+<p>During installation, depending on your operating system, you may receive several security warnings.<br/> 
+The certificate is signed by <a href="http://www.pnsconcept.com/coordinates.html">PnS Concept Sarl</a>, a French registered company.</p>
+
+<p>The permissions you give to this version (which may be described as "unrestricted access to the computer") are no different from the permissions you assign to the local version, i.e., an access to the hard drive of your computer.</p>
+
+<p>In order to install the Web start version, you must already have Java version 1.3 or later installed on your computer.</p>
+
+<p>Privacy information: OmegaT Java Web Start does not save any of your information to OmegaT's web servers. The application runs on your machine. Your documents and translation memories remain on your computer, and the OmegaT project will have no access to your work or information.</p>
+
+<h3>Legacy versions</h3>
+
+<p>Legacy versions are older versions that have been superseded. For most users, these are not of interest. However, some users may face restrictions (imposed by their operating systems or Java version) that may result in a preference for an older version.</p>
+
+<h3>Trunk version</h3>
+
+<p>The /trunk (alpha) version reflects the very latest state of development. It is recommended for serious developers and testers only. It can also be obtained using the subversion command:</p>
+
+<p>svn checkout svn://svn.code.sf.net/p/omegat/svn/trunk omegat-svn</p>
+
+<h3>Nightly builds</h3>
+
+<p>Periodic builds are available on CloudBees.</p>
+
+<img style="margin: auto; display: block;" src="../images/Button-Built-on-CB-1.png" alt="built on DEV@cloud" />
+
+<h3>Source code packages</h3>
+
+<p>Source code packages are not required by users and are intended for developers only. They can be found in the folders of the corresponding compiled versions.</p>
+
+</div>
+
+
+
+
+
+    <footer class="container-fluid text-center">
+  <a href="#page" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"/>
+  </a>
+  <div class="container-fluid">
+          <div class="row">
+          <div class="col-sm-2 social-links">
+    <h4>Connect</h4>
+    <ul>
+      <li><a href="https://sourceforge.net/projects/omegat/"><img       src="/omegat-website/img/sourceforge.svg" height="24"/> Sourceforge</a></li>
+      <li><a href="github.com/omegat-org/"><img                         src="/omegat-website/img/github.svg" height="24"/> Github</a></li>
+      <li><a href="https://twitter.com/OmegaTOfficial"><img             src="/omegat-website/img/twitter.svg" height="24"/> Twitter</a></li>
+      <li><a href="https://www.facebook.com/OmegaTOfficial"><img        src="/omegat-website/img/facebook.svg" height="24"/> Facebook</a></li>
+    </ul>
+  </div>
+  </div>
+  </div>
+  <p>Copyright &#xA9; 2017 - <a href="/omegat-website">omegat.org</a></p>
+</footer>
+
+
+  </body>
+
+</html>
 

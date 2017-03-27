@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/omegat-website/about.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/omegat-website/contact.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/omegat-website/dl_overview.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/omegat-website/documentation.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/omegat-website/download.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/omegat-website/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/omegat-website/philosophy.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/omegat-website/resources.html</loc>
+</url>
+</urlset>
