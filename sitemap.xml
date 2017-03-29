@@ -16,6 +16,9 @@
 <loc>http://localhost:4000/omegat-website/download</loc>
 </url>
 <url>
+<loc>http://localhost:4000/omegat-website/ex_doc</loc>
+</url>
+<url>
 <loc>http://localhost:4000/omegat-website/</loc>
 </url>
 <url>

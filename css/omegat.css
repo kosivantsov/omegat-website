@@ -143,8 +143,10 @@ footer h4 {
   border-bottom: solid 1px #d5e4bf;
   padding-bottom: 5px; }
 
-.social-links {
+.footer-column {
   text-align: left; }
+  .footer-column .glyphicon {
+    color: #000; }
 
 ul.languages {
   columns: 3;
