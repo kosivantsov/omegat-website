@@ -154,6 +154,9 @@ ul.languages {
   -moz-columns: 3;
   background-color: #d5e4bf; }
 
+#download-wizard .panel-heading {
+  background-color: #88B04B;
+  border-color: #88B04B; }
 #download-wizard .navbar {
   background-color: inherit; }
 #download-wizard .nav-pills > li.active > a, #download-wizard .nav-pills > li.active > a:focus, #download-wizard .nav-pills > li.active > a:hover {

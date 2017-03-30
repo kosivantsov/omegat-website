@@ -24,10 +24,6 @@
   <link rel="alternate" type="application/rss+xml" title="Omegat - The Free Translation Memory Tool" href="/omegat-website/fr/feed.xml">
 
   
-    <script src="/omegat-website/js/jquery.bootstrap.wizard.js"></script>
-  
-  
-  
 </head>
 
 
@@ -95,164 +91,300 @@
     </nav>
 
 
-    <div class="jumbotron jumbo-page titles-dl_overview"><h1>Téléchargement</h1></div>
+    <div class="jumbotron jumbo-page titles-download"><h1>Téléchargement</h1></div>
         
     ﻿<div class="container">
-	
-<h2>Présentation du système de téléchargement d'OmegaT</h2>
+		
+<p class="lead">Links are provided below to the various versions of OmegaT. If
+you are confused about which version to download, you can use the <a
+href="#download-wizard" data-toggle="collapse">Assistant de téléchargement</a>.</p>
 
-<h3>Liens de téléchargement</h3>
 
-<p>Les liens indiqués ci-dessous renvoient aux différentes versions d'OmegaT. Pour plus d'informations, reportez-vous plus bas à la section «&nbsp;Précisions relatives aux versions ».</p>
+<h3 id="standard">Standard Version - 3.6.0 update 5</h3>
 
-<table>
+<p>The Standard version has usually been in use for some time and is therefore
+proven. Its documentation, at least in English, is usually reasonably up to
+date. It will however lack some of the features of the "Latest" version.</p>
 
-<tr>
+<table class="table table-striped downloads">
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>Detailed instructions</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
 
-<td><b>Versions standard</b><br/> (Version actuelle : 3.6.0 update 5)
-</td>
+  <tr id="standard_windows_jre">
+      <td class="version-name">Windows avec JRE</td>
+      <td>
+          <span rel="popover" data-platform="windows_jre" data-title="Windows avec JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+          <div id="info_windows_jre"/>
+      </td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Windows.exe/download" role="button">Download</a></td>
+  </tr>
 
-<td>
+  <tr id="standard_windows_nojre">
+      <td class="version-name">Windows without JRE</td>
+      <td>
+          <span rel="popover" data-platform="windows_nojre" data-title="Windows without JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+          <div id="info_windows_nojre"/>
+      </td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Windows_without_JRE.exe/download" role="button">Download</a></td>
+  </tr>
 
-<p>
+  <tr id="standard_osx_signed">
+      <td class="version-name">OS X Signé</td>
+      <td>
+          <span rel="popover" data-platform="osx_signed" data-title="OS X Signé" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+          <div id="info_osx_signed"/>
+      </td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Mac_Signed.zip/download" role="button">Download</a></td>
+  </tr>
 
- <a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Windows.exe/download"
->Windows avec JRE</a><br/>  <a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Windows_without_JRE.exe/download"
->Windows sans JRE</a><br/>  <a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Mac.zip/download"
->Mac OS X</a><br/>  <a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Linux.tar.bz2/download"
->Linux avec JRE</a><br/>  <a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Without_JRE.zip/download"
->Cross-platform sans JRE</a><br/>  <a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Source.zip/download"
->Code source</a><br/></p>
+  <tr id="standard_osx_unsigned">
+      <td class="version-name">OS X Non signé</td>
+      <td>
+          <span rel="popover" data-platform="osx_unsigned" data-title="OS X Non signé" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+          <div id="info_osx_unsigned"/>
+      </td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Mac.zip/download" role="button">Download</a></td>
+  </tr>
 
-</td>
+  <tr id="standard_linux_jre">
+      <td class="version-name">Linux with JRE</td>
+      <td>
+          <span rel="popover" data-platform="linux_jre" data-title="Linux with JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+          <div id="info_linux_jre"/>
+      </td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Linux.tar.bz2/download" role="button">Download</a></td>
+  </tr>
 
-</tr>
+  <tr id="standard_linux_jre64b">
+      <td class="version-name">Linux with 64-bit JRE</td>
+      <td>
+          <span rel="popover" data-platform="linux_jre64b" data-title="Linux with 64-bit JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+          <div id="info_linux_jre64b"/>
+      </td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Linux_64.tar.bz2/download" role="button">Download</a></td>
+  </tr>
 
-<tr>
+  <tr id="standard_linux_nojre">
+      <td class="version-name">Cross-platform without JRE</td>
+      <td>
+          <span rel="popover" data-platform="nojre" data-title="Cross-platform without JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+          <div id="info_nojre"/>
+      </td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Without_JRE.zip/download" role="button">Download</a></td>
+  </tr>
 
-<td><b>Versions récentes</b><br/> (Version actuelle : 4.1.1)
-</td>
+  <tr id="standard_webstart">
+      <td class="version-name">Web Start</td>
+      <td>
+          <span rel="popover" data-platform="webstart" data-title="Web Start" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+          <div id="info_webstart"/>
+      </td>
+      <td><a class="btn btn-primary version-download" href="http://omegat.sourceforge.net/webstart/OmegaT.jnlp" role="button">Download</a></td>
+  </tr>
 
-</td>
+  <tr id="">
+      <td class="version-name">Code source</td>
+      <td>
+          <span rel="popover" data-platform="source" data-title="Code source" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+          <div id="info_source"/>
+      </td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Source.zip/download" role="button">Download</a></td>
+  </tr>
 
-<td>
-
-<p>
-
- <a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows.exe/download"
->Windows avec JRE</a><br/>  <a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows_without_JRE.exe/download"
->Windows sans JRE</a><br/>  <a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Mac.zip/download"
->Mac OS X</a><br/>  <a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Linux.tar.bz2/download"
->Linux avec JRE</a><br/>  <a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Without_JRE.zip/download"
->Cross-platform sans JRE</a><br/>  <a
-href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Latest/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Source.zip/download"
->Code source</a><br/></p>
-
-</td>
-
-</tr>
-
-<tr>
-
-<td><b>Versions Web Start</b></td>
-
-<td>
-
-<p><a
-href="http://omegat.sourceforge.net/webstart/OmegaT.jnlp">Web Start standard</a><br/> <a
-href="http://omegat.sourceforge.net/webstart-dev/OmegaT.jnlp">Web Start récente</a><br/></p>
-
-</td>
-
-</tr>
-
-<tr>
-
-<td><b>Anciennes versions</b></td>
-
-<td><p><a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Legacy/">Versions obsolètes</a></p></td>
-
-</tr>
-
-<tr>
-
-<td><b>Version de développement</b></td>
-
-<td><p>Version <a href="http://omegat.svn.sourceforge.net/viewvc/omegat/trunk/?view=tar">/trunk</a> «&nbsp;alpha&nbsp;» avancée, en cours de développement</p></td>
-
-</tr>
+  </tbody>
 
 </table>
 
+<h3 id="latest">Latest Version - 4.1.1_Beta</h3>
 
-<h2>Précisions relatives aux versions</h2>
+<p>The Latest version is a more recent version than the Standard version and
+includes new features not present in the latter. The Latest version will
+usually be reasonably stable and usable, but may have some bugs. Documentation,
+particularly of new features, will be less comprehensive than that of the
+Standard version. Users who already have some experience with OmegaT often
+prefer the Latest version.</p>
 
-<p>Veuillez noter que les catégories mentionnées ci-dessous ne s'excluent pas mutuellement : une version peut très bien être «&nbsp;standard, avec JRE, pour Windows&nbsp;» ou «&nbsp;récente, avec JRE, pour Linux&nbsp;», etc.</p>
+<table class="table table-striped downloads">
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>Detailed instructions</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
 
-<h3>Version standard</h3>
+ <tr id="latest_windows_jre">
+      <td class="version-name">Windows avec JRE</td>
+      <td><span rel="popover" data-platform="windows_jre" data-title="Windows avec JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows.exe/download" role="button">Download</a></td>
+  </tr>
 
-<p>La version standard est la version normalement utilisée ; elle se distingue par sa fiabilité. La documentation qui l'accompagne est relativement à jour, du moins en ce qui concerne la documentation en anglais. Elle n'intègre cependant pas toutes les fonctionnalités de la version «&nbsp;récente&nbsp;».</p>
+ <tr id="latest_windows_jre64b">
+      <td class="version-name">Windows with 64-bit JRE</td>
+      <td><span rel="popover" data-platform="windows_jre64b" data-title="Windows with 64-bit JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows_64.exe/download" role="button">Download</a></td>
+  </tr>
 
-<h3>Version récente</h3>
+ <tr id="latest_windows_nojre">
+      <td class="version-name">Windows without JRE</td>
+      <td><span rel="popover" data-platform="windows_nojre" data-title="Windows without JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows_without_JRE.exe/download" role="button">Download</a></td>
+  </tr>
 
-<p>La version récente (ou «&nbsp;Latest&nbsp;») est plus actuelle que la version standard et intègre de nouvelles fonctionnalités. Globalement, elle est relativement stable, mais elle peut comporter des bogues. D'autre part, sa documentation est moins détaillée, en particulier les informations concernant les nouvelles fonctions. Les utilisateurs qui ont l'habitude d'OmegaT préfèrent souvent la dernière version.</p>
+ <tr id="latest_osx_signed">
+      <td class="version-name">OS X Signé</td>
+      <td><span rel="popover" data-platform="osx_signed" data-title="OS X Signé" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Mac_Signed.zip/download" role="button">Download</a></td>
+  </tr>
 
-<h3>Plateforme (système d'exploitation)</h3>
+ <tr id="latest_osx_unsigned">
+      <td class="version-name">OS X Non signé</td>
+      <td><span rel="popover" data-platform="osx_unsigned" data-title="OS X Non signé" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Mac.zip/download" role="button">Download</a></td>
+  </tr>
 
-<p>OmegaT se décline en versions spécifiques pour les plateformes Windows, Linux et Mac OS X. Une version indépendante des plateformes est également disponible ; elle fonctionne sur tout système d'exploitation intégrant une version adéquate de l'environnement d'exécution Java.</p>
+ <tr id="latest_linux_jre64b">
+      <td class="version-name">Linux with 64-bit JRE</td>
+      <td><span rel="popover" data-platform="linux_jre64b" data-title="Linux with 64-bit JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Linux_64.tar.bz2/download" role="button">Download</a></td>
+  </tr>
 
-<h3>Avec ou sans JRE</h3>
+ <tr id="latest_linux_nojre">
+      <td class="version-name">Cross-platform without JRE</td>
+      <td><span rel="popover" data-platform="nojre" data-title="Cross-platform without JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Without_JRE.zip/download" role="button">Download</a></td>
+  </tr>
 
-<p>L'environnement d'exécution Java (JRE) doit être installé sur votre ordinateur pour qu'OmegaT puisse fonctionner.</p>
+ <tr id="latest_webstart">
+      <td class="version-name">Web Start</td>
+      <td><span rel="popover" data-platform="webstart" data-title="Web Start" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td><a class="btn btn-primary version-download" href="http://omegat.sourceforge.net/webstart-dev/OmegaT.jnlp" role="button">Download</a></td>
+  </tr>
 
-<p>Si un JRE adéquat est déjà installé sur votre ordinateur, vous pouvez télécharger une version d'OmegaT sans JRE – le téléchargement sera plus rapide et l'installation demandera moins d'espace sur le disque dur. Dans ce cas, choisissez par exemple une version «&nbsp;standard&nbsp;» ou «&nbsp;récente&nbsp;» puis sélectionnez la variante portant la mention correspondante («&nbsp;Java not included&nbsp;», «&nbsp;without_JRE&nbsp;»). </p>
+ <tr id="">
+      <td class="version-name">Code source</td>
+      <td><span rel="popover" data-platform="source" data-title="Code source" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Source.zip/download" role="button">Download</a></td>
+  </tr>
 
-<p>Si vous deviez installer OmegaT avec son JRE, alors qu'un JRE est déjà présent sur votre ordinateur, il n'y aura pas de conflit entre les versions en raison d'installations distinctes. Par conséquent, l'installation d'OmegaT avec le JRE reste la méthode la plus sûre. Si vous n'êtes pas certain d'avoir une version appropriée du JRE, sélectionnez la version d'OmegaT avec JRE (ou la version par défaut). </p>
+  </tbody>
 
-<p>Note à l'attention des utilisateurs de Mac OS X : le JRE étant installé par défaut sur Mac OS X, la version correspondante d'OmegaT ne comporte pas de JRE.</p>
+</table>
 
-<p>Note à l'attention des utilisateurs de Linux : la plupart des distributions Linux sont fournies avec un environnement d'exécution Java, cependant certaines implémentations Open Source ne fonctionnent pas toujours correctement avec OmegaT (incompatibilité qui ne s'avère éventuellement pas immédiatement). Nous recommandons aux débutants sur Linux de choisir une version d'OmegaT avec JRE. Les utilisateurs avertis pourront préférer une installation du JRE d'Oracle (anciennement Sun) au niveau système.
+<h3 id="downloadTrunk">Developer Version</h3>
+
+<p>The "/trunk" version is a cutting-edge, "alpha" version, still in
+development. Pre-built binaries, are available as Nightly Builds.</p>
+
+<table class="table table-striped downloads">
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>Detailed instructions</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+      <td>Trunk</td>
+      <td><span rel="popover" data-platform="trunk" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      </td>
+      <td><a class="btn btn-primary" href="https://sourceforge.net/p/omegat/svn/HEAD/tarball?path=/trunk" role="button">Download</a></td>
+  </tr>
+  <tr>
+      <td>Nightly Builds</td>
+      <td><span rel="popover" data-platform="nightly" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      <td><a class="btn btn-primary" href="https://omegat.ci.cloudbees.com/job/omegat-trunk/" role="button">Download</a></td>
+  </tr>
+  </tbody>
+</table>
+
+<h3>Legacy versions</h3>
+
+<p>You can still find <a href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Legacy/">older, superseded versions</a> of OmegaT.</p>
+
+<p>Legacy versions are older versions that have been superseded. For most
+users, these are not of interest. However, some users may face restrictions
+(imposed by their operating systems or Java version) that may result in a
+preference for an older version.</p>
+
+<h3>With/without JRE</h3>
+
+<p>In order to run, OmegaT requires the Java Runtime Environment (JRE) to be installed on your computer.</p>
+
+<p>If you are confident that a suitable version of the JRE is already installed on your computer, you can download a version of OmegaT without the JRE. The download will be faster, and the installation will require less
+space on your hard drive. In this case, do not select the Default version; select a different version (e.g. Standard or Latest), then select a version marked "Java not included".</p>
+
+<p>If you install the OmegaT version with JRE even though the JRE is already installed on your computer, OmegaT's JRE will be installed separately and will not conflict with it. It is therefore always safe to install the version of OmegaT with JRE. If you are unsure whether or not you have a suitable version of the JRE, select a version with JRE (or the Default version). </p>
+
+<p><strong>Mac OS X users</strong>: the JRE is installed on Mac OS X by default; there is therefore no version for Mac OS X with the JRE.</p>
+
+<p><strong>Linux users</strong>: most Linux distributions are supplied with a Java Runtime Environment, but some open-source implementations do not work properly with OmegaT (although this may not be immediately apparent). If you are relatively new to Linux, we advise you to select an OmegaT version with the JRE included. More experienced Linux users may prefer to install the Oracle (formerly Sun) JRE at system level.
 </p>
 
-<h3>Version Web Start</h3>
+<div id="popover_content_osx_signed" style="display:none">
+<h4 id="about_signing">Signed/Unsigned</h4>
 
-<p>La version Web Start est une solution d'installation simple permettant d'exécuter la version actuelle d'OmegaT.</p>
+<p>Mac OS X has a feature called Gatekeeper that increases security by making it difficult to run unsigned programs. OmegaT for Mac OS X is available in both signed and unsigned versions; they are functionally identical, but the signed version is preferred as it is recognized by the system as being published by a known developer.</p>
 
-<p>L'une des particularités de cette version est l'installation automatique des mises à jours.</p>
+<p>There may be a delay in publishing signed versions. Users in a hurry can use the unsigned version instead; if you have difficulty launching the app, see <a href="https://support.apple.com/kb/ph14369">how to open an app from an unidentified developer</a>.</p>
+</div>
 
-<p>Durant l'installation, en fonction de votre système d'exploitation, vous recevrez peut-être plusieurs avertissements de sécurité. Le certificat est autosigné «&nbsp;Didier Briel&nbsp;».</p>
+<div id="popover_content_osx_unsigned" style="display:none">
+<h4 id="about_signing">Signed/Unsigned</h4>
 
-<p>Les autorisations que vous accordez à cette version (par exemple, un «&nbsp;accès illimité à l'ordinateur&nbsp;»)  sont identiques aux autorisations que vous donnez à la version locale (c'est-à-dire un accès au disque dur de l'ordinateur).</p>
+<p>Mac OS X has a feature called Gatekeeper that increases security by making it difficult to run unsigned programs. OmegaT for Mac OS X is available in both signed and unsigned versions; they are functionally identical, but the signed version is preferred as it is recognized by the system as being published by a known developer.</p>
 
-<p>L'installation de la version Web Start requiert Java 1.3 ou ultérieur sur votre ordinateur.</p>
+<p>There may be a delay in publishing signed versions. Users in a hurry can use the unsigned version instead; if you have difficulty launching the app, see <a href="https://support.apple.com/kb/ph14369">how to open an app from an unidentified developer</a>.</p>
+</div>
 
-<p>Engagement de confidentialité : le Java Web Start d'OmegaT ne stocke aucune de vos données sur les serveurs Web d'OmegaT. L'application est exécutée sur votre machine ; vos documents et mémoires de traduction restent sur votre ordinateur et le projet OmegaT n'aura en aucun cas accès à vos travaux ou informations.</p>
+<div id="popover_content_webstart" style="display:none">
+      <p>The Web Start version offers an alternative means of installing OmegaT on your computer.</p>
+      <p>With this version, future updates will be installed automatically.</p>
+      <p>During installation, depending on your operating system, you may
+      receive several security warnings.<br/>The certificate is signed by <a
+      href="http://www.pnsconcept.com/coordinates.html">PnS Concept Sarl</a>, a
+      French registered company.</p>
+      <p>The permissions you give to this version (which may be described as
+      "unrestricted access to the computer") are no different from the
+      permissions you assign to the local version, i.e., an access to the hard
+      drive of your computer.</p>
+      <p>In order to install the Web start version, you must already have Java
+      version 1.3 or later installed on your computer.</p>
+      <p>Privacy information: OmegaT Java Web Start does not save any of your
+      information to OmegaT's web servers. The application runs on your
+      machine. Your documents and translation memories remain on your computer,
+      and the OmegaT project will have no access to your work or
+      information.</p>
+</div>
 
-<h3>Anciennes versions</h3>
 
-<p>Ces anciennes versions sont devenues obsolètes et sont ainsi sans intérêt pour la plupart des utilisateurs. Certaines restrictions imposées par le système d'exploitation ou la version Java utilisés pourront toutefois obliger certains utilisateurs à préférer une version plus ancienne.</p>
+<div id="popover_content_trunk" style="display:none">
+    <p>The /trunk (alpha) version reflects the very latest state of development. It
+    is recommended for serious developers and testers only. It can also be obtained
+    using the subversion command:</p>
+    <p><kbd>svn checkout svn://svn.code.sf.net/p/omegat/svn/trunk omegat-svn</kbd></p>
+</div>
 
-<h3>Version de développement</h3>
+<div id="popover_content_nightly" style="display:none">
+  <p>Periodic builds are available on CloudBees.</p>
+  <div class="text-md-center">
+    <img src="https://www.cloudbees.com/sites/default/files/Button-Built-on-CB-1.png" alt="built on DEV@cloud" />
+  </div>
+</div>
 
-<p>La version de développement (alpha) reflète la phase de développement la plus récente. Elle n'est recommandée qu'aux développeurs et testeurs assidus. Elle peut également être obtenue via la commande de Subversion :</p>
-
-<p>svn co https://omegat.svn.sourceforge.net/svnroot/omegat/trunk omegat</p>
-
-<h3>Paquets code source</h3>
-
-<p>Les paquets de code source sont réservés aux développeurs, ils sont sans utilité pour les utilisateurs. Ils sont placés dans les dossiers des versions compilées correspondantes.</p>
-
+<div id="popover_content_source" style="display:none">
+    <p>Source code packages are not required by users and are intended for
+    developers only. They can be found in the folders of the corresponding compiled
+    versions.</p>
+</div>
 </div>
 
 
