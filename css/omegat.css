@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1, h2, h3 {
   color: #88B04B;
   font-weight: 700; }
@@ -131,7 +132,7 @@ footer {
 
 footer .glyphicon {
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-right: 5px;
   color: #fff; }
 
 footer ul li {
@@ -146,7 +147,7 @@ footer h4 {
 .footer-column {
   text-align: left; }
   .footer-column .glyphicon {
-    color: #000; }
+    color: #040805; }
 
 ul.languages {
   columns: 3;
@@ -217,6 +218,38 @@ ul.languages {
 .whitebox {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.6); }
+
+#quote-carousel {
+  padding: 0 10px 30px 10px;
+  margin-top: 30px; }
+  #quote-carousel .carousel-control {
+    background: none;
+    color: #222;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px; }
+  #quote-carousel .carousel-control.left {
+    left: -12px; }
+  #quote-carousel .carousel-control.right {
+    right: -12px !important; }
+  #quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px; }
+  #quote-carousel img {
+    width: 250px;
+    height: 100px; }
+  #quote-carousel .item blockquote {
+    border-left: none;
+    margin: 0; }
+  #quote-carousel .item blockquote img {
+    margin-bottom: 10px; }
+  #quote-carousel .item blockquote p:before {
+    content: "";
+    font-family: "Fontawesome";
+    float: left;
+    margin-right: 10px; }
 
 @font-face {
   font-family: "Linux Libertine Semibold";
