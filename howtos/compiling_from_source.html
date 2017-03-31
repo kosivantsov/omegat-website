@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Howto - Compiling OmegaT from the source code - OmegaT</title>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="/omegat-website/favicon.png">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/omegat-website/css/omegat.css"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/omegat-website/js/omegat.js"></script>
+
+  <meta name="description" content="OmegaT is a free translation memory application written in Java. It is a tool intended for professional translators.">
+
+  <link rel="canonical" href="http://localhost:4000/omegat-website/howtos/compiling_from_source">
+  <link rel="alternate" type="application/rss+xml" title="Omegat - The Free Translation Memory Tool" href="/omegat-website/feed.xml">
+
+  
+</head>
+
+
+
+  <body id="page">
+
+        <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"/>
+            <span class="icon-bar"/>
+            <span class="icon-bar"/>
+          </button>
+          <a class="navbar-brand" href="/omegat-website/">
+            <img alt="OmegaT" class="logo-omegat" src="/omegat-website/img/omegat.svg" height="80" width="80"/>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/omegat-website/download">Download</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><a href="/omegat-website/resources">Resources</a></li>
+            <li><a href="/omegat-website/documentation">Documentation</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Languages<span class="caret"/> <span class="sr-only">(current)</span></a>
+              <ul class="dropdown-menu languages">
+                
+                <li class="disabled"><a href="/omegat-website/ar/howtos/compiling_from_source">&#x628;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/ca/howtos/compiling_from_source">Catal&#xE0;</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/cz/howtos/compiling_from_source">&#x10C;e&#x161;tina</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/de/howtos/compiling_from_source">Deutsch</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/el/howtos/compiling_from_source">&#x395;&#x3BB;&#x3BB;&#x3B7;&#x3BD;&#x3B9;&#x3BA;&#x3AC;</a></li>
+                
+                <li><a href="/omegat-website/howtos/compiling_from_source">English</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/es/howtos/compiling_from_source">Espa&#xF1;ol</a></li>
+                
+                <li><a href="/omegat-website/fr/howtos/compiling_from_source">Fran&#xE7;ais</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/gl/howtos/compiling_from_source">Galego</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/id/howtos/compiling_from_source">Bahasa Indonesia</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/ia/howtos/compiling_from_source">Interlingua</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/it/howtos/compiling_from_source">Italiano</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/ko/howtos/compiling_from_source">&#xD55C;&#xAD6D;&#xC5B4;</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/hu/howtos/compiling_from_source">Magyar</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/ja/howtos/compiling_from_source">&#x65E5;&#x672C;&#x8A9E;</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/nl/howtos/compiling_from_source">Nederlands</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/pl/howtos/compiling_from_source">Polski</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/br/howtos/compiling_from_source">Portugu&#xEA;s (Brazil)</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/pt/howtos/compiling_from_source">Portugu&#xEA;s (Portugal)</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/ru/howtos/compiling_from_source">&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/sq/howtos/compiling_from_source">Shqip</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/sk/howtos/compiling_from_source">Sloven&#x10D;ina</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/si/howtos/compiling_from_source">Sloven&#x161;&#x10D;ina</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/hr/howtos/compiling_from_source">Srpskohrvatski</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/fi/howtos/compiling_from_source">Suomi</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/sv/howtos/compiling_from_source">Svenska</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/zh_CN/howtos/compiling_from_source">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/zh_TW/howtos/compiling_from_source">&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</a></li>
+                
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="jumbotron jumbo-page titles-howtos-compiling_from_source"><h1>Howto - Compiling OmegaT from the source code</h1></div>
+        
+    <div class="container">
+  <p>This HowTo describes how to compile OmegaT from the source code.</p>
+  <p>OmegaT is supplied ready-compiled for a number of platforms, including a cross-platform version. Users do not therefore need to compile OmegaT themselves. Compiling OmegaT is relevant for developers who wish to make modifications of their own to its code. </p>
+  <p>
+    <strong>1. Download and install the Java Development Kit (JDK)</strong>
+  </p>
+  <p>The <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit</a> is required. For OmegaT 4.0 and later, no additional software is required.</p>
+  <p>Earlier versions of OmegaT require <a href="http://ant.apache.org">Apache Ant</a>.</p>
+  <p>You may have to set your <code>JAVA_HOME</code> environment variable to point to the location of the JDK.</p>
+  <p>
+    <strong>2. Compile the code</strong>
+  </p>
+  <p>Open a command-line window (console, DOS window). Navigate to the root of the OmegaT source code (the folder containing the file <code>build.gradle</code>), e.g.</p>
+  <pre>cd C:\My Documents\MyOmegat\OmegaT_&lt;version&gt;_Beta_Source</pre>
+  <p>
+    <em>OmegaT 4.0 or later</em>
+  </p>
+  <p>You can run OmegaT directly from the command line with</p>
+  <pre>gradlew run</pre>
+  <p>If this is all you're interested in, you can skip to step 3a.</p>
+  <p>To build the OmegaT program and all associated files, instead do</p>
+  <pre>gradlew installDist</pre>
+  <p>The results will be in the <code>build\install\OmegaT</code>.</p>
+  <p>
+    <em>Older versions of OmegaT</em>
+  </p>
+  <p>From within the root folder, execute Apache Ant by entering the ant executable. It may be necessary to enter the full path, e.g.:</p>
+  <pre>C:\Program Files\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin\ant</pre>
+  <p>If the code compiles successfully, you will see the <code>BUILD SUCCESSFUL</code> message. If not, debugging messages will be shown which will (hopefully) provide some idea of where the problem is.</p>
+  <p>If your code has compiled successfully, the compiled OmegaT is placed in:</p>
+  <pre>OmegaT_&lt;version&gt;_Beta_Source\dist</pre>
+  <p>Still in your command-line window, change to this folder, e.g. with:</p>
+  <pre>cd C:\My Documents\MyOmegat\OmegaT_&lt;version&gt;_Beta_Source\dist</pre>
+  <p>and launch OmegaT with:</p>
+  <pre>java -jar OmegaT.jar</pre>
+  <p>
+    <strong>3a. 1st example modification: changing the colour of segment highlighting</strong>
+  </p>
+  <p>In the folder <code>src/org/omegat/gui/editor</code> open the file <code>SegmentBuilder.java</code> in a text editor.</p>
+  <p>Find the lines:</p>
+  <pre>return Styles.createAttributeSet(fg, Styles.COLOR_GREEN, true, null);</pre>
+  <p>and</p>
+  <pre>b = Styles.COLOR_GREEN;</pre>
+  <p>and replace <code>COLOR_GREEN</code> with <code>COLOR_BLUE</code>.</p>
+  <p>In the folder <code>src/org/omegat/util/gui</code> open the file <code>Styles.java</code> in a text editor.</p>
+  <p>Find the line</p>
+  <pre>public static final Color COLOR_GREEN = new Color(192, 255, 192);</pre>
+  <p>Replace <code>COLOR_GREEN</code> with <code>COLOR_BLUE</code> and <code>192, 255, 192</code> with <code>225, 225, 255</code>.</p>
+  <p>
+    <strong>3b. 2nd example modification: increasing the number of fuzzy matches displayed from five to ten</strong>
+  </p>
+  <p>In the folder <code>/src/org/omegat/util</code> open the file <code>OConsts.java</code> in a text editor.</p>
+  <p>Find the lines:</p>
+  <pre>    /** Number of fuzzy matches to display */
+    public static final int MAX_NEAR_STRINGS = 5;</pre>
+  <p>and replace <code>= 5</code> with <code>= 10</code>.</p>
+  <p>For both examples, compile and test as described above.</p>
+  <p>Copyright Marc Prior 2011-2012</p>
+</div>
+
+
+
+
+    <footer class="container-fluid text-center">
+  <a href="#page" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"/>
+  </a>
+  <div class="container-fluid">
+      <div class="col-sm-offset-3 col-sm-2 footer-column">
+        <h4>Connect</h4>
+        <div class="header-line"><!----></div>
+        <ul>
+          <li>
+            <a href="https://sourceforge.net/projects/omegat/"><img src="/omegat-website/img/sourceforge.svg" height="24" width="24"/> Sourceforge</a>
+          </li>
+          <li>
+            <a href="https://github.com/omegat-org/"><img src="/omegat-website/img/github.svg" height="24" width="24"/> Github</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/OmegaTOfficial"><img src="/omegat-website/img/twitter.svg" height="24" width="24"/> Twitter</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/OmegaTOfficial"><img src="/omegat-website/img/facebook.svg" height="24" width="24"/> Facebook</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-2 footer-column">
+        <h4>Documentation</h4>
+        <div class="header-line"><!----></div>
+        <ul>
+          <li><a href="/omegat-website/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
+          <li><a href="/omegat-website/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
+          <li><a href="/omegat-website/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
+          <li><a href="/omegat-website/reviews"><span class="glyphicon glyphicon-heart"></span> Reviews</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2 footer-column">
+        <h4>The OmegaT Project</h4>
+        <div class="header-line"><!----></div>
+        <ul>
+          <li>
+          <a href="/omegat-website/contact"><span class="glyphicon glyphicon-envelope"></span> Contact and Support</a>
+          </li>
+          <li>
+          <a href="/omegat-website/about"><span class="glyphicon glyphicon-question-sign"></span> About</a>
+          </li>
+          <li>
+          <a href="/omegat-website/philosophy"><span class="glyphicon glyphicon-console"></span> Philosophy</a>
+          </li>
+        </ul>
+      </div>
+  </div>
+  <p class="footer-copyright">Copyright &#xA9; 2017 - <a href="/omegat-website">omegat.org</a></p>
+</footer>
+
+
+  </body>
+
+</html>
+

@@ -45,44 +45,73 @@
         </div>
         <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="download">Téléchargement</a></li>
+            <li><a href="/omegat-website/fr/download">Téléchargement</a></li>
           </ul>
           <ul class="nav navbar-nav">
-            <li><a href="resources">Ressources</a></li>
-            <li><a href="documentation">Documentation</a></li>
+            <li><a href="/omegat-website/fr/resources">Ressources</a></li>
+            <li><a href="/omegat-website/fr/documentation">Documentation</a></li>
           </ul>
           <ul class="nav navbar-nav">
             <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Langues<span class="caret"/> <span class="sr-only">(current)</span></a>
               <ul class="dropdown-menu languages">
+                
                 <li class="disabled"><a href="/omegat-website/ar/download">&#x628;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/ca/download">Catal&#xE0;</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/cz/download">&#x10C;e&#x161;tina</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/de/download">Deutsch</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/el/download">&#x395;&#x3BB;&#x3BB;&#x3B7;&#x3BD;&#x3B9;&#x3BA;&#x3AC;</a></li>
-                <li class="        "><a href="/omegat-website/download">English</a></li>
+                
+                <li><a href="/omegat-website/download">English</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/es/download">Espa&#xF1;ol</a></li>
-                <li class="        "><a href="/omegat-website/fr/download">Fran&#xE7;ais</a></li>
+                
+                <li><a href="/omegat-website/fr/download">Fran&#xE7;ais</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/gl/download">Galego</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/id/download">Bahasa Indonesia</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/ia/download">Interlingua</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/it/download">Italiano</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/ko/download">&#xD55C;&#xAD6D;&#xC5B4;</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/hu/download">Magyar</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/ja/download">&#x65E5;&#x672C;&#x8A9E;</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/nl/download">Nederlands</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/pl/download">Polski</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/br/download">Portugu&#xEA;s (Brazil)</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/pt/download">Portugu&#xEA;s (Portugal)</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/ru/download">&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/sq/download">Shqip</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/sk/download">Sloven&#x10D;ina</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/si/download">Sloven&#x161;&#x10D;ina</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/hr/download">Srpskohrvatski</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/fi/download">Suomi</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/sv/download">Svenska</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/zh_CN/download">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</a></li>
+                
                 <li class="disabled"><a href="/omegat-website/zh_TW/download">&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</a></li>
+                
               </ul>
             </li>
           </ul>
@@ -93,13 +122,164 @@
 
     <div class="jumbotron jumbo-page titles-download"><h1>Téléchargement</h1></div>
         
-    ﻿<div class="container">
+    <div class="container">
 		
 <p class="lead">Links are provided below to the various versions of OmegaT. If
 you are confused about which version to download, you can use the <a
-href="#download-wizard" data-toggle="collapse">Assistant de téléchargement</a>.</p>
+href="#download-wizard" data-toggle="collapse">Download selector</a>.</p>
 
+<div id="download-wizard" class="panel panel-primary collapse">
+  <div class="panel-heading">
+    <h3 class="panel-title">OmegaT Download Selector</h3>
+  </div>
+  <div class="panel-body">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav nav-pills">
+            <li>
+              <a href="#tab-install-type" data-toggle="tab">Installation Type</a>
+            </li>
+            <li>
+              <a href="#tab-version" data-toggle="tab">Version</a>
+            </li>
+            <li>
+              <a href="#tab-operating-system" data-toggle="tab">Operating System</a>
+            </li>
+            <li>
+              <a href="#tab-jre" data-toggle="tab">JRE</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane fade in" id="tab-install-type">
+        <div class="radio">
+          <label><input type="radio" class="radio-primary" value="traditional" name="optType"/>Traditional</label>
+          <p>The version for installation by the user, familiar to existing OmegaT users. If in doubt, select this version.</p>
+        </div>
+        <div class="radio">
+          <label><input type="radio" class="radio-primary" value="webstart" name="optType"/>Web Start</label>
+          <p>The Web Start version is the "install and forget" version.<br/>
+                <strong>The benefit</strong>: once launched, future updates of the Web Start version will be installed automatically on your computer.<br/>
+                <strong>The drawback</strong>: at present, this version cannot be used in conjunction with plug-ins, so not all functions are available.</p>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="tab-operating-system">
+        <div class="radio">
+          <label><input type="radio" class="radio-primary" id="optWindows" value="windows" name="optOS"/>Windows</label>
+          <p>For installation on Windows System.</p>
+        </div>
+        <div class="radio">
+          <label><input type="radio" class="radio-primary" id="optOsx" value="osx" name="optOS"/>Mac OS X</label>
+          <p>For installation on Mac OS X.</p>
+        </div>
+        <div class="radio">
+          <label><input type="radio" class="radio-primary" id="optLinux" value="linux" name="optOS"/>Linux</label>
+          <p>For installation on Linux.</p>
+        </div>
+        <div class="radio">
+          <label><input type="radio" class="radio-primary" value="other" name="optOS"/>Other</label>
+          <p>For installation on other operating systems (such as FreeBSD and Solaris).<br/>
+          <i>OmegaT can be installed on any operating system capable of running version 1.6 of the Java runtime environment.</i></p>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="tab-jre">
+        <p class="with-windows-jre" style="display:none;">Select whether to download OmegaT with or
+        without the Java Runtime Environment (JRE) included. If a suitable
+        JRE is already installed on your Windows system, select "Without
+        JRE". If not, or if you are not sure, select "with JRE".</p>
+        <div class="with-linux-jre" style="display:none;">
+          <p>OmegaT will usually run on any Linux system on which a
+          suitable version of the Java Runtime Environment (JRE) can be be
+          installed. OmegaT currently requires version 1.6 of the JRE or
+          later. To check what version of the JRE, if any, is installed on
+          your Linux system, open a console (command-line window) and
+          type:</p>
+          <pre>$ <strong>java -version</strong></pre>
+          <p>If you are unsure whether a suitable JRE is already installed
+          on your system, you can still download and install an OmegaT
+          version with JRE. This version of the JRE will only be used
+          locally for OmegaT, will not conflict with, override or uninstall
+          any other JRE installations, and is therefore safe to
+          use.</p>
+        </div>
+        <div class="radio jre32">
+          <label><input type="radio" class="radio-primary" value="jre" name="optJRE"/>With JRE</label>
+          <p>The "batteries included" version of OmegaT, with its own Java
+          Runtime Environment. This version will take longer to download and will
+          require more space on your hard drive, but you can be confident that it
+          will run. If in doubt, select this option.</p>
+        </div>
+        <div class="radio jre64">
+          <label><input type="radio" class="radio-primary" value="jre64b" name="optJRE"/>With 64-bit JRE</label>
+          <p>The included JRE is the 64-bit version.</p>
+          <p class="jrelatest">The "batteries included" version of OmegaT, with its own Java
+          Runtime Environment. This version will take longer to download and will
+          require more space on your hard drive, but you can be confident that it
+          will run. If in doubt, select this option.</p>
+        </div>
+        <div class="radio">
+          <label><input type="radio" class="radio-primary" value="nojre" name="optJRE"/>Without JRE</label>
+          <p>If you are sure that a suitable Java Runtime Environment is already
+          installed on your computer at system level, you can select the option
+          without JRE included.</p>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="tab-version">
+        <div class="radio">
+          <label><input type="radio" class="radio-primary" value="standard" name="optVersion"/>Standard</label>
+          <p>The "Standard" version of OmegaT includes a full user manual (at
+          least in English) and will usually have been tested for some time to
+          eliminate any bugs. It is the recommended version for first-time users.</p>
+          <div class="radio">
+            <label><input type="radio" class="radio-primary" value="latest" name="optVersion"/>Latest</label>
+            <p>As its name suggests, the "Latest" version of Omegat is more up to
+          date. However, the user manual may no longer be up to date (and
+          therefore possibly confusing), and some minor bugs are possible.
+          Nevertheless, the "Latest" versions of OmegaT are usually very stable
+          and are recommended for any users who already have some experience with
+          OmegaT.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer collapse text-center" style="display:none;" id="wizard-result">
+        <p>Based on your choices, we recommand you use:</p>
+        <h3><a id="wizard-result-version" href="#">some version</a></h3>
+        <a id="wizard-result-btn" class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-download"></span> Download</a>
+        <div id="wizard-result-osx" style="display:none;">
+          <p>If this version is not availble, you can try to <a href="#" id="wizard-result-unsigned">download the unsigned version</a>.</p> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<h3>Requirements</h3>
+
+<h4>System requirements</h4>
+
+<p>OmegaT will run on any system on which the JRE (Java Runtime Environment)
+has been or can be installed. The JRE is now supplied with OmegaT and need not
+be obtained separately. OmegaT has been successfully installed on Windows (all
+versions from 98 onwards), Macintosh OS X and Linux.</p>
+<p>Files in Microsoft Office XML format can be translated directly in OmegaT.
+Files in older MS Word, Excel and Powerpoint formats can be translated
+following conversion to the equivalent current Microsoft Office formats, or
+alternatively to the Office Open XML format, which can be done in
+OpenOffice.org or LibreOffice (also free). To obtain OpenOffice.org or
+LibreOffice, follow the link from "Third-party software" button on the
+left.</p>
+
+<h4>User requirements</h4>
+<p>OmegaT is not particularly difficult to install or use, but it does require
+a willingness to read and follow the instructions. If you have a natural
+aversion to reading instructions, and your approach to new software is to click
+on every button you see until something resembling the desired effect occurs,
+then OmegaT is probably not suitable for you.</p>
+
+<a name="downloads"></a>
 <h3 id="standard">Standard Version - 3.6.0 update 5</h3>
 
 <p>The Standard version has usually been in use for some time and is therefore
@@ -119,8 +299,7 @@ date. It will however lack some of the features of the "Latest" version.</p>
   <tr id="standard_windows_jre">
       <td class="version-name">Windows avec JRE</td>
       <td>
-          <span rel="popover" data-platform="windows_jre" data-title="Windows avec JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-          <div id="info_windows_jre"/>
+      
       </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Windows.exe/download" role="button">Download</a></td>
   </tr>
@@ -128,8 +307,7 @@ date. It will however lack some of the features of the "Latest" version.</p>
   <tr id="standard_windows_nojre">
       <td class="version-name">Windows sans JRE</td>
       <td>
-          <span rel="popover" data-platform="windows_nojre" data-title="Windows sans JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-          <div id="info_windows_nojre"/>
+      
       </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Windows_without_JRE.exe/download" role="button">Download</a></td>
   </tr>
@@ -137,8 +315,10 @@ date. It will however lack some of the features of the "Latest" version.</p>
   <tr id="standard_osx_signed">
       <td class="version-name">OS X Signé</td>
       <td>
+      
           <span rel="popover" data-platform="osx_signed" data-title="OS X Signé" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
           <div id="info_osx_signed"/>
+      
       </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Mac_Signed.zip/download" role="button">Download</a></td>
   </tr>
@@ -146,8 +326,10 @@ date. It will however lack some of the features of the "Latest" version.</p>
   <tr id="standard_osx_unsigned">
       <td class="version-name">OS X Non signé</td>
       <td>
+      
           <span rel="popover" data-platform="osx_unsigned" data-title="OS X Non signé" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
           <div id="info_osx_unsigned"/>
+      
       </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Mac.zip/download" role="button">Download</a></td>
   </tr>
@@ -155,8 +337,7 @@ date. It will however lack some of the features of the "Latest" version.</p>
   <tr id="standard_linux_jre">
       <td class="version-name">Linux avec JRE 32 bits</td>
       <td>
-          <span rel="popover" data-platform="linux_jre" data-title="Linux avec JRE 32 bits" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-          <div id="info_linux_jre"/>
+      
       </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Linux.tar.bz2/download" role="button">Download</a></td>
   </tr>
@@ -164,8 +345,7 @@ date. It will however lack some of the features of the "Latest" version.</p>
   <tr id="standard_linux_jre64b">
       <td class="version-name">Linux avec JRE 64 bits</td>
       <td>
-          <span rel="popover" data-platform="linux_jre64b" data-title="Linux avec JRE 64 bits" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-          <div id="info_linux_jre64b"/>
+      
       </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Linux_64.tar.bz2/download" role="button">Download</a></td>
   </tr>
@@ -173,8 +353,7 @@ date. It will however lack some of the features of the "Latest" version.</p>
   <tr id="standard_linux_nojre">
       <td class="version-name">Cross-platform sans JRE</td>
       <td>
-          <span rel="popover" data-platform="nojre" data-title="Cross-platform sans JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
-          <div id="info_nojre"/>
+      
       </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Without_JRE.zip/download" role="button">Download</a></td>
   </tr>
@@ -182,8 +361,10 @@ date. It will however lack some of the features of the "Latest" version.</p>
   <tr id="standard_webstart">
       <td class="version-name">Web Start</td>
       <td>
+      
           <span rel="popover" data-platform="webstart" data-title="Web Start" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
           <div id="info_webstart"/>
+      
       </td>
       <td><a class="btn btn-primary version-download" href="http://omegat.sourceforge.net/webstart/OmegaT.jnlp" role="button">Download</a></td>
   </tr>
@@ -191,8 +372,10 @@ date. It will however lack some of the features of the "Latest" version.</p>
   <tr id="">
       <td class="version-name">Code source</td>
       <td>
+      
           <span rel="popover" data-platform="source" data-title="Code source" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
           <div id="info_source"/>
+      
       </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%203.6.0 update 5/OmegaT_3.6.0_05_Source.zip/download" role="button">Download</a></td>
   </tr>
@@ -222,55 +405,81 @@ prefer the Latest version.</p>
 
  <tr id="latest_windows_jre">
       <td class="version-name">Windows avec JRE</td>
-      <td><span rel="popover" data-platform="windows_jre" data-title="Windows avec JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td>
+      
+      </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows.exe/download" role="button">Download</a></td>
   </tr>
 
  <tr id="latest_windows_jre64b">
       <td class="version-name">Windows avec JRE 64 bits</td>
-      <td><span rel="popover" data-platform="windows_jre64b" data-title="Windows avec JRE 64 bits" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td>
+      
+      </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows_64.exe/download" role="button">Download</a></td>
   </tr>
 
  <tr id="latest_windows_nojre">
       <td class="version-name">Windows sans JRE</td>
-      <td><span rel="popover" data-platform="windows_nojre" data-title="Windows sans JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td>
+      
+      </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Windows_without_JRE.exe/download" role="button">Download</a></td>
   </tr>
 
  <tr id="latest_osx_signed">
       <td class="version-name">OS X Signé</td>
-      <td><span rel="popover" data-platform="osx_signed" data-title="OS X Signé" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td>
+      
+          <span rel="popover" data-platform="osx_signed" data-title="OS X Signé" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      
+      </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Mac_Signed.zip/download" role="button">Download</a></td>
   </tr>
 
  <tr id="latest_osx_unsigned">
       <td class="version-name">OS X Non signé</td>
-      <td><span rel="popover" data-platform="osx_unsigned" data-title="OS X Non signé" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td>
+      
+          <span rel="popover" data-platform="osx_unsigned" data-title="OS X Non signé" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      
+      </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Mac.zip/download" role="button">Download</a></td>
   </tr>
 
  <tr id="latest_linux_jre64b">
       <td class="version-name">Linux avec JRE 64 bits</td>
-      <td><span rel="popover" data-platform="linux_jre64b" data-title="Linux avec JRE 64 bits" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td>
+      
+      </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Linux_64.tar.bz2/download" role="button">Download</a></td>
   </tr>
 
  <tr id="latest_linux_nojre">
       <td class="version-name">Cross-platform sans JRE</td>
-      <td><span rel="popover" data-platform="nojre" data-title="Cross-platform sans JRE" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td>
+      
+      </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Without_JRE.zip/download" role="button">Download</a></td>
   </tr>
 
  <tr id="latest_webstart">
       <td class="version-name">Web Start</td>
-      <td><span rel="popover" data-platform="webstart" data-title="Web Start" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td>
+      
+          <span rel="popover" data-platform="webstart" data-title="Web Start" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      
+      </td>
       <td><a class="btn btn-primary version-download" href="http://omegat.sourceforge.net/webstart-dev/OmegaT.jnlp" role="button">Download</a></td>
   </tr>
 
  <tr id="">
       <td class="version-name">Code source</td>
-      <td><span rel="popover" data-platform="source" data-title="Code source" data-content="" class="glyphicon glyphicon-info-sign"><!----></span></td>
+      <td>
+      
+          <span rel="popover" data-platform="source" data-title="Code source" data-content="" class="glyphicon glyphicon-info-sign"><!----></span>
+      
+      </td>
       <td><a class="btn btn-primary version-download" href="http://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%204.1.1/OmegaT_4.1.1_Beta_Source.zip/download" role="button">Download</a></td>
   </tr>
 
@@ -376,7 +585,7 @@ space on your hard drive. In this case, do not select the Default version; selec
 <div id="popover_content_nightly" style="display:none">
   <p>Periodic builds are available on CloudBees.</p>
   <div class="text-md-center">
-    <img src="https://www.cloudbees.com/sites/default/files/Button-Built-on-CB-1.png" alt="built on DEV@cloud" />
+    <img src="https://www.cloudbees.com/sites/default/files/Button-Built-on-CB-1.png" width="209" height="72" alt="built on DEV@cloud" />
   </div>
 </div>
 
@@ -418,10 +627,10 @@ space on your hard drive. In this case, do not select the Default version; selec
         <h4>Documentation</h4>
         <div class="header-line"><!----></div>
         <ul>
-          <li><a href="documentation#manual"><span class="glyphicon glyphicon-book"></span> Manuel</a></li>
-          <li><a href="documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutoriels</a></li>
-          <li><a href="documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> Guides pratiques</a></li>
-          <li><a href="reviews"><span class="glyphicon glyphicon-heart"></span> Articles</a></li>
+          <li><a href="/omegat-website/fr/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manuel</a></li>
+          <li><a href="/omegat-website/fr/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutoriels</a></li>
+          <li><a href="/omegat-website/fr/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> Guides pratiques</a></li>
+          <li><a href="/omegat-website/fr/reviews"><span class="glyphicon glyphicon-heart"></span> Articles</a></li>
         </ul>
       </div>
       <div class="col-sm-2 footer-column">
@@ -429,18 +638,18 @@ space on your hard drive. In this case, do not select the Default version; selec
         <div class="header-line"><!----></div>
         <ul>
           <li>
-          <a href="contact"><span class="glyphicon glyphicon-envelope"></span> Contact et Assistance</a>
+          <a href="/omegat-website/fr/contact"><span class="glyphicon glyphicon-envelope"></span> Contact et Assistance</a>
           </li>
           <li>
-            <a href="about"><span class="glyphicon glyphicon-question-sign"></span> À propos</a>
+          <a href="/omegat-website/fr/about"><span class="glyphicon glyphicon-question-sign"></span> À propos</a>
           </li>
           <li>
-            <a href="philosophy"><span class="glyphicon glyphicon-console"></span> Philosophie</a>
+          <a href="/omegat-website/fr/philosophy"><span class="glyphicon glyphicon-console"></span> Philosophie</a>
           </li>
         </ul>
       </div>
   </div>
-  <p class="footer-copyright">Copyright &#xA9; 2017 - <a href="/omegat-website/fr/">omegat.org</a></p>
+  <p class="footer-copyright">Copyright &#xA9; 2017 - <a href="/omegat-website/fr">omegat.org</a></p>
 </footer>
 
 

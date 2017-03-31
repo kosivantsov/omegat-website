@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Howto - Creating a new file filter - OmegaT</title>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="/omegat-website/favicon.png">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/omegat-website/css/omegat.css"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/omegat-website/js/omegat.js"></script>
+
+  <meta name="description" content="OmegaT is a free translation memory application written in Java. It is a tool intended for professional translators.">
+
+  <link rel="canonical" href="http://localhost:4000/omegat-website/howtos/new_filter">
+  <link rel="alternate" type="application/rss+xml" title="Omegat - The Free Translation Memory Tool" href="/omegat-website/feed.xml">
+
+  
+</head>
+
+
+
+  <body id="page">
+
+        <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"/>
+            <span class="icon-bar"/>
+            <span class="icon-bar"/>
+          </button>
+          <a class="navbar-brand" href="/omegat-website/">
+            <img alt="OmegaT" class="logo-omegat" src="/omegat-website/img/omegat.svg" height="80" width="80"/>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/omegat-website/download">Download</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><a href="/omegat-website/resources">Resources</a></li>
+            <li><a href="/omegat-website/documentation">Documentation</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Languages<span class="caret"/> <span class="sr-only">(current)</span></a>
+              <ul class="dropdown-menu languages">
+                
+                <li class="disabled"><a href="/omegat-website/ar/howtos/new_filter">&#x628;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/ca/howtos/new_filter">Catal&#xE0;</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/cz/howtos/new_filter">&#x10C;e&#x161;tina</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/de/howtos/new_filter">Deutsch</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/el/howtos/new_filter">&#x395;&#x3BB;&#x3BB;&#x3B7;&#x3BD;&#x3B9;&#x3BA;&#x3AC;</a></li>
+                
+                <li><a href="/omegat-website/howtos/new_filter">English</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/es/howtos/new_filter">Espa&#xF1;ol</a></li>
+                
+                <li><a href="/omegat-website/fr/howtos/new_filter">Fran&#xE7;ais</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/gl/howtos/new_filter">Galego</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/id/howtos/new_filter">Bahasa Indonesia</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/ia/howtos/new_filter">Interlingua</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/it/howtos/new_filter">Italiano</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/ko/howtos/new_filter">&#xD55C;&#xAD6D;&#xC5B4;</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/hu/howtos/new_filter">Magyar</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/ja/howtos/new_filter">&#x65E5;&#x672C;&#x8A9E;</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/nl/howtos/new_filter">Nederlands</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/pl/howtos/new_filter">Polski</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/br/howtos/new_filter">Portugu&#xEA;s (Brazil)</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/pt/howtos/new_filter">Portugu&#xEA;s (Portugal)</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/ru/howtos/new_filter">&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/sq/howtos/new_filter">Shqip</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/sk/howtos/new_filter">Sloven&#x10D;ina</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/si/howtos/new_filter">Sloven&#x161;&#x10D;ina</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/hr/howtos/new_filter">Srpskohrvatski</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/fi/howtos/new_filter">Suomi</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/sv/howtos/new_filter">Svenska</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/zh_CN/howtos/new_filter">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</a></li>
+                
+                <li class="disabled"><a href="/omegat-website/zh_TW/howtos/new_filter">&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</a></li>
+                
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="jumbotron jumbo-page titles-howtos-new_filter"><h1>Howto - Creating a new file filter</h1></div>
+        
+    <div class="container">
+  <p>This HowTo explains how to create a new file filter for use with OmegaT by describing the creation of a rudimentary file filter for the TMX format. Although it might seem strange to want to translate TMX files (the usual reason for creating a file filter), the addition of a TMX filter has the interesting effect that it enables TMX files in any location to be searched for from within any OmegaT project using the "Search Files" function, something not possible in the standard OmegaT build.</p>
+  <p>For compiling OmegaT from the source code, see <a href="compiling_from_source.html">Compiling OmegaT from Source HowTo</a>.</p>
+  <p>Select an existing filter for a format similar to that for the new filter. In this example, the Help &amp; Manual filter has been selected as a basis. </p>
+  <p>Locate the folder src/org/omegat/filters3/xml, and make a copy the subfolder /helpandmanual, naming it /tmx. In this folder, rename the two files HelpandManualDialect.java and HelpandManualFilter.java to TmxDialect.java and TmxFilter.java respectively.</p>
+  <p>Open the files TMXDialect.java and TMX filter in a text editor. In both files, search for (matching the case) and replace:</p>
+  <p>"helpandmanual" with "tmx"<br/>
+"HelpAndManual" with "TMX"<br/>
+"HELPANDMANUAL" with "TMX"<br/>
+"Help &amp; Manual" with "TMX"<br/>
+"Help&amp;Manual" with "TMX"</p>
+  <p>Identify the paragraph-level tag(s) for your new file format. To find out what the paragraph tags should be, examine a sample file in a text editor. In TMX, the paragraph-level tag corresponding to a segment is "tu".</p>
+  <p>In TMXDialect.java:</p>
+  <p>Define the paragraph tags, in this case by changing the line:</p>
+  <p>&#xA0;&#xA0;&#xA0;defineParagraphTags(new String[] { "caption", "config-value", "variable", "para", "title", "keyword",
+                "li", });</p>
+  <p>to</p>
+  <p>&#xA0;&#xA0;&#xA0;defineParagraphTags(new String[] { "tu", });</p>
+  <p>You can delete the line:</p>
+  <p> &#xA0;&#xA0;&#xA0;defineShortcut("link", "li");</p>
+  <p>as it is irrelevant to TMX, although the new filter will still work if you do not.</p>
+  <p>You can define out-of-turn tags. These define subsegments that are presented outside the segment in which they are contained (footnotes are a good example). To do this for the TMX filter, insert the line </p>
+  <p>&#xA0;&#xA0;&#xA0;defineOutOfTurnTags(new String[] { "sub", });</p>
+  <p>beneath the line</p>
+  <p>&#xA0;&#xA0;&#xA0;defineParagraphTags(new String[] { "tu", });</p>
+  <p>The filter will however still work if you do not do this.</p>
+  <p>Beneath these lines, you can also insert the code:</p>
+  <p>&#xA0;&#xA0;&#xA0;defineIntactTags(new String[]<br/>
+&#xA0;&#xA0;&#xA0;{<br/>
+&#xA0;&#xA0;&#xA0;"header",<br/>
+&#xA0;&#xA0;&#xA0;"prop",<br/>
+&#xA0;&#xA0;&#xA0;"ph",<br/>
+&#xA0;&#xA0;&#xA0;"bpt",<br/>
+&#xA0;&#xA0;&#xA0;"ept",<br/>
+&#xA0;&#xA0;&#xA0;"it",<br/>
+&#xA0;&#xA0;&#xA0;"ut",<br/>
+&#xA0;&#xA0;&#xA0;});</p>
+  <p>This will make the display of the TMX files neater, but again, it is not absolutely essential.</p>
+  <p>In TMXFilter.java:</p>
+  <p>Change the file extension, in this case to .tmx, by changing the line:</p>
+  <p>&#xA0;&#xA0;&#xA0;public Instance[] getDefaultInstances() {<br/>
+&#xA0;&#xA0;&#xA0;return new Instance[] { new Instance("*.xml", null, null), new Instance("*.hmxp", null, null), };</p>
+  <p>to:</p>
+  <p>&#xA0;&#xA0;&#xA0;public Instance[] getDefaultInstances() {<br/>
+&#xA0;&#xA0;&#xA0;return new Instance[] { new Instance("*.tmx", null, null), };</p>
+  <p>In the folder /src/org/omegat, open the file Bundle.properties in a text editor and find the lines</p>
+  <p>&#xA0;&#xA0;&#xA0;# HelpAndManualFilter.java<br/>
+&#xA0;&#xA0;&#xA0;HELPANDMANUAL_FILTER_NAME=Help &amp; Manual Files</p>
+  <p>Below these lines, insert the lines </p>
+  <p>&#xA0;&#xA0;&#xA0;# TMXFilter.java<br/>
+&#xA0;&#xA0;&#xA0;TMX_FILTER_NAME=TMX files</p>
+  <p>(If you wish to launch OmegaT with a user interface language other than English, make the same change in the relevant localized Bundle.properties file.)</p>
+  <p>In the main folder of the source code, open the file manifest-template.mf in a text editor. Find the lines:</p>
+  <p>&#xA0;&#xA0;&#xA0;Name: org.omegat.filters3.xml.helpandmanual.HelpAndManualFilter<br/>
+&#xA0;&#xA0;&#xA0;OmegaT-Plugin: filter</p>
+  <p>Below them, insert the lines:</p>
+  <p>&#xA0;&#xA0;&#xA0;Name: org.omegat.filters3.xml.tmx.TMXFilter<br/>
+&#xA0;&#xA0;&#xA0;OmegaT-Plugin: filter</p>
+  <p>Compile as described in the Compiling OmegaT from Source HowTo. Launch the newly compiled version. Check in Options &gt; File Filters that the new filter is present. To check whether it works, you can place a TMX file in the /source folder of a project, or (more useful) perform a Text Search &gt; Search files operation on TMX files.</p>
+  <p>Copyright Marc Prior 2008-2011</p>
+</div>
+
+
+
+
+    <footer class="container-fluid text-center">
+  <a href="#page" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"/>
+  </a>
+  <div class="container-fluid">
+      <div class="col-sm-offset-3 col-sm-2 footer-column">
+        <h4>Connect</h4>
+        <div class="header-line"><!----></div>
+        <ul>
+          <li>
+            <a href="https://sourceforge.net/projects/omegat/"><img src="/omegat-website/img/sourceforge.svg" height="24" width="24"/> Sourceforge</a>
+          </li>
+          <li>
+            <a href="https://github.com/omegat-org/"><img src="/omegat-website/img/github.svg" height="24" width="24"/> Github</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/OmegaTOfficial"><img src="/omegat-website/img/twitter.svg" height="24" width="24"/> Twitter</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/OmegaTOfficial"><img src="/omegat-website/img/facebook.svg" height="24" width="24"/> Facebook</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-2 footer-column">
+        <h4>Documentation</h4>
+        <div class="header-line"><!----></div>
+        <ul>
+          <li><a href="/omegat-website/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
+          <li><a href="/omegat-website/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
+          <li><a href="/omegat-website/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
+          <li><a href="/omegat-website/reviews"><span class="glyphicon glyphicon-heart"></span> Reviews</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2 footer-column">
+        <h4>The OmegaT Project</h4>
+        <div class="header-line"><!----></div>
+        <ul>
+          <li>
+          <a href="/omegat-website/contact"><span class="glyphicon glyphicon-envelope"></span> Contact and Support</a>
+          </li>
+          <li>
+          <a href="/omegat-website/about"><span class="glyphicon glyphicon-question-sign"></span> About</a>
+          </li>
+          <li>
+          <a href="/omegat-website/philosophy"><span class="glyphicon glyphicon-console"></span> Philosophy</a>
+          </li>
+        </ul>
+      </div>
+  </div>
+  <p class="footer-copyright">Copyright &#xA9; 2017 - <a href="/omegat-website">omegat.org</a></p>
+</footer>
+
+
+  </body>
+
+</html>
+
