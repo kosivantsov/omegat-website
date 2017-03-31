@@ -101,10 +101,33 @@
       <h1>OmegaT <small>the free translation memory tool</small></h1>
       <div class="title-buttons">
         <a class="btn btn-primary" href="download" role="button">Download</a>
-        <a class="btn btn-primary" href="#get-started" role="button">Get Started</a>
+        <a id="get-started" class="btn btn-primary" href="#get-started" role="button" data-toggle="modal" data-target="#modal-get-started">Get Started</a>
       </div>
     </div>
   </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="modal-get-started">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close close-yt" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title">Get Started with OmegaT</h4>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="ytvideo embed-responsive-item" src="//www.youtube.com/embed/WMXr6aJTpcU?rel=0" allowfullscreen=""><!----></iframe>
+          </div>
+          <p class="text-center">Video by <a href="https://www.youtube.com/channel/UC2EFKLWWI4gh9BGpMf0-_5g">CATguruEN</a> (Dominique Pivard)</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close-yt" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container-fluid section">
     <p class="lead"><strong>OmegaT</strong> is a free translation memory application written in
 Java. It is a tool intended for professional translators. It does not
@@ -383,7 +406,7 @@ areas for which further volunteers would be more than welcome!</p>
             <a href="https://sourceforge.net/projects/omegat/"><img src="/omegat-website/img/sourceforge.svg" height="24" width="24"/> Sourceforge</a>
           </li>
           <li>
-            <a href="github.com/omegat-org/"><img src="/omegat-website/img/github.svg" height="24" width="24"/> Github</a>
+            <a href="https://github.com/omegat-org/"><img src="/omegat-website/img/github.svg" height="24" width="24"/> Github</a>
           </li>
           <li>
             <a href="https://twitter.com/OmegaTOfficial"><img src="/omegat-website/img/twitter.svg" height="24" width="24"/> Twitter</a>
@@ -397,9 +420,9 @@ areas for which further volunteers would be more than welcome!</p>
         <h4>Documentation</h4>
         <div class="header-line"><!----></div>
         <ul>
-          <li><a href="manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
-          <li><a href="tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
-          <li><a href="howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
+          <li><a href="documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
+          <li><a href="documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
+          <li><a href="documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
           <li><a href="reviews"><span class="glyphicon glyphicon-heart"></span> Reviews</a></li>
         </ul>
       </div>
