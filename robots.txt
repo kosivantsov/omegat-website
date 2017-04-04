@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/omegat-website/sitemap.xml
+Sitemap: https://omegat-org.github.io/omegat-website/sitemap.xml
