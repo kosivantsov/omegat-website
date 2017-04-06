@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <!-- _includes/head.html -->
-<head>
+  <head>
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <title>Howto - Using the OmegaT tokenizer - OmegaT</title>
-  
+
   <link rel="shortcut icon" type="image/x-icon" href="/omegat-website/favicon.png">
-  
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="/omegat-website/css/omegat.css"/>
 
@@ -18,12 +17,41 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="/omegat-website/js/omegat.js"></script>
 
-  <meta name="description" content="OmegaT is a free translation memory application written in Java. It is a tool intended for professional translators.">
+  <meta name="description" content="OmegaT is a free open-source translation memory application written in Java. It is a tool intended for professional translators.">
 
   <link rel="canonical" href="https://omegat-org.github.io/omegat-website/howtos/tokenizer">
-  <link rel="alternate" type="application/rss+xml" title="Omegat - The Free Translation Memory Tool" href="/omegat-website/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Omegat - The Free Open-Source Translation Memory Tool" href="/omegat-website/feed.xml">
 
   
+
+  <!-- SEO tags -->
+  
+  <meta property="og:title"       content="Howto - Using the OmegaT tokenizer - OmegaT" />
+  <meta name="description"        content="OmegaT is a free open-source translation memory application for professional translators written in Java." />
+  <meta property="og:description" content="OmegaT is a free open-source translation memory application for professional translators written in Java." />
+  <meta property="og:url"         content="https://omegat-org.github.io/omegat-website/howtos/tokenizer" />
+  <meta property="og:site_name"   content="OmegaT - The Free Translation Memory Tool" />
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@OmegaTOfficial" />
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "",
+    "url": "https://omegat-org.github.io/omegat-website/omegat-website",
+    "headline": "Howto - Using the OmegaT tokenizer",
+    "description": "OmegaT is a free open-source translation memory application for professional translators written in Java.",
+    "publisher": {
+      "@type": "Organization",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://omegat-org.github.io/omegat-website/img/omegat_96.png"
+      }
+    },
+    "sameAs": ["https://sourceforge.net/projects/omegat/","https://github.com/omegat-org/","https://twitter.com/OmegaTOfficial","https://www.facebook.com/OmegaTOfficial"]
+  }</script>
+  <!-- /SEO tags -->
 </head>
 
 
@@ -33,7 +61,7 @@
     <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#omegat-menu" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"><!----></span>
         <span class="icon-bar"><!----></span>
@@ -43,7 +71,7 @@
         <img alt="OmegaT" class="logo-omegat" src="/omegat-website/img/omegat.svg" height="80" width="80"/>
       </a>
     </div>
-    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse navbar-right" id="omegat-menu">
       <ul class="nav navbar-nav">
         <li><a href="/omegat-website/download">Download</a></li>
       </ul>
@@ -249,45 +277,43 @@ org.omegat.plugins.tokenizer.SnowballTurkishTokenizer</p>
       <div class="col-sm-offset-3 col-sm-2 footer-column">
         <h4>Connect</h4>
         <div class="header-line"><!----></div>
-        <ul>
-          <li>
-            <a href="https://sourceforge.net/projects/omegat/"><img alt="Sourceforge" src="/omegat-website/img/sourceforge.svg" height="24" width="24"/> Sourceforge</a>
-          </li>
-          <li>
-            <a href="https://github.com/omegat-org/"><img alt="Github" src="/omegat-website/img/github.svg" height="24" width="24"/> Github</a>
-          </li>
-          <li>
-            <a href="https://twitter.com/OmegaTOfficial"><img alt="Twitter" src="/omegat-website/img/twitter.svg" height="24" width="24"/> Twitter</a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/OmegaTOfficial"><img alt="Facebook" src="/omegat-website/img/facebook.svg" height="24" width="24"/> Facebook</a>
-          </li>
-        </ul>
+        <div class="footer-links">
+          <ul>
+            <li><a href="https://sourceforge.net/projects/omegat/"><img alt="Sourceforge" src="/omegat-website/img/sourceforge.svg" height="24" width="24"/> Sourceforge</a></li>
+            <li><a href="https://github.com/omegat-org/"><img alt="Github" src="/omegat-website/img/github.svg" height="24" width="24"/> Github</a></li>
+            <li><a href="https://twitter.com/OmegaTOfficial"><img alt="Twitter" src="/omegat-website/img/twitter.svg" height="24" width="24"/> Twitter</a></li>
+            <li><a href="https://www.facebook.com/OmegaTOfficial"><img alt="Facebook" src="/omegat-website/img/facebook.svg" height="24" width="24"/> Facebook</a></li>
+          </ul>
+        </div>
       </div>
       <div class="col-sm-2 footer-column">
         <h4>Documentation</h4>
         <div class="header-line"><!----></div>
-        <ul>
-          <li><a href="/omegat-website/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
-          <li><a href="/omegat-website/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
-          <li><a href="/omegat-website/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
-          <li><a href="/omegat-website/reviews"><span class="glyphicon glyphicon-heart"></span> Reviews</a></li>
-        </ul>
+        <div class="footer-links">
+          <ul>
+            <li><a href="/omegat-website/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
+            <li><a href="/omegat-website/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
+            <li><a href="/omegat-website/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
+            <li><a href="/omegat-website/reviews"><span class="glyphicon glyphicon-heart"></span> Reviews</a></li>
+          </ul>
+        </div>
       </div>
       <div class="col-sm-2 footer-column">
         <h4>The OmegaT Project</h4>
         <div class="header-line"><!----></div>
-        <ul>
-          <li>
-          <a href="/omegat-website/contact"><span class="glyphicon glyphicon-envelope"></span> Contact and Support</a>
-          </li>
-          <li>
-          <a href="/omegat-website/about"><span class="glyphicon glyphicon-question-sign"></span> About</a>
-          </li>
-          <li>
-          <a href="/omegat-website/philosophy"><span class="glyphicon glyphicon-console"></span> Philosophy</a>
-          </li>
-        </ul>
+        <div class="footer-links">
+          <ul>
+            <li>
+            <a href="/omegat-website/contact"><span class="glyphicon glyphicon-envelope"></span> Contact and Support</a>
+            </li>
+            <li>
+            <a href="/omegat-website/about"><span class="glyphicon glyphicon-question-sign"></span> About</a>
+            </li>
+            <li>
+            <a href="/omegat-website/philosophy"><span class="glyphicon glyphicon-console"></span> Philosophy</a>
+            </li>
+          </ul>
+        </span>
       </div>
   </div>
   <p class="footer-copyright">Copyright &#xA9; 2017 - <a href="/omegat-website/">omegat.org</a></p>
