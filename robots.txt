@@ -1,1 +1,1 @@
-Sitemap: https://omegat-org.github.io/omegat-website/sitemap.xml
+Sitemap: http://www.omegat.org/sitemap.xml
