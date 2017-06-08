@@ -1,1 +1,1 @@
-Sitemap: http://www.omegat.org/sitemap.xml
+Sitemap: http://omegat.org/sitemap.xml
