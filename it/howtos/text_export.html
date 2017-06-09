@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="it">
+
+  <head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Howto - Using the OmegaT text export function (scripting interface) - OmegaT</title>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180"    href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest"                            href="/manifest.json">
+  <link rel="mask-icon" color="#5bbad5"           href="/safari-pinned-tab.svg">
+  <meta name="apple-mobile-web-app-title" content="OmegaT">
+  <meta name="application-name" content="OmegaT">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link type="text/css" rel="stylesheet" href="/it/assets/omegat.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/it/assets/omegat.js"></script>
+
+
+  <meta name="description" content="OmegaT is a free open-source translation memory application for professional translators written in Java.">
+
+  <link rel="canonical" href="http://omegat.org/it/howtos/text_export">
+  <link rel="alternate" type="application/rss+xml" title="Omegat - The Free Open-Source Translation Memory Tool" href="/it/feed.xml">
+
+  
+    <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){ i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-87327-16', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  
+
+  <!-- SEO tags -->
+  
+  <meta property="og:title"       content="Howto - Using the OmegaT text export function (scripting interface) - OmegaT" />
+  <meta property="og:description" content="OmegaT is a free open-source translation memory application for professional translators written in Java." />
+  <meta property="og:url"         content="http://omegat.org/it/howtos/text_export" />
+  <meta property="og:site_name"   content="OmegaT - The Free Translation Memory Tool" />
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@OmegaTOfficial" />
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "",
+    "url": "http://omegat.org/it",
+    "headline": "Howto - Using the OmegaT text export function (scripting interface)",
+    "description": "OmegaT is a free open-source translation memory application for professional translators written in Java.",
+    "publisher": {
+      "@type": "Organization",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://omegat.org/img/omegat_96.png"
+      }
+    },
+    "sameAs": ["https://sourceforge.net/projects/omegat/","https://github.com/omegat-org/","https://twitter.com/OmegaTOfficial","https://www.facebook.com/OmegaTOfficial"]
+  }</script>
+  <!-- /SEO tags -->
+</head>
+
+
+
+  <body id="page">
+
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#omegat-menu" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"><!----></span>
+        <span class="icon-bar"><!----></span>
+        <span class="icon-bar"><!----></span>
+      </button>
+      <a class="navbar-brand" href="/it/">
+        <img alt="OmegaT" class="logo-omegat" src="/img/omegat.svg" height="80" width="80"/>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right" id="omegat-menu">
+      <ul class="nav navbar-nav">
+        <li><a href="/it/download">Scaricare OmegaT</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li><a href="/it/resources">Altre risorse OmegaT</a></li>
+        <li><a href="/it/documentation">Documentazione</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span data-toggle="popover" class="language-popover" data-trigger="manual" data-container="body" title="-" data-content="-" data-placement="bottom">
+              Languages<span class="caret"><!----></span> <span class="sr-only">(current)</span>
+            </span>
+          </a>
+          <ul class="dropdown-menu languages">
+            
+            <li><a href="/ar/howtos/text_export">&#x628;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</a></li>
+            
+            <li><a href="/ca/howtos/text_export">Catal&#xE0;</a></li>
+            
+            <li><a href="/cz/howtos/text_export">&#x10C;e&#x161;tina</a></li>
+            
+            <li><a href="/de/howtos/text_export">Deutsch</a></li>
+            
+            <li><a href="/el/howtos/text_export">&#x395;&#x3BB;&#x3BB;&#x3B7;&#x3BD;&#x3B9;&#x3BA;&#x3AC;</a></li>
+            
+            <li><a href="/howtos/text_export">English</a></li>
+            
+            <li><a href="/es/howtos/text_export">Espa&#xF1;ol</a></li>
+            
+            <li><a href="/fr/howtos/text_export">Fran&#xE7;ais</a></li>
+            
+            <li><a href="/gl/howtos/text_export">Galego</a></li>
+            
+            <li><a href="/id/howtos/text_export">Bahasa Indonesia</a></li>
+            
+            <li><a href="/ia/howtos/text_export">Interlingua</a></li>
+            
+            <li><a href="/it/howtos/text_export">Italiano</a></li>
+            
+            <li><a href="/ko/howtos/text_export">&#xD55C;&#xAD6D;&#xC5B4;</a></li>
+            
+            <li><a href="/hu/howtos/text_export">Magyar</a></li>
+            
+            <li><a href="/ja/howtos/text_export">&#x65E5;&#x672C;&#x8A9E;</a></li>
+            
+            <li><a href="/nl/howtos/text_export">Nederlands</a></li>
+            
+            <li><a href="/pl/howtos/text_export">Polski</a></li>
+            
+            <li><a href="/br/howtos/text_export">Portugu&#xEA;s (Brazil)</a></li>
+            
+            <li><a href="/pt/howtos/text_export">Portugu&#xEA;s (Portugal)</a></li>
+            
+            <li><a href="/ru/howtos/text_export">&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</a></li>
+            
+            <li><a href="/sq/howtos/text_export">Shqip</a></li>
+            
+            <li><a href="/sk/howtos/text_export">Sloven&#x10D;ina</a></li>
+            
+            <li><a href="/si/howtos/text_export">Sloven&#x161;&#x10D;ina</a></li>
+            
+            <li><a href="/hr/howtos/text_export">Srpskohrvatski</a></li>
+            
+            <li><a href="/fi/howtos/text_export">Suomi</a></li>
+            
+            <li><a href="/sv/howtos/text_export">Svenska</a></li>
+            
+            <li><a href="/zh_CN/howtos/text_export">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</a></li>
+            
+            <li><a href="/zh_TW/howtos/text_export">&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="jumbotron jumbo-page titles-howtos-text_export"><h1>Howto - Using the OmegaT text export function (scripting interface)</h1></div>
+        
+    <div class="container">
+
+<h2>Guida di OmegaT: <br/>Usare la funzione di esportazione di testo di OmegaT (interfaccia di script)</h2>
+
+<p>Dalla versione 2.0.1, OmegaT ha una funzione di esportazione testo. Questa guida descrive la funzione e i suoi possibili usi. Inoltre, il pacchetto <a href="../../omegatk/te-scripts.zip">te-scripts.zip</a> contiene alcuni script in tcl/tk molto semplici, che sono destinati a illustrare l'uso della funzione.</p>
+
+<h3>Scopo</h3>
+
+<p>La funzione di esportazione testo esporta dati dall'interno del progetto corrente di OmegaT in file di testo semplice. Attualmente, i dati esportati sono:</p>
+
+<p>- Il contenuto del segmento del testo sorgente, quando il segmento è aperto <br/> - Il contenuto del segmento del testo di destinazione, quando il segmento è aperto <br/> - Il testo evidenziato nel testo di destinazione, quando viene premuta la relativa scorciatoia</p>
+
+<p>I programmatori e gli autori di script possono utilizzare i file contenenti questo testo per aggiungere ulteriori funzioni a OmegaT. Non hanno bisogno di alcuna conoscenza di Java; può essere utilizzata la maggior parte dei linguaggi di programmazione, se non tutti, e conseguite funzioni utili anche con abilità di programmazione relativamente limitate.</p>
+
+<h3>Usare la funzione di esportazione di testo</h3>
+
+<p>Per usare la funzione di esportazione testo è necessario prima abilitarla nello stesso OmegaT:</p>
+
+<p>Opzioni &gt; Comportamento di modifica... </p>
+
+<p>Quindi spuntare la casella &quot;Esporta il segmento in file di testo&quot;.</p>
+
+<p>I file appaiono nella sottocartella /script della cartella dei file delle impostazioni utente di OmegaT<br/> (per la posizione della cartella file utente di OmegaT sul proprio sistema operativo, vedere il Manuale dell'utente (F1 all'interno di OmegaT) &gt; File e cartelle di OmegaT &gt; File delle impostazioni utente):</p>
+
+<p>source.txt - contiene il testo sorgente del segmento <br/> target.txt - contiene il testo di destinazione del segmento <br/> selection.txt - contiene il testo evidenziato dall'utente, quando si preme Ctrl-Maiusc-C o è selezionato Modifica &gt; Esporta la selezione</p>
+
+<p>Il contenuto dei file viene sovrascritto sia quando un nuovo segmento è aperto (source.txt e target.txt), sia quando una nuova selezione è esportata (selection.txt). I file sono di testo semplice non formattato.</p>
+
+<h3>Usare gli script di esempio</h3>
+
+<p>Deve essere installato Tcl/tk, se non lo è già. Tcl/tk può essere ottenuto da un certo numero di fonti; tcl.activestate.com è una fonte popolare. Gli utenti Mac OSX dovrebbero installare tcl/tk dai loro supporti di sistema e gli utenti Linux dovrebbero trovarlo nell'archivio della loro distribuzione, se non è già installato (nota per gli utenti Ubuntu: l'implementazione dei caratteri dell'installazione predefinita tcl/tk in Ubuntu al momento attuale - versione 9.10 - è spaventosa, ma può essere rettificata).</p>
+
+<p>Per rendere il funzionamento del codice script più chiaro, ogni script esegue essenzialmente una sola funzione. Se, in pratica, dovessero essere utilizzate più funzioni insieme, sarebbe più efficiente combinarle in un unico file di script.</p>
+
+<p>Gli script di esempio forniti <a href="../../omegatk/te-scripts.zip">qui</a> avviano tutti una finestra, ma gli script che svolgono funzioni in sottofondo sono abbastanza immaginabili.</p>
+
+<p>Per avviare uno script:</p>
+
+<p>Copiare lo script nella cartella &quot;script&quot; di OmegaT, ossia quella contenente source.txt, ecc. (gli script possono, in linea di principio, essere collocati ovunque, ma devono essere poi richiamati con aggiunta del percorso ai file di script).</p>
+
+<p>In base alla configurazione del proprio sistema, è possibile avviare gli script semplicemente facendovi sopra clic col mouse. In alternativa:</p>
+
+<p>Aprire una finestra a riga di comando (console, terminale, prompt di DOS)</p>
+
+<p>Passare alla cartella (directory) script, ad esempio (sui sistemi Windows XP):</p>
+
+<p>cd C:\Documents and Settings\User Name\Application Data\OmegaT\script</p>
+
+<p>Avviare lo script con &quot;wish&quot; seguito dal nome del file di script, ad esempio:</p>
+
+<p>wish te-basic-source.tcl</p>
+
+<h3>Descrizioni dei singoli script</h3>
+
+<p><strong>te-basic-source</strong></p>
+
+<p>Questo script consente di visualizzare il testo sorgente in una finestra separata. Come tale, non fa nulla che non sia stato già fatto dal pannello dell'Editor di OmegaT; il suo scopo è quello di illustrare come il testo può essere estratto da un file di script e reso disponibile per ulteriori script. Il contenuto della finestra dello script è modificabile e può essere copiata e incollata nel pannello dell'Editor di OmegaT.</p>
+
+<p><strong>te-basic-target</strong></p>
+
+<p>Uguale a te-basic-source, ma per il testo di destinazione.</p>
+
+<p><strong>te-warning</strong></p>
+
+<p>Oltre alla visualizzazione del testo di origine, questo script fornisce una casella di immissione in cui l'utente può digitare una stringa (ad esempio, una parola). Quando viene aperto un segmento di OmegaT contenente questa stringa, lo script emette un avviso. L'avviso assume la forma del testo nella finestra script viene evidenziata in giallo. Inoltre, se supportato dall'hardware e dal sistema operativo (non sempre), verrà emesso un segnale acustico.</p>
+
+<p>Di seguito è riportato un esempio di utilizzo di questa funzione. Il traduttore ha un testo contenente la frase &quot;abc&quot; e ha completato una prima bozza, traducendo &quot;abc&quot; come &quot;abc&quot;. Si scopre poi che &quot;abc&quot; dovrebbe essere tradotto come &quot;def&quot;. Anziché trovare tutti i casi di &quot;abc&quot; e correggerli prima di procedere (il che è possibile ma presenta inconvenienti), potrebbe semplicemente decidere di correggerli nel corso della successiva stesura di bozza. In questo caso, un &quot;promemoria&quot; in ogni segmento interessato potrebbe risultare utile.</p>
+
+<p><strong>te-notags</strong></p>
+
+<p>Come suggerisce il nome, questo script elimina automaticamente i tag da un segmento di OmegaT (destinazione). Questo è utile per il <i>controllo</i> a video di segmenti con molti tag, dato che è facile trascurare gli spazi mancanti o doppi, per esempio.</p>
+
+<p><strong>te-tags</strong></p>
+
+<p>Questo script visualizza il segmento di destinazione in un particolare tipo di carattere (cablato a codice nello script, ma può essere modificato) piuttosto che il tipo di carattere predefinito. I tag vengono visualizzati in un carattere diverso per renderli meno invadenti. A differenza di te-notags, il traduttore può lavorare in questa finestra, dunque copiare e incollare totalmente il contenuto nel pannello dell'Editor di OmegaT.</p>
+
+<p><strong>te-gloss-highlight</strong></p>
+
+<p>Questo script legge il contenuto di un file di glossario e mette in evidenza tutti i termini trovati in esso all'interno del segmento (origine) corrente. Il file di glossario deve costituito da solo due colonne, avere il nome GLOSS.utf8 ed essere presente nella cartella /script.</p>
+
+<p><strong>te-gloss-subst</strong></p>
+
+<p>Uguale a te-gloss-highlight, ma sostituisce i termini di origine nel glossario con quelli di destinazione.</p>
+
+<p><strong>te-gloss-subst-highlight</strong></p>
+
+<p>Combina la sostituzione evidenziando le funzioni di te-gloss-highlight e te-gloss-subst.</p>
+
+<h3>Programmazione in tcl/tk</h3>
+
+<p>Tcl/tk ha una serie di vantaggi come linguaggio di script:</p>
+
+<p>- È facile da imparare<br/> - È gratuito<br/> - È ampiamente utilizzato, dunque si può trovare aiuto in Internet<br/> - Il componente Tk lo rende semplice per produrre interfacce utente grafiche<br/> - Ci sono tanti buoni libri e altre risorse relative disponibili (almeno in inglese)<br/> - È orientato alla stringa, rendendolo particolarmente adatto per applicazioni che prevedono testo</p>
+
+<p>Sono disponibili per i principianti diverse esercitazioni in linea, come ad esempio:</p>
+
+<p><a href="http://www.dci.clrc.ac.uk/Publications/Cookbook/index.html">www.dci.clrc.ac.uk/Publications/Cookbook/index.html</a><br/>
+<a href="http://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html">www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html</a><br/>
+<a href="http://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html">www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html</a></p>
+
+<p>Se si vuole davvero imparare a usare tcl/tk è fortemente consigliato il testo &quot;Practical Programming in Tcl and Tk&quot; di Brent Welch, ISBN: 0-13-038560-3. È probabile sia un po' troppo tecnico per i neofiti della programmazione ma, dopo aver lavorato attraverso una delle esercitazioni in linea, anche loro lo troveranno utile.</p>
+
+<p>Copyright Marc Prior 2009-2011</p>
+
+</div>
+
+
+
+
+
+    <footer class="container-fluid text-center">
+  <a href="#page" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"><!----></span>
+  </a>
+  <div class="container-fluid">
+      <div class="col-sm-offset-3 col-sm-2 footer-column">
+        <h4>Connect</h4>
+        <div class="header-line"><!----></div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="https://sourceforge.net/projects/omegat/"><img alt="Sourceforge" src="/img/sourceforge.svg" height="24" width="24"/> Sourceforge</a></li>
+            <li><a href="https://github.com/omegat-org/"><img alt="Github" src="/img/github.svg" height="24" width="24"/> Github</a></li>
+            <li><a href="https://twitter.com/OmegaTOfficial"><img alt="Twitter" src="/img/twitter.svg" height="24" width="24"/> Twitter</a></li>
+            <li><a href="https://www.facebook.com/OmegaTOfficial"><img alt="Facebook" src="/img/facebook.svg" height="24" width="24"/> Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-2 footer-column">
+        <h4>Documentazione</h4>
+        <div class="header-line"><!----></div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="/it/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
+            <li><a href="/it/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
+            <li><a href="/it/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
+            <li><a href="/it/reviews"><span class="glyphicon glyphicon-heart"></span> Recensioni di OmegaT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-2 footer-column">
+        <h4>The OmegaT Project</h4>
+        <div class="header-line"><!----></div>
+        <div class="footer-links">
+          <ul>
+            <li>
+            <a href="/it/contact"><span class="glyphicon glyphicon-envelope"></span> Contatti e supporto</a>
+            </li>
+            <li>
+            <a href="/it/about"><span class="glyphicon glyphicon-question-sign"></span> Chi siamo</a>
+            </li>
+            <li>
+            <a href="/it/philosophy"><span class="glyphicon glyphicon-console"></span> Filosofia</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  <p class="footer-copyright">Copyright &#xA9; 2017 - <a href="/it/">omegat.org</a></p>
+</footer>
+
+
+  </body>
+
+</html>
+

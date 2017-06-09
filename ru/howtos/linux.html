@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>OmegaT on Linux HowTo - OmegaT</title>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180"    href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest"                            href="/manifest.json">
+  <link rel="mask-icon" color="#5bbad5"           href="/safari-pinned-tab.svg">
+  <meta name="apple-mobile-web-app-title" content="OmegaT">
+  <meta name="application-name" content="OmegaT">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link type="text/css" rel="stylesheet" href="/ru/assets/omegat.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/ru/assets/omegat.js"></script>
+
+
+  <meta name="description" content="OmegaT is a free open-source translation memory application for professional translators written in Java.">
+
+  <link rel="canonical" href="http://omegat.org/ru/howtos/linux">
+  <link rel="alternate" type="application/rss+xml" title="Omegat - The Free Open-Source Translation Memory Tool" href="/ru/feed.xml">
+
+  
+    <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){ i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-87327-16', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  
+
+  <!-- SEO tags -->
+  
+  <meta property="og:title"       content="OmegaT on Linux HowTo - OmegaT" />
+  <meta property="og:description" content="OmegaT is a free open-source translation memory application for professional translators written in Java." />
+  <meta property="og:url"         content="http://omegat.org/ru/howtos/linux" />
+  <meta property="og:site_name"   content="OmegaT - The Free Translation Memory Tool" />
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@OmegaTOfficial" />
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "",
+    "url": "http://omegat.org/ru",
+    "headline": "OmegaT on Linux HowTo",
+    "description": "OmegaT is a free open-source translation memory application for professional translators written in Java.",
+    "publisher": {
+      "@type": "Organization",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://omegat.org/img/omegat_96.png"
+      }
+    },
+    "sameAs": ["https://sourceforge.net/projects/omegat/","https://github.com/omegat-org/","https://twitter.com/OmegaTOfficial","https://www.facebook.com/OmegaTOfficial"]
+  }</script>
+  <!-- /SEO tags -->
+</head>
+
+
+
+  <body id="page">
+
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#omegat-menu" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"><!----></span>
+        <span class="icon-bar"><!----></span>
+        <span class="icon-bar"><!----></span>
+      </button>
+      <a class="navbar-brand" href="/ru/">
+        <img alt="OmegaT" class="logo-omegat" src="/img/omegat.svg" height="80" width="80"/>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right" id="omegat-menu">
+      <ul class="nav navbar-nav">
+        <li><a href="/ru/download">Загрузить OmegaT</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li><a href="/ru/resources">Прочие ресурсы OmegaT</a></li>
+        <li><a href="/ru/documentation">Документация</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span data-toggle="popover" class="language-popover" data-trigger="manual" data-container="body" title="-" data-content="-" data-placement="bottom">
+              Languages<span class="caret"><!----></span> <span class="sr-only">(current)</span>
+            </span>
+          </a>
+          <ul class="dropdown-menu languages">
+            
+            <li><a href="/ar/howtos/linux">&#x628;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</a></li>
+            
+            <li><a href="/ca/howtos/linux">Catal&#xE0;</a></li>
+            
+            <li><a href="/cz/howtos/linux">&#x10C;e&#x161;tina</a></li>
+            
+            <li><a href="/de/howtos/linux">Deutsch</a></li>
+            
+            <li><a href="/el/howtos/linux">&#x395;&#x3BB;&#x3BB;&#x3B7;&#x3BD;&#x3B9;&#x3BA;&#x3AC;</a></li>
+            
+            <li><a href="/howtos/linux">English</a></li>
+            
+            <li><a href="/es/howtos/linux">Espa&#xF1;ol</a></li>
+            
+            <li><a href="/fr/howtos/linux">Fran&#xE7;ais</a></li>
+            
+            <li><a href="/gl/howtos/linux">Galego</a></li>
+            
+            <li><a href="/id/howtos/linux">Bahasa Indonesia</a></li>
+            
+            <li><a href="/ia/howtos/linux">Interlingua</a></li>
+            
+            <li><a href="/it/howtos/linux">Italiano</a></li>
+            
+            <li><a href="/ko/howtos/linux">&#xD55C;&#xAD6D;&#xC5B4;</a></li>
+            
+            <li><a href="/hu/howtos/linux">Magyar</a></li>
+            
+            <li><a href="/ja/howtos/linux">&#x65E5;&#x672C;&#x8A9E;</a></li>
+            
+            <li><a href="/nl/howtos/linux">Nederlands</a></li>
+            
+            <li><a href="/pl/howtos/linux">Polski</a></li>
+            
+            <li><a href="/br/howtos/linux">Portugu&#xEA;s (Brazil)</a></li>
+            
+            <li><a href="/pt/howtos/linux">Portugu&#xEA;s (Portugal)</a></li>
+            
+            <li><a href="/ru/howtos/linux">&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</a></li>
+            
+            <li><a href="/sq/howtos/linux">Shqip</a></li>
+            
+            <li><a href="/sk/howtos/linux">Sloven&#x10D;ina</a></li>
+            
+            <li><a href="/si/howtos/linux">Sloven&#x161;&#x10D;ina</a></li>
+            
+            <li><a href="/hr/howtos/linux">Srpskohrvatski</a></li>
+            
+            <li><a href="/fi/howtos/linux">Suomi</a></li>
+            
+            <li><a href="/sv/howtos/linux">Svenska</a></li>
+            
+            <li><a href="/zh_CN/howtos/linux">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</a></li>
+            
+            <li><a href="/zh_TW/howtos/linux">&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="jumbotron jumbo-page titles-howtos-linux"><h1>OmegaT on Linux HowTo</h1></div>
+        
+    <div class="container">
+
+<h2>OmegaT на GNU/Linux</h2>
+
+
+<p>В данном руководстве представлена информация об использовании OmegaT на GNU/Linux. Оно написано так, чтобы быть понятным даже не очень опытным пользователям этой системы.</p>
+
+<h3>Java</h3>
+
+<p>OmegaT работает не на всех версиях Java. Перед загрузкой программы убедитесь, что системная версия Java подходит для запуска OmegaT. Для этого, откройте терминал (консоль, командную строку; «konsole» в KDE, или «gnome-terminal» в Gnome) и введите команду:</p>
+
+<p>java -version</p>
+
+<p>Будет показана информация о версии установленной в системе Java.</p>
+
+<p>- если у вас версия Java от компании Sun (Oracle): убедитесь, что эта версия соответствует системным требованиям, указанным в файле «readme.txt» (т.е. убедитесь, что у вас достаточно новая версия Java).</p>
+
+<p>- если у вас версия Java от другого поставщика: до недавних пор OmegaT работала только на версии Java от компании Sun. Сейчас OmegaT может работать на OpenJDK, свободной реализации Java, установленной на многих GNU/Linux системах, однако, некоторые функции пока не доступны (например, поддерживается не весь набор аргументов командной строки), поставляется другой набор шрифтов и были замечены некоторые проблемы с отображением содержимого окон и сегментацией.</p>
+
+<p>Если вы не уверены, подходит ли ваша версия Java, вы можете:</p>
+
+<p>- просто установить версию OmegaT без Java и проверить работает ли она. Если нет, ничего страшного, можно установить другую версию Java на системном уровне или локально для конкретного пользователя.</p>
+
+<p>- установить в систему ещё одну версию Java и запускать OmegaT с её помощью.</p>
+
+<p>- установить версию OmegaT с Java.</p>
+
+<p>Если ваша версия Java не подходит для OmegaT, и вы хотите установить версию компании Sun (Oracle), проверьте, нет ли соответствующего пакета в репозитории вашего дистрибутива. Это значительно упростит установку.</p>
+
+<p>Если же вы скачаете Java непосредственно с веб-сайта компании Sun (Oracle), установка будет достаточно простой, однако, затем вам придётся вручную настраивать вашу систему для использования этой версии по умолчанию. Пользоваться этим способом не рекомендуется, особенно если вы ещё новичок в GNU/Linux.</p>
+
+<p>Ну и всегда есть возможность воспользоваться «запасным аэродромом», то есть установить версию OmegaT, поставляемую с Java.</p>
+
+<h3>Выбор и загрузка OmegaT</h3>
+
+<p>Для GNU/Linux доступны следующие версии OmegaT:</p>
+
+<p>- «Standard», «Latest», «/trunk» и «Webstart». Рекомендуется использовать версию «Latest». (Подробное описание различий в версиях можно прочитать на сайте OmegaT, на странице «Загрузка».)</p>
+
+<p>- без или с JRE, то есть кросс-платформенная сборка без JRE, например, «OmegaT_2.1.7_02_Beta_Without_JRE.zip» и сборка работающая только на GNU/Linux с JRE, например, «OmegaT_2.1.7_02_Beta_Linux.tar.bz2». В зависимости от установленной версии Java (см. выше), выберите версию с или без JRE.</p>
+
+<p>Заметьте, что в GNU/Linux можно легко установить несколько версий OmegaT, и они не будут конфликтовать друг с другом. Однако, они будут использовать один и те же файлы настроек (если только не запускать их от разных пользователей).</p>
+
+<h3>Распаковка архива</h3>
+
+<p>Предположим, что вы загрузили последнюю бета-версию с или без JRE. Переместите архив в подходящую папку. Рекомендуется создать папку <i>/omegat</i> в каталоге «/usr/local/lib», или в «/opt». Для этого вам понадобятся права суперпользователя.</p>
+
+<p>Распакуйте архив в созданную папку. В большинстве дистрибутивов не возникнет никаких проблем с распаковкой архивов zip и tar.bz2 (формат tar.bz2 часто используется в GNU/Linux системах).</p>
+
+<p>Какой-то особой процедуры «установки» нет, всё что нужно, это скачать архив и распаковать его. При первом запуске OmegaT создаёт несколько файлов и папок, специфичных для пользователя, запустившего её.</p>
+
+<h3>Запуск OmegaT из командной строки</h3>
+
+<p>Сначала попробуйте запустить OmegaT из командной строки. Откройте терминал (как это сделать описано выше). Прав суперпользователя для этого не требуются. В командной строке перейдите в каталог, содержащий OmegaT.jar, например:</p>
+
+<p>cd /usr/local/lib/omegat/OmegaT_2.3.0</p>
+
+<p>и нажмите «Ввод». (Путь будет слегка отличаться, в зависимости от того, куда вы поместили OmegaT и как назвали каталог с программой.)</p>
+
+<p>Затем введите команду запуска и нажмите «Ввод». Как правило, команда запуска выглядит так:</p>
+
+<p>java -jar OmegaT.jar</p>
+
+<p>Заметьте, что команда чувствительна к регистру.</p>
+
+<p>Если вы планируете использовать версию Java, которая не является системной версией по умолчанию, необходимо также указать путь к этой версии Java. Если вы установили OmegaT с JRE, в скрипте запуска правильный путь уже прописан. Если вы установили вторую версию Java, но не сделали её версией по умолчанию на системном уровне, в команде запуска полный путь всё же придётся указывать. Путь выглядит примерно как «/usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java», постарайтесь запомнить его, когда будете устанавливать Java. В этому случае команда запуска примет вид:</p>
+
+<p>/usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java -jar OmegaT.jar</p>
+
+<p>При написании скрипта запуска не путайте путь к OmegaT.jar и путь к нужной версии Java, Первый передаётся в качестве аргумента команде «cd», если скрипт и OmegaT.jar находятся в разных папках. Второй указывается, если необходимо использовать версию Java отличную от версии по умолчанию.</p>
+
+<h3>Запуск OmegaT с помощью скрипта</h3>
+
+<p>Если вам удалось запустить OmegaT из командной строки, для удобства можно создать скрипт запуска. Простейший скрипт поставляется вместе с OmegaT: это файл с именем «OmegaT» в главном каталоге программы. Вы можете легко создать свой собственный скрипт (или даже скрипты): это просто текстовые файлы, которые можно создавать и редактировать в обычном текстовом редакторе.</p>
+
+<p>В скрипте запуска должны содержаться описанные выше команды, т.е.:</p>
+
+<p>- простейший скрипт запуска OmegaT:</p>
+
+<p>java -jar OmegaT.jar</p>
+
+<p>- возможно, потребуется дополнительно указать путь к исполняемому файлу Java, например:</p>
+
+<p>/usr/lib/jvm/java-6-sun-1.6.0.16/jre/bin/java -jar OmegaT.jar</p>
+
+<p>- а также добавить в начало скрипта команду для перехода в каталог, содержащий OmegaT.jar:</p>
+
+<p>cd /usr/local/lib/omegat/OmegaT_2.3.0</p>
+
+<p>В зависимости от вашего дистрибутива может понадобиться сделать скрипт запуска исполняемым. Для этого щёлкните правой кнопкой мыши на файле скрипта, выберите «свойства» -&gt; «права» -&gt; «сделать исполняемым». (Точные называния зависят от вашего дистрибутива). В зависимости от того, где находится ваш скрипт, для этой операции вам могут понадобиться привилегии суперпользователя.</p>
+
+<h3>Проверка скрипта запуска</h3>
+
+<p>Откройте терминал. С помощью команды «cd» перейдите в каталог, в котором хранится ваш скрипт запуска. Введите</p>
+
+<p>./OmegaT</p>
+
+<p>(предположим, что вы назвали скрипт запуска именно так) и нажмите «Ввод». Должна запуститься OmegaT.</p>
+
+<p>В некоторых дистрибутивах OmegaT можно запустить, просто щёлкнув по скрипту запуска в файловом менеджере.</p>
+
+<h3>Использование скрипта на системном уровне</h3>
+
+<p>Скопируйте или переместите скрипт запуска в папку, прописанную в системной переменной PATH (как правило, это «/usr/local/bin»). Если файл скрипта раньше находился в той же папке, что и OmegaT.jar, то в начало скрипта следует добавить команду «cd» с соответствующим аргументом, чтобы перейти в папку OmegaT.</p>
+
+<p>Чтобы убедиться в том, что OmegaT можно запустить из любой папки вашей системы, откройте терминал, введите имя скрипта запуска и нажмите «Ввод». Имя скрипта следует вводить с учётом регистра; если вы хотите запускать OmegaT вводя, например, <i>omt</i>, просто переименуйте скрипт из <i>OmegaT</i> в <i>omt</i>.</p>
+
+<p>Есть ещё более простой способ запуска OmegaT: нажмите Alt+F2, в появившемся окне введите имя скрипта запуска и нажмите «Ввод».</p>
+
+<p>В системе может быть несколько скриптов, запускающих OmegaT. Благодаря этому можно, например, попробовать новую версию OmegaT, не удаляя при этом предыдущей: просто напишите ещё один скрипт для новой версии и назовите его как-нибудь иначе. Также, несколько скриптов могут понадобиться, для запуска OmegaT с разными аргументами командной строки, что полезно, например, при использовании модуля «tokenizer».</p>
+
+<h3>Удобный запуск OmegaT</h3>
+
+<p>Если вы дочитали до этого места, вы, наверное, уже понимаете, что существует несколько способов запуска OmegaT, один удобней другого.</p>
+
+<p>Следующим шагом будет добавление OmegaT на рабочий стол и в меню. Как это сделать, зависит от вашей системы и вашего рабочего стола (например, KDE или Gnome).</p>
+
+<p>В KDE можно добавить OmegaT в меню следующим образом:</p>
+
+<p>Центр Управления - Рабочий стол - Панели - Меню - Редактировать меню - Файл - Новый элемент/Новое подменю</p>
+
+<p>Затем, после выбора подходящего меню добавьте новое подменю или элемент, нажав соответствующую кнопку. В качестве имени нового элемента введите «OmegaT».</p>
+
+<p>Используйте кнопку обзора, чтобы ввести путь к скрипту запуска (файл с именем «OmegaT» в папке, в которую вы распаковали архив) в поле «Команда».</p>
+
+<p>Щёлкните на кнопке выбора значка (справа от полей «Имя», «Описание», «Комментарий»), затем нажмите «Другие значки» - «Обзор» и перейдите в подкаталог «/images» папки OmegaT. Выберите значок OmegaT.</p>
+
+<p>Наконец, сохраните изменения, выбрав Файл - Сохранить.</p>
+
+<p>В Gnome можно добавить OmegaT на панель (она находится в верхней части экрана) следующим образом:</p>
+
+<p>Щёлкните правой кнопкой мыши по панели и выберите команду «Добавить на панель».</p>
+
+<p>В поле «Имя» введите «OmegaT»; используйте кнопку обзора, чтобы ввести путь к скрипту запуска OmegaT в поле «Команда». Выделите скрипт и нажмите «ОК».</p>
+
+<p>Щёлкните на кнопке выбора значка, затем нажмите «Обзор» и перейдите в подкаталог «/images» папки OmegaT. Выберите OmegaT_icon.png. Возможно, Gnome не покажет файлы со значками, так как по умолчанию ожидает SVG-файлы, однако, если всё-таки выбрать папку, значки будут отображены и файл OmegaT_icon.png можно будет выбрать.</p>
+
+<h3>Настройка скрипта запуска</h3>
+
+<p>OmegaT понимает некоторые аргументы командной строки. Как видно из их названия, эти аргументы можно вводить в командной строке, но, помимо этого, их можно добавить в скрипт запуска. Полный список аргументов можно найти в руководстве пользователя.</p>
+
+<h3>Использование Kaptain для запуска OmegaT</h3>
+
+<p>Другим способом запуска OmegaT в GNU/Linux является использование Kaptain. Kaptain предоставляет удобный графический интерфейс, в котором можно запустить OmegaT с различными аргументами. Это может быть особенно полезно, если вы часто используете различные версии OmegaT или часто запускаете программу с различными аргументами, например, с разными языками модуля «tokenizer».<br/> <a href="../../resources/omegat.kaptn">Пример Kaptain-скрипта</a><br/> <a href="http://kaptain.sourceforge.net/">Более подробная информация о Kaptain</a></p>
+
+
+<h3>Отображение шрифтов в OmegaT на GNU/Linux</h3>
+
+<p>Отображение шрифтов в OmegaT на GNU/Linux может различаться в зависимости от:</p>
+
+<p>- используемой версии Java (один и тот же шрифт в Sun Java и OpenJDK может выглядеть совершенно по разному);</p>
+
+<p>- доступных/выбранных шрифтов;</p>
+
+<p>- размера шрифта;</p>
+
+<p>- параметров сглаживания (параметры задаются в виде аргумента командной строки, за более подробной информацией обратитесь к Руководству пользователя).</p>
+
+<h3>Удаление OmegaT</h3>
+
+<p>Чтобы полностью удалить OmegaT из системы:</p>
+
+<p>Удалите папку с программой. В дальнейшем она может быть легко восстановлена.</p>
+
+<p>Удалите каталог «~/.omegat» из домашних папок всех пользователей, которые использовали OmegaT. Это приведёт к удалению всех пользовательских настроек (например, правил сегментации). Если каталог удалён полностью (а не просто перемещён в корзину), пользовательские настройки восстановить уже нельзя.</p>
+
+<p>Удалите любые созданные вами скрипты и элементы рабочего стола, которые имеют отношение к OmegaT.</p>
+
+<p>Удаление OmegaT не приведёт к удалению ваших проектов (только если вы не храните их в одном каталоге с программой или настройками, что в любом случае является плохой идеей).</p>
+
+<p>Copyright Марк Прайор 2010-2011</p>
+
+</div>
+
+
+
+
+
+    <footer class="container-fluid text-center">
+  <a href="#page" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"><!----></span>
+  </a>
+  <div class="container-fluid">
+      <div class="col-sm-offset-3 col-sm-2 footer-column">
+        <h4>Connect</h4>
+        <div class="header-line"><!----></div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="https://sourceforge.net/projects/omegat/"><img alt="Sourceforge" src="/img/sourceforge.svg" height="24" width="24"/> Sourceforge</a></li>
+            <li><a href="https://github.com/omegat-org/"><img alt="Github" src="/img/github.svg" height="24" width="24"/> Github</a></li>
+            <li><a href="https://twitter.com/OmegaTOfficial"><img alt="Twitter" src="/img/twitter.svg" height="24" width="24"/> Twitter</a></li>
+            <li><a href="https://www.facebook.com/OmegaTOfficial"><img alt="Facebook" src="/img/facebook.svg" height="24" width="24"/> Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-2 footer-column">
+        <h4>Документация</h4>
+        <div class="header-line"><!----></div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="/ru/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
+            <li><a href="/ru/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
+            <li><a href="/ru/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
+            <li><a href="/ru/reviews"><span class="glyphicon glyphicon-heart"></span> Обзоры системы OmegaT</a></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-2 footer-column">
+        <h4>The OmegaT Project</h4>
+        <div class="header-line"><!----></div>
+        <div class="footer-links">
+          <ul>
+            <li>
+            <a href="/ru/contact"><span class="glyphicon glyphicon-envelope"></span> Контакты и поддержка</a>
+            </li>
+            <li>
+            <a href="/ru/about"><span class="glyphicon glyphicon-question-sign"></span> О проекте</a>
+            </li>
+            <li>
+            <a href="/ru/philosophy"><span class="glyphicon glyphicon-console"></span> Philosophy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  <p class="footer-copyright">Copyright &#xA9; 2017 - <a href="/ru/">omegat.org</a></p>
+</footer>
+
+
+  </body>
+
+</html>
+

@@ -25,16 +25,10 @@
 <loc>http://omegat.org/download</loc>
 </url>
 <url>
-<loc>http://omegat.org/ex_doc</loc>
-</url>
-<url>
 <loc>http://omegat.org/howtos/export_uncleaned_rtf</loc>
 </url>
 <url>
 <loc>http://omegat.org/howtos/google_translate</loc>
-</url>
-<url>
-<loc>http://omegat.org/howto</loc>
 </url>
 <url>
 <loc>http://omegat.org/howtos/iceni_infix</loc>
@@ -47,9 +41,6 @@
 </url>
 <url>
 <loc>http://omegat.org/howtos/localizing_omegat</loc>
-</url>
-<url>
-<loc>http://omegat.org/manual</loc>
 </url>
 <url>
 <loc>http://omegat.org/howtos/ms_translator</loc>
@@ -86,9 +77,6 @@
 </url>
 <url>
 <loc>http://omegat.org/howtos/tokenizer</loc>
-</url>
-<url>
-<loc>http://omegat.org/tutorials</loc>
 </url>
 <url>
 <loc>http://omegat.org/files/DA_Guillardeau.pdf</loc>

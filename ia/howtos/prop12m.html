@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ia">
+
+  <head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Propagation and one-to-many matching HowTo - OmegaT</title>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180"    href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest"                            href="/manifest.json">
+  <link rel="mask-icon" color="#5bbad5"           href="/safari-pinned-tab.svg">
+  <meta name="apple-mobile-web-app-title" content="OmegaT">
+  <meta name="application-name" content="OmegaT">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link type="text/css" rel="stylesheet" href="/ia/assets/omegat.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/ia/assets/omegat.js"></script>
+
+
+  <meta name="description" content="OmegaT is a free open-source translation memory application for professional translators written in Java.">
+
+  <link rel="canonical" href="http://omegat.org/ia/howtos/prop12m">
+  <link rel="alternate" type="application/rss+xml" title="Omegat - The Free Open-Source Translation Memory Tool" href="/ia/feed.xml">
+
+  
+    <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){ i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-87327-16', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  
+
+  <!-- SEO tags -->
+  
+  <meta property="og:title"       content="Propagation and one-to-many matching HowTo - OmegaT" />
+  <meta property="og:description" content="OmegaT is a free open-source translation memory application for professional translators written in Java." />
+  <meta property="og:url"         content="http://omegat.org/ia/howtos/prop12m" />
+  <meta property="og:site_name"   content="OmegaT - The Free Translation Memory Tool" />
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@OmegaTOfficial" />
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "",
+    "url": "http://omegat.org/ia",
+    "headline": "Propagation and one-to-many matching HowTo",
+    "description": "OmegaT is a free open-source translation memory application for professional translators written in Java.",
+    "publisher": {
+      "@type": "Organization",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://omegat.org/img/omegat_96.png"
+      }
+    },
+    "sameAs": ["https://sourceforge.net/projects/omegat/","https://github.com/omegat-org/","https://twitter.com/OmegaTOfficial","https://www.facebook.com/OmegaTOfficial"]
+  }</script>
+  <!-- /SEO tags -->
+</head>
+
+
+
+  <body id="page">
+
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#omegat-menu" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"><!----></span>
+        <span class="icon-bar"><!----></span>
+        <span class="icon-bar"><!----></span>
+      </button>
+      <a class="navbar-brand" href="/ia/">
+        <img alt="OmegaT" class="logo-omegat" src="/img/omegat.svg" height="80" width="80"/>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right" id="omegat-menu">
+      <ul class="nav navbar-nav">
+        <li><a href="/ia/download">Discargar OmegaT</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li><a href="/ia/resources">Altere ressources OmegaT</a></li>
+        <li><a href="/ia/documentation">Documentation</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span data-toggle="popover" class="language-popover" data-trigger="manual" data-container="body" title="-" data-content="-" data-placement="bottom">
+              Languages<span class="caret"><!----></span> <span class="sr-only">(current)</span>
+            </span>
+          </a>
+          <ul class="dropdown-menu languages">
+            
+            <li><a href="/ar/howtos/prop12m">&#x628;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</a></li>
+            
+            <li><a href="/ca/howtos/prop12m">Catal&#xE0;</a></li>
+            
+            <li><a href="/cz/howtos/prop12m">&#x10C;e&#x161;tina</a></li>
+            
+            <li><a href="/de/howtos/prop12m">Deutsch</a></li>
+            
+            <li><a href="/el/howtos/prop12m">&#x395;&#x3BB;&#x3BB;&#x3B7;&#x3BD;&#x3B9;&#x3BA;&#x3AC;</a></li>
+            
+            <li><a href="/howtos/prop12m">English</a></li>
+            
+            <li><a href="/es/howtos/prop12m">Espa&#xF1;ol</a></li>
+            
+            <li><a href="/fr/howtos/prop12m">Fran&#xE7;ais</a></li>
+            
+            <li><a href="/gl/howtos/prop12m">Galego</a></li>
+            
+            <li><a href="/id/howtos/prop12m">Bahasa Indonesia</a></li>
+            
+            <li><a href="/ia/howtos/prop12m">Interlingua</a></li>
+            
+            <li><a href="/it/howtos/prop12m">Italiano</a></li>
+            
+            <li><a href="/ko/howtos/prop12m">&#xD55C;&#xAD6D;&#xC5B4;</a></li>
+            
+            <li><a href="/hu/howtos/prop12m">Magyar</a></li>
+            
+            <li><a href="/ja/howtos/prop12m">&#x65E5;&#x672C;&#x8A9E;</a></li>
+            
+            <li><a href="/nl/howtos/prop12m">Nederlands</a></li>
+            
+            <li><a href="/pl/howtos/prop12m">Polski</a></li>
+            
+            <li><a href="/br/howtos/prop12m">Portugu&#xEA;s (Brazil)</a></li>
+            
+            <li><a href="/pt/howtos/prop12m">Portugu&#xEA;s (Portugal)</a></li>
+            
+            <li><a href="/ru/howtos/prop12m">&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</a></li>
+            
+            <li><a href="/sq/howtos/prop12m">Shqip</a></li>
+            
+            <li><a href="/sk/howtos/prop12m">Sloven&#x10D;ina</a></li>
+            
+            <li><a href="/si/howtos/prop12m">Sloven&#x161;&#x10D;ina</a></li>
+            
+            <li><a href="/hr/howtos/prop12m">Srpskohrvatski</a></li>
+            
+            <li><a href="/fi/howtos/prop12m">Suomi</a></li>
+            
+            <li><a href="/sv/howtos/prop12m">Svenska</a></li>
+            
+            <li><a href="/zh_CN/howtos/prop12m">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</a></li>
+            
+            <li><a href="/zh_TW/howtos/prop12m">&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="jumbotron jumbo-page titles-howtos-prop12m"><h1>Propagation and one-to-many matching HowTo</h1></div>
+        
+    <div class="container">
+
+<h2>Guida al propagation e al concordantia un a multe</h2>
+
+<h3>Introduction</h3>
+
+<p>Iste Guida describe le functiones de OmegaT pro le propagation automatic del concordantia e le concordantia un a multe.</p>
+
+<h3>Propagation</h3>
+
+<p>Per arrangiamento initial, OmegaT uses automatic match propagation. Isto significa que si tosto que un segmento es rendite, le identic traduction es automaticamente inserite in omne le identic segmentos. Si un segmento esseva ja rendite e un segmento identic plus tarde sur in le texto es alora cambiate, le segmento anterior essera re portate in linea con le segmento cambiate. Segmentos le qual occurre plus que un vice es denominate in OmegaT como &quot;segmentos non unic&quot;.</p>
+
+<p>Selectionar Vista &gt; marca le Segmentos Non Unic causa solmente le prime occurrentia de un segmento non unic esser monstrate in nigre, e secundo e ulterior occurrentias esser monstrate in gris. Isto es utile quando on debe verificar le traduction, depois que solmente le prime occurrentia del segmentos identic pote necessitar de esser verificate. Le usator pote in consequentia vider immediatemente que un segmento in gris, plus tosto que nigre, esseva jam verificate. (Si Optiones &gt; Vista &gt; &quot;includer le prime segmento non unic quando marca le segmentos non unic&quot; es seligite, omne segmentos non unic includente le  primo es marcate in iste maniera.)</p>
+
+
+<h3>Concordantia un a multe (del version 2.5.0 in avante)</h3>
+
+<p>In le major parte del casos, le translator desirara render segmentos identic intra un projecto in le mesme maniera. Pro casos ubi duo o magis segmentos identic require traductiones distincte, OmegaT offere &quot;le concordantia un a multe&quot;.</p>
+
+<p>Le function de concordantia un a multe de OmegaT in prime loco assume que segmentos identic debe esser rendite in le mesme maniera. Iste traduction es describite como le &quot;traduction base&quot;. Pro producer un traduction que es differente de le traduction base, clicca con dextera le mus intra le segmento e selige &quot;Crea traduction alternative&quot;. Ora iste segmento pote esser rendite como desiderate foras de altere occurrentias de illo automaticamente esser facite identic ad illo.</p>
+
+<p>Tu pote haber tante &quot;traductiones alternative&quot; quam tu vole de segmentos identic, ma il pote sol esser un traduction base (o necun del toto).</p>
+
+<p>Pro render traduction base un traduction alternative, clicca con le dextero con le mouse e selige &quot;Usa como translation base&quot;. Isto rendera traduction base le traduction currente. Omne altere occurrentias del identic segmento que esseva previemente le &quot;traduction base&quot; ora essera alineate con iste traduction.</p>
+
+<p>Pro remover le stato de &quot;traduction alternative&quot; de un singule segmento e reportar lo in linea con le &quot;traduction base&quot;, dele simplemente le contento del segmento. Isto ha le effecto de  cancellar le &quot;traduction alternative&quot; stato al mesme tempore; le traduction del segmento revertera dunque e &amp;&amp;&amp;&amp;&amp; of the default translation. Le contento de un segmento pote esser delite completemente o per medio del vias breve del claviero Ctrl+A &gt; Ctrl+X &gt; Enter, per click dextere con le mouse e le commando del menu Remove traduction, o simplemente usante le clave Dele (plure vices).</p>
+
+
+<h3>Summario del commandos de propagation e concordantia un a multe</h3>
+
+<p><b>Necun</b> (comportamento base): omne le segmentos identic es automaticamente traducite al mesme maniera.</p>
+
+<p><b>Marca segmentos non unic</b>: segmentos identic es marcate in gris (cambia le apparentia, ma non le comportamento).</p>
+
+<p><b>Crea traduction alternative</b>: rende le segmento unic. Le cambios a iste segmento non ha effecto sur le cetere segmentos, ni le cambios al &quot;traduction base&quot; affice lo.</p>
+
+<p><b>Remove traduction</b>: dele le contento del segmento, causante le insertion (quando es pressate Enter) del traduction base.</p>
+
+<p><b>Usa como traduction base</b>: rende le segmento active &quot;traduction base&quot; e ergo omne le previe segmentos &quot;traduction base&quot; a alineate con illo.</p>
+
+
+
+<h3>Punctos a notar</h3>
+
+<p>Pro qualque typos de file, OmegaT usa le segmentos precedente e sequente pro confectionar segmentos unic. crear un &quot;traduction alternative&quot; dunque fide sur identic segmentos que ha distincte segmentos precedente e sequente. Ubi duo segmentos ha alsi identic segmentos precedente e sequente (per exemplo quando un pagina integre compare duo vices in le texto), illos non pote esser rendite in modo differente de le un le altere in OmegaT, i.e. il non es possibile render un de illos un &quot;traduction alternative&quot;.</p>
+
+<p>Le &quot;segmento non unic&quot; concerne ambe le traductiones, base e alternative. Alora, segmentos que es marcate (con le typo de character gris) como non unic es marcate como non unic sin respecto si esseva create o non traductiones alternative.</p>
+
+<p>Per arrangiamento base, Le commando (Ctrl+U) Vade al segmento non rendite sequente, salta al segmento non rendite sequente, saltante le traductiones  propagate in le processo. Si Optiones &gt; Comportamento del modifica &gt; &quot;Vade al sequente segmento non rendite arresta quando il ha is al minus un translation alternative&quot; es seligite totevia e al minus un traduction alternative de un segmento non unic esseva create, iste function tracta omne occurrentias de un segmento (si traductiones base o alternative) ut non rendite, i.e. non salta los.</p>
+
+
+<p>Copyright Marc Prior 2012</p>
+
+</div>
+
+
+
+
+
+    <footer class="container-fluid text-center">
+  <a href="#page" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"><!----></span>
+  </a>
+  <div class="container-fluid">
+      <div class="col-sm-offset-3 col-sm-2 footer-column">
+        <h4>Connect</h4>
+        <div class="header-line"><!----></div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="https://sourceforge.net/projects/omegat/"><img alt="Sourceforge" src="/img/sourceforge.svg" height="24" width="24"/> Sourceforge</a></li>
+            <li><a href="https://github.com/omegat-org/"><img alt="Github" src="/img/github.svg" height="24" width="24"/> Github</a></li>
+            <li><a href="https://twitter.com/OmegaTOfficial"><img alt="Twitter" src="/img/twitter.svg" height="24" width="24"/> Twitter</a></li>
+            <li><a href="https://www.facebook.com/OmegaTOfficial"><img alt="Facebook" src="/img/facebook.svg" height="24" width="24"/> Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-2 footer-column">
+        <h4>Documentation</h4>
+        <div class="header-line"><!----></div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="/ia/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
+            <li><a href="/ia/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
+            <li><a href="/ia/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
+            <li><a href="/ia/reviews"><span class="glyphicon glyphicon-heart"></span> Recensiones de OmegaT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-2 footer-column">
+        <h4>The OmegaT Project</h4>
+        <div class="header-line"><!----></div>
+        <div class="footer-links">
+          <ul>
+            <li>
+            <a href="/ia/contact"><span class="glyphicon glyphicon-envelope"></span> Contacto e supporto</a>
+            </li>
+            <li>
+            <a href="/ia/about"><span class="glyphicon glyphicon-question-sign"></span> Qui es nos</a>
+            </li>
+            <li>
+            <a href="/ia/philosophy"><span class="glyphicon glyphicon-console"></span> Philosophia</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  <p class="footer-copyright">Copyright &#xA9; 2017 - <a href="/ia/">omegat.org</a></p>
+</footer>
+
+
+  </body>
+
+</html>
+
