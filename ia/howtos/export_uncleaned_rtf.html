@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format - OmegaT</title>
+  <title>Guida - Exportar ex OmegaT al formato 'RTF non mundate' de Trados - OmegaT</title>
 
   
   <link rel="apple-touch-icon" sizes="180x180"    href="/apple-touch-icon.png">
@@ -26,7 +26,7 @@
   <script type="text/javascript" src="/ia/assets/omegat.js"></script>
 
 
-  <meta name="description" content="OmegaT is a free open-source translation memory application for professional translators written in Java.">
+  <meta name="description" content="OmegaT es un programma gratuite pro memoria de traduction, scripte in Java.">
 
   <link rel="canonical" href="http://omegat.org/ia/howtos/export_uncleaned_rtf">
 
@@ -42,10 +42,10 @@
 
   <!-- SEO tags -->
   
-  <meta property="og:title"       content="Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format - OmegaT" />
-  <meta property="og:description" content="OmegaT is a free open-source translation memory application for professional translators written in Java." />
+  <meta property="og:title"       content="Guida - Exportar ex OmegaT al formato 'RTF non mundate' de Trados - OmegaT" />
+  <meta property="og:description" content="OmegaT es un programma gratuite pro memoria de traduction, scripte in Java." />
   <meta property="og:url"         content="http://omegat.org/ia/howtos/export_uncleaned_rtf" />
-  <meta property="og:site_name"   content="OmegaT - The Free Translation Memory Tool" />
+  <meta property="og:site_name"   content="OmegaT - Le application gratuite pro memorias de traduction" />
   
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@OmegaTOfficial" />
@@ -55,8 +55,8 @@
     "@type": "WebSite",
     "name": "",
     "url": "http://omegat.org/ia",
-    "headline": "Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format",
-    "description": "OmegaT is a free open-source translation memory application for professional translators written in Java.",
+    "headline": "Guida - Exportar ex OmegaT al formato 'RTF non mundate' de Trados",
+    "description": "OmegaT es un programma gratuite pro memoria de traduction, scripte in Java.",
     "publisher": {
       "@type": "Organization",
       "logo": {
@@ -88,17 +88,17 @@
     </div>
     <div class="collapse navbar-collapse navbar-right" id="omegat-menu">
       <ul class="nav navbar-nav">
-        <li><a href="/ia/download">Discargar OmegaT</a></li>
+        <li><a href="/ia/download">Discargamento</a></li>
       </ul>
       <ul class="nav navbar-nav">
-        <li><a href="/ia/resources">Altere ressources OmegaT</a></li>
+        <li><a href="/ia/resources">Ressources</a></li>
         <li><a href="/ia/documentation">Documentation</a></li>
       </ul>
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span data-toggle="popover" class="language-popover" data-trigger="manual" data-container="body" title="-" data-content="-" data-placement="bottom">
-              Languages<span class="caret"><!----></span> <span class="sr-only">(current)</span>
+              Linguas<span class="caret"><!----></span> <span class="sr-only">(current)</span>
             </span>
           </a>
           <ul class="dropdown-menu languages">
@@ -167,96 +167,90 @@
 </nav>
 
 
-    <div class="jumbotron jumbo-page titles-howtos-export_uncleaned_rtf"><h1>Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format</h1></div>
+    <div class="jumbotron jumbo-page titles-howtos-export_uncleaned_rtf"><h1>Guida - Exportar ex OmegaT al formato 'RTF non mundate' de Trados</h1></div>
         
     <div class="container">
-
-<h2>Guida de OmegaT: <br/>Exportar ex OmegaT al formato  &quot;RTF non mundate Trados&quot;</h2>
-
-<p>Iste Guida explica como producer  un file &quot;RTF non mundate&quot; de ex projecto OmegaT. Iste formato pote esser un practic formato de intercambio pro usatores de altere applicationes CAT, in particular Trados e Wordfast Classic.</p> 
-
-<p>Punctos a notar:</p>
-<p>Iste combination codice/procedura non esseva ancora probate a fundo (ben que le reportos initial es promittente).</p>
-<p>Le script es utilisabile sol pro le platteforma Windows.</p>
-<p>Illo habilita solmente le traductores a generar (id es committer) files non mundate Trados. Illo non habilita illes a  &quot;traducer&quot; le files bilingue supplite per lor clientes.</p>
-
-<p><strong>1. Insere le delimiters de segmento de Trados</strong></p>
-
-<p>Pro producer a file bilingue OpenOffice.Org continente le delimiters de segmento Trados, claude le projecto OmegaT, pois exeque le script AutoIt sequente (necessita Windows) sur le the file project_save.tmx del projecto:</p>
-
-<a href="http://www.leuce.com/tempfile/omtautoit/uncleanifyTMX.zip">http://www.leuce.com/tempfile/omtautoit/uncleanifyTMX.zip</a>
-<p><strong>2. Crea documentos final</strong></p>
-
-<p>Crea le documentos final como de costume e converte le file al formato Microsoft Word.</p>
-
-<p><strong>3. Applicar le stilos pro delimitar</strong></p>
-
-<p>In Microsoft Word, exeque le macro sequente pro applicar le stilos apposite al documento(s) final:</p>
-
-<p>Private Sub AddTw4winStyles()<br/>
+  <p>Iste Guida explica como producer un file "RTF non mundate" ex un projecto OmegaT. Iste formato pote esser un practic formato de intercambio pro usatores de altere applicationes CAT, in particular Trados e Wordfast Classic.</p>
+  <p>Punctos a notar:</p>
+  <p>Iste combination codice/procedura non esseva ancora probate a fundo (ben que le reportos initial es promittente).</p>
+  <p>Le script es utilisabile solo pro le platteforma Windows.</p>
+  <p>Illo habilita solmente le traductores a generar (id es committer) files non mundate Trados. Illo non habilita illes a "traducer" le files bilingue supplite per lor clientes.</p>
+  <p>
+    <strong>1. Insere le delimitatores de segmento de Trados</strong>
+  </p>
+  <p>Pro generar un file OpenOffice.Org bilingue continente le delimitatores de segmento de Trados, claude le projecto OmegaT, postea exeque le script AutoIt sequente (Windows es necesse) sur le file project_save.tmx del projecto:</p>
+  <p>
+    <a href="http://www.leuce.com/autoit/uncleanifyTMX.zip">www.leuce.com/autoit/uncleanifyTMX.zip</a>
+  </p>
+  <p>
+    <strong>2. Crea documentos final</strong>
+  </p>
+  <p>Crea le documentos final como de costume e converte le file al formato Microsoft Word.</p>
+  <p>
+    <strong>3. Applicar le stilos al delimitatores</strong>
+  </p>
+  <p>In Microsoft Word, exeque le macro sequente pro applicar le stilos apposite al documento(s) final:</p>
+  <p>Private Sub AddTw4winStyles()<br/>
 
 On Error Resume Next<br/>
 
 Dim sMark, sInt, sExt As Style<br/>
 
-Set sMark = ActiveDocument.Styles.Add(Name:=&quot;tw4winMark&quot;, _<br/>
+Set sMark = ActiveDocument.Styles.Add(Name:="tw4winMark", _<br/>
 
-    Type:=wdStyleTypeCharacter)<br/>
+&nbsp;&nbsp;&nbsp; Type:=wdStyleTypeCharacter)<br/>
 
 With sMark.Font<br/>
 
-  .Name = &quot;Courier&quot;<br/>
+&nbsp; .Name = "Courier"<br/>
 
-  .Size = 11<br/>
+&nbsp; .Size = 11<br/>
 
-  .Hidden = True<br/>
+&nbsp; .Hidden = True<br/>
 
-  .Subscript = True<br/>
+&nbsp; .Subscript = True<br/>
 
-  .ColorIndex = wdViolet<br/>
+&nbsp; .ColorIndex = wdViolet<br/>
 
 End With<br/>
 
-Set sInt = ActiveDocument.Styles.Add(Name:=&quot;tw4winInternal&quot;, _<br/>
+Set sInt = ActiveDocument.Styles.Add(Name:="tw4winInternal", _<br/>
 
-    Type:=wdStyleTypeCharacter)<br/>
+&nbsp;&nbsp;&nbsp; Type:=wdStyleTypeCharacter)<br/>
 
 sInt.LanguageID = wdNoProofing<br/>
 
 With sInt.Font<br/>
 
-  .Name = &quot;Courier&quot;<br/>
+&nbsp; .Name = "Courier"<br/>
 
-  .Size = 11<br/>
+&nbsp; .Size = 11<br/>
 
-  .ColorIndex = wdRed<br/>
+&nbsp; .ColorIndex = wdRed<br/>
 
 End With<br/>
 
-Set sExt = ActiveDocument.Styles.Add(Name:=&quot;tw4winExternal&quot;, _<br/>
+Set sExt = ActiveDocument.Styles.Add(Name:="tw4winExternal", _<br/>
 
-    Type:=wdStyleTypeCharacter)<br/>
+&nbsp;&nbsp;&nbsp; Type:=wdStyleTypeCharacter)<br/>
 
 sExt.LanguageID = wdNoProofing<br/>
 
 With sExt.Font<br/>
 
-  .Name = &quot;Courier&quot;<br/>
+&nbsp; .Name = "Courier"<br/>
 
-  .Size = 11<br/>
+&nbsp; .Size = 11<br/>
 
-  .ColorIndex = wdGray50<br/>
+&nbsp; .ColorIndex = wdGray50<br/>
 
 End With<br/>
 
 End Sub<br/>
 
 </p>
-
-<p>Copyright Marc Prior 2009-2011</p>
-
+  <p>Copyright Marc  2009-2011</p>
 </div>
-
 
 
 
@@ -267,7 +261,7 @@ End Sub<br/>
   </a>
   <div class="container-fluid">
       <div class="col-sm-offset-3 col-sm-2 footer-column">
-        <h4>Connect</h4>
+        <h4>Connecter</h4>
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
@@ -284,22 +278,22 @@ End Sub<br/>
         <div class="footer-links">
           <ul>
             <li><a href="/ia/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
-            <li><a href="/ia/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
-            <li><a href="/ia/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
-            <li><a href="/ia/reviews"><span class="glyphicon glyphicon-heart"></span> Recensiones de OmegaT</a></li>
+            <li><a href="/ia/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Breve instructiones</a></li>
+            <li><a href="/ia/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> Guida</a></li>
+            <li><a href="/ia/reviews"><span class="glyphicon glyphicon-heart"></span> Revistas</a></li>
           </ul>
         </div>
       </div>
       <div class="col-sm-2 footer-column">
-        <h4>The OmegaT Project</h4>
+        <h4>Le projecto OmegaT Projecto</h4>
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
             <li>
-            <a href="/ia/contact"><span class="glyphicon glyphicon-envelope"></span> Contacto e supporto</a>
+            <a href="/ia/contact"><span class="glyphicon glyphicon-envelope"></span> Contactos e supporto</a>
             </li>
             <li>
-            <a href="/ia/about"><span class="glyphicon glyphicon-question-sign"></span> Qui es nos</a>
+            <a href="/ia/about"><span class="glyphicon glyphicon-question-sign"></span> A proposito</a>
             </li>
             <li>
             <a href="/ia/philosophy"><span class="glyphicon glyphicon-console"></span> Philosophia</a>
