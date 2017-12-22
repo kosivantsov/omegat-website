@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Howto - Using Google Translate in OmegaT - OmegaT</title>
+  <title>Guida - Usare Google Translate in OmegaT - OmegaT</title>
 
   
   <link rel="apple-touch-icon" sizes="180x180"    href="/apple-touch-icon.png">
@@ -26,7 +26,7 @@
   <script type="text/javascript" src="/it/assets/omegat.js"></script>
 
 
-  <meta name="description" content="OmegaT is a free open-source translation memory application for professional translators written in Java.">
+  <meta name="description" content="OmegaT è un'applicazione di memoria di traduzione gratuita per traduttori professionisti scritta in Java.">
 
   <link rel="canonical" href="http://omegat.org/it/howtos/google_translate">
 
@@ -42,10 +42,10 @@
 
   <!-- SEO tags -->
   
-  <meta property="og:title"       content="Howto - Using Google Translate in OmegaT - OmegaT" />
-  <meta property="og:description" content="OmegaT is a free open-source translation memory application for professional translators written in Java." />
+  <meta property="og:title"       content="Guida - Usare Google Translate in OmegaT - OmegaT" />
+  <meta property="og:description" content="OmegaT è un'applicazione di memoria di traduzione gratuita per traduttori professionisti scritta in Java." />
   <meta property="og:url"         content="http://omegat.org/it/howtos/google_translate" />
-  <meta property="og:site_name"   content="OmegaT - The Free Translation Memory Tool" />
+  <meta property="og:site_name"   content="OmegaT - lo strumento gratuito per memorie di traduzione" />
   
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@OmegaTOfficial" />
@@ -55,8 +55,8 @@
     "@type": "WebSite",
     "name": "",
     "url": "http://omegat.org/it",
-    "headline": "Howto - Using Google Translate in OmegaT",
-    "description": "OmegaT is a free open-source translation memory application for professional translators written in Java.",
+    "headline": "Guida - Usare Google Translate in OmegaT",
+    "description": "OmegaT è un'applicazione di memoria di traduzione gratuita per traduttori professionisti scritta in Java.",
     "publisher": {
       "@type": "Organization",
       "logo": {
@@ -88,17 +88,17 @@
     </div>
     <div class="collapse navbar-collapse navbar-right" id="omegat-menu">
       <ul class="nav navbar-nav">
-        <li><a href="/it/download">Scaricare OmegaT</a></li>
+        <li><a href="/it/download">Scarica</a></li>
       </ul>
       <ul class="nav navbar-nav">
-        <li><a href="/it/resources">Altre risorse OmegaT</a></li>
+        <li><a href="/it/resources">Risorse</a></li>
         <li><a href="/it/documentation">Documentazione</a></li>
       </ul>
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span data-toggle="popover" class="language-popover" data-trigger="manual" data-container="body" title="-" data-content="-" data-placement="bottom">
-              Languages<span class="caret"><!----></span> <span class="sr-only">(current)</span>
+              Lingue<span class="caret"><!----></span> <span class="sr-only">(current)</span>
             </span>
           </a>
           <ul class="dropdown-menu languages">
@@ -169,74 +169,69 @@
 </nav>
 
 
-    <div class="jumbotron jumbo-page titles-howtos-google_translate"><h1>Howto - Using Google Translate in OmegaT</h1></div>
+    <div class="jumbotron jumbo-page titles-howtos-google_translate"><h1>Guida - Usare Google Translate in OmegaT</h1></div>
         
     <div class="container">
-
-<h2>Guida di OmegaT: <br/>Usare Google Translate in OmegaT</h2>
-
-<p>Oltre alla pagina web in cui gli utenti possono semplicemente incollare il testo per la traduzione, Google Translate fornisce anche un'interfaccia (API) che può essere utilizzata dalle applicazioni CAT per accedere al servizio. Dal dicembre 2011 Google richiede un pagamento per l'uso di questo servizio. Questa guida descrive come configurare la funzione di OmegaT.</p>
-
-<p>1. Se non se ne possiede già uno, aprire un conto con google.com.</p>
-
-<p>2. <a href="http://code.google.com/apis/language/translate/v2/pricing.html">Seguire questo collegamento per richiedere a Google</a> la chiave di Google Translate API v2. Assicurarsi di avere a portata di mano i dati della carta di credito. Google genererà la chiave API, una stringa con circa 39 caratteri.</p>
-
-<p>3. Assegnare la chiave alla procedura di avvio di OmegaT come segue, a seconda se si utilizza Windows, Mac, o avviare OmegaT dalla riga di comando o tramite uno script:</p>
-
-<p><b>Utenti Windows:</b></p>
-
-<p>3.1. Individuare il file di configurazione OmegaT.l4J.ini (la posizione predefinita è C:\Programmi (x86) \OmegaT).</p>
-<p>3.2. Per modificare questo file potrebbe essere necessaria la modalità amministratore, oppure lo si può spostare temporaneamente in una posizione diversa del proprio disco rigido.</p>
-<p>3.3. Aprire OmegaT.l4J.ini in un editor di testo</p>
-<p>3.4. Aggiungere la riga seguente al testo del file:</p>
-<p>-Dgoogle.api.key=XXXXXXXX </p>
-<p>(dove &quot;XXXXXXXX&quot; è la chiave API fornita da Google).</p>
-<p>3.5. Salvare OmegaT.l4J.ini (e se necessario, tornare alla cartella OmegaT).</p>
-
-<p><b>Utenti di Mac</b></p>
-
-<p>3.6 Fare clic col pulsante destro del mouse su OmegaT.app e selezionare &quot;Mostra contenuto del pacchetto&quot;.</p>
-<p>3.7 Fare clic col pulsante destro del mouse sul file Info.plist e selezionare l'editor preferito per aprire il file.</p>
-<p>3.8. Trovare le righe:</p>
-<p>&lt;key&gt;apple.awt.graphics.UseQuartz&lt;/key&gt;</p>
-<p>&lt;string&gt;true&lt;/string&gt;</p>
-<p>e, subito dopo queste, aggiungere le righe:</p>
-<p>&lt;key&gt;google.api.key&lt;/key&gt;</p>
-<p>&lt;string&gt;XXXXXXXX&lt;/string&gt;</p>
-<p>dove &quot;XXXXXXXX&quot; è la propria chiave API di Google Translate.</p>
-<p>3.9 Salvare Info.plist.</p>
-
-<p><b>Utenti di Linux</b></p>
-
-<p>3.10 Assicurarsi di avere installato l'avviatore Kaptain (<a href="./linux.html">riferirsi eventualmente alla guida di Linux)</a>, quindi immettere la chiave API di Google Translate nel relativo campo della scheda di connettività.</p>
-
-<p><b>Utenti che avviano OmegaT dalla riga di comando o da uno script:</b></p>
-
-<p>3.11 Aggiungere il seguente argomento per il comando di avvio:</p>
-
-<p>-Dgoogle.api.key=XXXXXXXX</p>
-
-<p>dove &quot;XXXXXXXX&quot; è la propria chiave API di Google Translate.</p>
-
-<p>Il comando base di avvio con il Google Translate API aggiunto sarà quindi:</p>
-
-<p>java -jar -Dgoogle.api.key=XXXXXXXX OmegaT.jar</p>
-
-<p>4. Configurazione in OmegaT</p>
-<p>4.1. Avviare OmegaT</p>
-<p>4.2. Selezionare Opzioni &gt; Traduzione automatica</p>
-<p>4.3. Spuntare Google Translate v2 (lasciando le altre opzioni non spuntate)</p>
-
-<p>5. Nota:</p>
-
-<p>5.1 la traduzione automatica di Google è un servizio a pagamento (US$ 20,00 per milione di caratteri). È possibile controllarne l'utilizzo quotidiano dal proprio account Google. Nel menu in alto:</p>
-<p>More &gt; Even More &gt; Innovation/Code &gt; APIs Console &gt; Service/Translate API</p>
-
-
-<p>Copyright Milan Hubacek e Marc Prior 2011</p>
-
+  <p>Oltre alla pagina web in cui gli utenti possono semplicemente incollare il testo per la traduzione, Google Translate fornisce anche un'interfaccia (API) che può essere utilizzata dalle applicazioni CAT per accedere al servizio. Dal dicembre 2011 Google richiede un pagamento per l'uso di questo servizio. Questa guida descrive come configurare la funzione di OmegaT.</p>
+  <p>1. Se non se ne possiede già uno, aprire un conto con google.com.</p>
+  <p>2. <a href="http://code.google.com/apis/language/translate/v2/pricing.html">Seguire questo collegamento per richiedere a Google</a> la chiave di Google Translate API v2. Assicurarsi di avere a portata di mano i dati della carta di credito. Google genererà la chiave API, una stringa con circa 39 caratteri.</p>
+  <p>3. Assegnare la chiave alla procedura di avvio di OmegaT come segue, a seconda se si utilizza Windows, Mac, o avviare OmegaT dalla riga di comando o tramite uno script:</p>
+  <p>
+    <b>Utenti Windows:</b>
+  </p>
+  <p>3.1. Individuare il file di configurazione OmegaT.l4J.ini (la posizione predefinita è C:\Programmi (x86) \OmegaT).</p>
+  <p>3.2. Per modificare questo file potrebbe essere necessaria la modalità amministratore, oppure lo si può spostare temporaneamente in una posizione diversa del proprio disco rigido.</p>
+  <p>3.3. Aprire OmegaT.l4J.ini in un editor di testo</p>
+  <p>3.4. Individuare le righe seguenti:</p>
+  <pre>
+# Google Translate v2 API key
+#-Dgoogle.api.key=xxxxx
+</pre>
+  <p>e rimuovere "#" all'inizio della riga -Dgoogle.api.key.</p>
+  <pre>
+# Google Translate v2 API key
+-Dgoogle.api.key=xxxxx
+</pre>
+  <p>(dove "xxxxx" è la chiave API fornita da Google).</p>
+  <p>3.5. Salvare OmegaT.l4J.ini (e se necessario, tornare alla cartella OmegaT).</p>
+  <p>
+    <b>Utenti di Mac</b>
+  </p>
+  <p>3.6. Fare clic col pulsante destro del mouse su OmegaT.app e selezionare "Mostra contenuto del pacchetto".</p>
+  <p>3.7. Individuare il file OmegaT.app/Contents/MacOS/OmegaT.sh e selezionare il proprio editor di testo preferito per aprirlo.</p>
+  <p>3.8. Individuare le righe seguenti:
+<pre>
+# Google Translate v2 API key
+#GOOGLE_API_KEY="-Dgoogle.api.key=0123456789A0123456789B0123456789C0123456789D"
+</pre>
+e rimuovere "#" all'inizio della riga. Questa riga definisce GOOGLE_API_KEY.</p>
+  <pre>
+# Google Translate v2 API key
+GOOGLE_API_KEY="-Dgoogle.api.key=XXXXXXXX"
+</pre>
+  <p>dove "XXXXXXXX" è la propria chiave API di Google Translate.</p>
+  <p>3.9 Salvare OmegaT.sh.</p>
+  <p>
+    <b>Utenti di Linux</b>
+  </p>
+  <p>3.10 Assicurarsi di avere installato l'avviatore Kaptain (<a href="./linux.html">riferirsi eventualmente alla guida di Linux)</a>, quindi immettere la chiave API di Google Translate nel relativo campo della scheda di connettività.</p>
+  <p>
+    <b>Utenti che avviano OmegaT dalla riga di comando o da uno script:</b>
+  </p>
+  <p>3.11 Aggiungere il seguente argomento per il comando di avvio:</p>
+  <p>-Dgoogle.api.key=XXXXXXXX</p>
+  <p>dove "XXXXXXXX" è la propria chiave API di Google Translate.</p>
+  <p>Il comando base di avvio con il Google Translate API aggiunto sarà quindi:</p>
+  <p>java -jar -Dgoogle.api.key=XXXXXXXX OmegaT.jar</p>
+  <p>4. Configurazione in OmegaT</p>
+  <p>4.1. Avviare OmegaT</p>
+  <p>4.2. Selezionare Opzioni &gt; Traduzione automatica</p>
+  <p>4.3. Spuntare Google Translate v2 (lasciando le altre opzioni non spuntate)</p>
+  <p>5. Nota:</p>
+  <p>5.1 la traduzione automatica di Google è un servizio a pagamento (US$ 20,00 per milione di caratteri). È possibile controllarne l'utilizzo quotidiano dal proprio account Google. Nel menu in alto:</p>
+  <p>More &gt; Even More &gt; Innovation/Code &gt; APIs Console &gt; Service/Translate API</p>
+  <p>Copyright Milan Hubacek e Marc Prior 2011</p>
 </div>
-
 
 
 
@@ -247,7 +242,7 @@
   </a>
   <div class="container-fluid">
       <div class="col-sm-offset-3 col-sm-2 footer-column">
-        <h4>Connect</h4>
+        <h4>Connetti</h4>
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
@@ -263,15 +258,15 @@
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
-            <li><a href="/it/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
-            <li><a href="/it/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
-            <li><a href="/it/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
-            <li><a href="/it/reviews"><span class="glyphicon glyphicon-heart"></span> Recensioni di OmegaT</a></li>
+            <li><a href="/it/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manuale</a></li>
+            <li><a href="/it/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Esercitazioni</a></li>
+            <li><a href="/it/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> Guide all'uso</a></li>
+            <li><a href="/it/reviews"><span class="glyphicon glyphicon-heart"></span> Recensioni</a></li>
           </ul>
         </div>
       </div>
       <div class="col-sm-2 footer-column">
-        <h4>The OmegaT Project</h4>
+        <h4>Il progetto OmegaT</h4>
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
@@ -279,7 +274,7 @@
             <a href="/it/contact"><span class="glyphicon glyphicon-envelope"></span> Contatti e supporto</a>
             </li>
             <li>
-            <a href="/it/about"><span class="glyphicon glyphicon-question-sign"></span> Chi siamo</a>
+            <a href="/it/about"><span class="glyphicon glyphicon-question-sign"></span> Informazioni su</a>
             </li>
             <li>
             <a href="/it/philosophy"><span class="glyphicon glyphicon-console"></span> Filosofia</a>

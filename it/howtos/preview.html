@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Howto - Adding a preview function to OmegaT - OmegaT</title>
+  <title>Guida - Aggiunta di una funzione di anteprima a OmegaT - OmegaT</title>
 
   
   <link rel="apple-touch-icon" sizes="180x180"    href="/apple-touch-icon.png">
@@ -26,7 +26,7 @@
   <script type="text/javascript" src="/it/assets/omegat.js"></script>
 
 
-  <meta name="description" content="OmegaT is a free open-source translation memory application for professional translators written in Java.">
+  <meta name="description" content="OmegaT è un'applicazione di memoria di traduzione gratuita per traduttori professionisti scritta in Java.">
 
   <link rel="canonical" href="http://omegat.org/it/howtos/preview">
 
@@ -42,10 +42,10 @@
 
   <!-- SEO tags -->
   
-  <meta property="og:title"       content="Howto - Adding a preview function to OmegaT - OmegaT" />
-  <meta property="og:description" content="OmegaT is a free open-source translation memory application for professional translators written in Java." />
+  <meta property="og:title"       content="Guida - Aggiunta di una funzione di anteprima a OmegaT - OmegaT" />
+  <meta property="og:description" content="OmegaT è un'applicazione di memoria di traduzione gratuita per traduttori professionisti scritta in Java." />
   <meta property="og:url"         content="http://omegat.org/it/howtos/preview" />
-  <meta property="og:site_name"   content="OmegaT - The Free Translation Memory Tool" />
+  <meta property="og:site_name"   content="OmegaT - lo strumento gratuito per memorie di traduzione" />
   
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@OmegaTOfficial" />
@@ -55,8 +55,8 @@
     "@type": "WebSite",
     "name": "",
     "url": "http://omegat.org/it",
-    "headline": "Howto - Adding a preview function to OmegaT",
-    "description": "OmegaT is a free open-source translation memory application for professional translators written in Java.",
+    "headline": "Guida - Aggiunta di una funzione di anteprima a OmegaT",
+    "description": "OmegaT è un'applicazione di memoria di traduzione gratuita per traduttori professionisti scritta in Java.",
     "publisher": {
       "@type": "Organization",
       "logo": {
@@ -88,17 +88,17 @@
     </div>
     <div class="collapse navbar-collapse navbar-right" id="omegat-menu">
       <ul class="nav navbar-nav">
-        <li><a href="/it/download">Scaricare OmegaT</a></li>
+        <li><a href="/it/download">Scarica</a></li>
       </ul>
       <ul class="nav navbar-nav">
-        <li><a href="/it/resources">Altre risorse OmegaT</a></li>
+        <li><a href="/it/resources">Risorse</a></li>
         <li><a href="/it/documentation">Documentazione</a></li>
       </ul>
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span data-toggle="popover" class="language-popover" data-trigger="manual" data-container="body" title="-" data-content="-" data-placement="bottom">
-              Languages<span class="caret"><!----></span> <span class="sr-only">(current)</span>
+              Lingue<span class="caret"><!----></span> <span class="sr-only">(current)</span>
             </span>
           </a>
           <ul class="dropdown-menu languages">
@@ -169,11 +169,11 @@
 </nav>
 
 
-    <div class="jumbotron jumbo-page titles-howtos-preview"><h1>Howto - Adding a preview function to OmegaT</h1></div>
+    <div class="jumbotron jumbo-page titles-howtos-preview"><h1>Guida - Aggiunta di una funzione di anteprima a OmegaT</h1></div>
         
-    <div class="container">
+    
+<div class="container">
 
-<h2>Guida: Aggiunta di una funzione di anteprima a OmegaT</h2>
 
 <h3>Premesse</h3>
 
@@ -198,11 +198,11 @@
 
 <ul>
 
-<li>Firefox:<br/> Gli utenti di Windows che non stanno già utilizzando Firefox possono <a href="http://www.mozilla.org">scaricarlo da www.mozilla.org</a>; la maggior parte degli utenti Linux l'avrà già installato, oppure può installarlo tramite gli archivi delle loro distribuzioni. Per aggiungere la funzione di aggiornamento automatico di Firefox, <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">installare il componente aggiuntivo &quot;ReloadEvery&quot;</a>.</li>
+<li>Firefox:<br/> Gli utenti di Windows che non stanno già utilizzando Firefox possono <a href="http://www.mozilla.org">scaricarlo da www.mozilla.org</a>; la maggior parte degli utenti Linux l'avrà già installato, oppure può installarlo tramite gli archivi delle loro distribuzioni. Per aggiungere la funzione di aggiornamento automatico di Firefox, <a href="http://addons.mozilla.org/de/firefox/addon/reloadevery/">installare il componente aggiuntivo "ReloadEvery"</a>.</li>
 
 <li>Opera:<br/> Opera è disponibile per tutte le piattaforme; inoltre è molto veloce e richiede modeste risorse hardware. <a href="http://www.opera.com">Scaricarlo da www.opera.com</a> (per gli utenti Linux: tramite l'archivio della propria distribuzione). La funzione di aggiornamento automatico è integrata.</li>
 
-<li>Chrome:<br/> Chrome è disponibile per tutte le piattaforme. <a href="http://www.google.com/chrome">Scaricare Chrome da www.google.com/chrome</a>. Per aggiungere la funzione di aggiornamento automatico in Chrome, <a href="http://chrome.google.com/webstore/detail/oilipfekkmncanaajkapbpancpelijih">scaricare e installare l'estensione &quot;Auto Refresh Plus&quot;</a> dal Web Store.</li>
+<li>Chrome:<br/> Chrome è disponibile per tutte le piattaforme. <a href="https://www.google.com/chrome/browser/desktop/index.html">Scaricare Chrome da www.google.com/chrome</a>. Per aggiungere la funzione di aggiornamento automatico in Chrome, <a href="https://chrome.google.com/webstore/detail/easy-auto-refresh/aabcgdmkeabbnleenpncegpcngjpnjkc">scaricare e installare l'estensione "Auto Refresh Plus"</a> dal Web Store. </li>
 
 </ul>
 
@@ -233,11 +233,10 @@
 
 <p>LibreOffice è una suite per ufficio completa simile a Microsoft Office. Può anche essere utilizzata per convertire i file .docx e .odt in formato ,html, ma per farlo dalla riga di comando richiede anche Unoconv, un componente aggiuntivo. <a href="http://www.libreoffice.org/">Scarica LibreOffice qui</a>; <a href="http://dag.wieers.com/home-made/unoconv/">scarica il plug-in Unoconv qui</a>.</p>
 
-<p>Una volta installato Abiword o la combinazione di LibreOffice + Uniconv, è possibile convertire i file di destinazione prodotti da OmegaT in formato html, in modo da poter essere letti dal browser. Ricordare che bisognerà prima salvare in OmegaT e produrre i documenti tradotti, avviare poi l'utilità di conversione e quindi attendere che la visualizzazione sia aggiornata nel browser.</p>
+<p>Una volta installato Abiword o la combinazione di LibreOffice+Uniconv, è possibile convertire i file di destinazione prodotti da OmegaT in formato html, in modo da poter essere letti dal browser. Ricordare che bisognerà prima salvare in OmegaT e produrre i documenti tradotti, avviare poi l'utilità di conversione e quindi attendere che la visualizzazione sia aggiornata nel browser.</p>
 
-<p>Esistono molti modi per farlo, ma una soluzione pratica è quella di utilizzare uno script che &quot;ascolta&quot; eventuali modifiche dei file tradotti prodotti da OmegaT e, una volta rilevata una modifica, avvia automaticamente l'utilità che converte i file in formato html per la lettura nel browser. Di seguito è riportato un breve schema:</p>
-
-<p><img src="/img/preview_flow.png" alt="preview_flow.png"/></p>
+<p>Esistono molti modi per farlo, ma una soluzione pratica è quella di utilizzare uno script che "ascolta" eventuali modifiche dei file tradotti prodotti da OmegaT e, una volta rilevata una modifica, avvia automaticamente l'utilità che converte i file in formato html per la lettura nel browser. Di seguito è riportato un breve schema:</p>
+<p><img src="/img/preview_flow.png" alt="preview_flow.png"></img></p>
 
 <p>Un esempio di script che realizza questa funzione è descritto nella <a href="priorview.html">Guida di Priorview</a>.</p>
 
@@ -257,7 +256,7 @@
   </a>
   <div class="container-fluid">
       <div class="col-sm-offset-3 col-sm-2 footer-column">
-        <h4>Connect</h4>
+        <h4>Connetti</h4>
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
@@ -273,15 +272,15 @@
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
-            <li><a href="/it/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
-            <li><a href="/it/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
-            <li><a href="/it/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
-            <li><a href="/it/reviews"><span class="glyphicon glyphicon-heart"></span> Recensioni di OmegaT</a></li>
+            <li><a href="/it/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manuale</a></li>
+            <li><a href="/it/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Esercitazioni</a></li>
+            <li><a href="/it/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> Guide all'uso</a></li>
+            <li><a href="/it/reviews"><span class="glyphicon glyphicon-heart"></span> Recensioni</a></li>
           </ul>
         </div>
       </div>
       <div class="col-sm-2 footer-column">
-        <h4>The OmegaT Project</h4>
+        <h4>Il progetto OmegaT</h4>
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
@@ -289,7 +288,7 @@
             <a href="/it/contact"><span class="glyphicon glyphicon-envelope"></span> Contatti e supporto</a>
             </li>
             <li>
-            <a href="/it/about"><span class="glyphicon glyphicon-question-sign"></span> Chi siamo</a>
+            <a href="/it/about"><span class="glyphicon glyphicon-question-sign"></span> Informazioni su</a>
             </li>
             <li>
             <a href="/it/philosophy"><span class="glyphicon glyphicon-console"></span> Filosofia</a>

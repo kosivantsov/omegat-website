@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Howto - Creating a new file filter - OmegaT</title>
+  <title>Guida - Creazione di un nuovo filtro di file - OmegaT</title>
 
   
   <link rel="apple-touch-icon" sizes="180x180"    href="/apple-touch-icon.png">
@@ -26,7 +26,7 @@
   <script type="text/javascript" src="/it/assets/omegat.js"></script>
 
 
-  <meta name="description" content="OmegaT is a free open-source translation memory application for professional translators written in Java.">
+  <meta name="description" content="OmegaT è un'applicazione di memoria di traduzione gratuita per traduttori professionisti scritta in Java.">
 
   <link rel="canonical" href="http://omegat.org/it/howtos/new_filter">
 
@@ -42,10 +42,10 @@
 
   <!-- SEO tags -->
   
-  <meta property="og:title"       content="Howto - Creating a new file filter - OmegaT" />
-  <meta property="og:description" content="OmegaT is a free open-source translation memory application for professional translators written in Java." />
+  <meta property="og:title"       content="Guida - Creazione di un nuovo filtro di file - OmegaT" />
+  <meta property="og:description" content="OmegaT è un'applicazione di memoria di traduzione gratuita per traduttori professionisti scritta in Java." />
   <meta property="og:url"         content="http://omegat.org/it/howtos/new_filter" />
-  <meta property="og:site_name"   content="OmegaT - The Free Translation Memory Tool" />
+  <meta property="og:site_name"   content="OmegaT - lo strumento gratuito per memorie di traduzione" />
   
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@OmegaTOfficial" />
@@ -55,8 +55,8 @@
     "@type": "WebSite",
     "name": "",
     "url": "http://omegat.org/it",
-    "headline": "Howto - Creating a new file filter",
-    "description": "OmegaT is a free open-source translation memory application for professional translators written in Java.",
+    "headline": "Guida - Creazione di un nuovo filtro di file",
+    "description": "OmegaT è un'applicazione di memoria di traduzione gratuita per traduttori professionisti scritta in Java.",
     "publisher": {
       "@type": "Organization",
       "logo": {
@@ -88,17 +88,17 @@
     </div>
     <div class="collapse navbar-collapse navbar-right" id="omegat-menu">
       <ul class="nav navbar-nav">
-        <li><a href="/it/download">Scaricare OmegaT</a></li>
+        <li><a href="/it/download">Scarica</a></li>
       </ul>
       <ul class="nav navbar-nav">
-        <li><a href="/it/resources">Altre risorse OmegaT</a></li>
+        <li><a href="/it/resources">Risorse</a></li>
         <li><a href="/it/documentation">Documentazione</a></li>
       </ul>
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span data-toggle="popover" class="language-popover" data-trigger="manual" data-container="body" title="-" data-content="-" data-placement="bottom">
-              Languages<span class="caret"><!----></span> <span class="sr-only">(current)</span>
+              Lingue<span class="caret"><!----></span> <span class="sr-only">(current)</span>
             </span>
           </a>
           <ul class="dropdown-menu languages">
@@ -169,109 +169,65 @@
 </nav>
 
 
-    <div class="jumbotron jumbo-page titles-howtos-new_filter"><h1>Howto - Creating a new file filter</h1></div>
+    <div class="jumbotron jumbo-page titles-howtos-new_filter"><h1>Guida - Creazione di un nuovo filtro di file</h1></div>
         
     <div class="container">
-
-<h2>Guida di OmegaT: Creazione di un nuovo filtro di file</h2>
-
-<p>Questa guida spiega come creare un nuovo filtro di file per l'uso con OmegaT descrivendo la creazione di un filtro rudimentale per il formato TMX. Anche se può sembrare strano voler tradurre file TMX (il motivo usuale per la creazione di un filtro di file), l'aggiunta di un filtro TMX produce l'interessante effetto di permettere la ricerca all'interno dei file TMX da qualsiasi posizione, all'interno di qualsiasi progetto OmegaT, tramite la funzione &quot;Ricerca file&quot;, cosa non possibile nell'impianto standard di OmegaT.</p>
-
-<p>Per la compilazione di OmegaT dal codice sorgente, vedere la <a href="compiling_from_source.html">Guida alla compilazione di OmegaT dal codice sorgente</a>.</p>
-
-<p>Selezionare un filtro esistente per un formato simile a quello per il nuovo filtro. In questo esempio, il filtro Help &amp; Manual è stato selezionato come base.</p>
-
-<p>Individuare la cartella src/org/omegat/filters3/xml e fare una copia della sottocartella /helpandmanual, chiamandola /tmx. In questa cartella, rinominare i due file HelpandManualDialect.java e HelpandManualFilter.java in TmxDialect.java e TmxFilter.java, rispettivamente.</p>
-
-<p>Aprire il file TMXDialect.java e il filtro TMX in un editor di testo. In entrambi i file, cercare (con discriminazione delle maiuscole/minuscole) e sostituire:</p>
-
-<p>&quot;helpandmanual&quot; con &quot;tmx&quot;<br/> &quot;HelpAndManual&quot; con &quot;TMX&quot;<br/> &quot;HELPANDMANUAL&quot; con &quot;TMX&quot;<br/> &quot;Help &amp; Manual&quot; con &quot;TMX&quot;<br/> &quot;Help&amp;Manual&quot; con &quot;TMX&quot;</p>
-
-<p>Identificare i tag a livello di paragrafo per il nuovo formato di file. Per scoprire quali dovrebbero essere i tag di paragrafo, esaminare un file di esempio in un editor di testo. In TMX, il tag di paragrafo corrispondente a un segmento è &quot;tu&quot;.</p>
-
-<p>In TMXDialect.java:</p>
-
-<p>Definire i tag di paragrafo, in questo caso modificando la riga:</p>
-
-<p>   defineParagraphTags(new String[] { &quot;caption&quot;, &quot;config-value&quot;, &quot;variable&quot;, &quot;para&quot;, &quot;title&quot;, &quot;keyword&quot;,
-                &quot;li&quot;, });</p>
-
-<p>in</p>
-
-<p>   defineParagraphTags(new String[] { &quot;tu&quot;, });</p>
-
-
-<p>È possibile eliminare la riga:</p>
-
-<p>    defineShortcut(&quot;link&quot;, &quot;li&quot;);</p>
-
-<p>in quanto è irrilevante per TMX, sebbene il nuovo filtro continuerà a funzionare anche se non si elimina.</p>
-
-<p>È possibile definire i tag fuori testo. Questi definiscono sottosegmenti che vengono presentati al di fuori del segmento in cui sono contenuti (le note a piè di pagina sono un buon esempio). Per fare questo per il filtro TMX, inserire la riga</p>
-
-<p>   defineOutOfTurnTags(new String[] { &quot;sub&quot;, });</p>
-
-<p>sotto la riga</p>
-
-<p>   defineParagraphTags(new String[] { &quot;tu&quot;, });</p>
-
-<p>Il filtro continuerà comunque a funzionare anche se non viene inserita.</p>
-
-<p>Sotto queste righe, è possibile anche inserire il codice:</p>
-
-<p>   defineIntactTags(new String[]<br/>
-   {<br/>
-   &quot;header&quot;,<br/>
-   &quot;prop&quot;,<br/>
-   &quot;ph&quot;,<br/>
-   &quot;bpt&quot;,<br/>
-   &quot;ept&quot;,<br/>
-   &quot;it&quot;,<br/>
-   &quot;ut&quot;,<br/>
-   });</p>
-
-<p>Questo codice renderà l'aspetto dei file TMX più ordinato ma, ancora una volta, esso non è assolutamente indispensabile.</p>
-
-<p>In TMXFilter.java:</p>
-
-<p>Cambiare l'estensione del file, in questo caso in .tmx, modificando la riga:</p>
-
-<p>   public Instance[] getDefaultInstances() {<br/>
-   return new Instance[] { new Instance(&quot;*.xml&quot;, null, null), new Instance(&quot;*.hmxp&quot;, null, null), };</p>
-
-<p>in:</p>
-
-<p>   public Instance[] getDefaultInstances() {<br/>
-   return new Instance[] { new Instance(&quot;*.tmx&quot;, null, null), };</p>
-
-<p>In /src/org/omegat la cartella, aprire il file Bundle.properties in un editor di testo e individuare le righe</p>
-
-<p>   # HelpAndManualFilter.java<br/>
-   HELPANDMANUAL_FILTER_NAME=Help &amp; Manual Files</p>
-
-<p>Sotto di esse, inserire le righe:</p>
-
-<p>   # TMXFilter.java<br/>
-   TMX_FILTER_NAME=TMX files</p>
-
-<p>(Se si desidera avviare OmegaT con una lingua di interfaccia utente diversa dall'inglese, apportare la stessa modifica nel file Bundle.properties localizzato interessato.)</p>
-
-<p>Nella cartella principale del codice sorgente, aprire il file manifest-template.mf in un editor di testo. Trovare le righe:</p>
-
-<p>   Name: org.omegat.filters3.xml.helpandmanual.HelpAndManualFilter<br/>
-   OmegaT-Plugin: filter</p>
-
-<p>Sotto di esse, inserire le righe:</p>
-
-<p>   Name: org.omegat.filters3.xml.tmx.TMXFilter<br/>
-   OmegaT-Plugin: filter</p>
-
-<p>Compilare come descritto nella Guida alla compilazione di OmegaT da codice sorgente. Avviare la versione appena compilata. Verificare che in &quot;Opzioni &gt; Filtri dei file&quot; sia presente il nuovo filtro. Per verificare la correttezza del suo funzionamento è possibile inserire un file TMX nella cartella /source di un progetto o, ancora meglio, eseguire una Ricerca di testo &gt; operazione di ricerca file su file TMX.</p>
-
-<p>Copyright Marc Prior 2008-2011</p>
-
+  <p>Questa guida spiega come creare un nuovo filtro di file per l'uso con OmegaT descrivendo la creazione di un filtro rudimentale per il formato TMX. Anche se può sembrare strano voler tradurre file TMX (il motivo usuale per la creazione di un filtro di file), l'aggiunta di un filtro TMX produce l'interessante effetto di permettere la ricerca all'interno dei file TMX da qualsiasi posizione, all'interno di qualsiasi progetto OmegaT, tramite la funzione "Ricerca file", cosa non possibile nell'impianto standard di OmegaT.</p>
+  <p>Per la compilazione di OmegaT dal codice sorgente, vedere la <a href="compiling_from_source.html">Guida alla compilazione di OmegaT dal codice sorgente</a>.</p>
+  <p>Selezionare un filtro esistente per un formato simile a quello per il nuovo filtro. In questo esempio, il filtro Help &amp; Manual è stato selezionato come base. </p>
+  <p>Individuare la cartella src/org/omegat/filters3/xml e fare una copia della sottocartella /helpandmanual, chiamandola /tmx. In questa cartella, rinominare i due file HelpandManualDialect.java e HelpandManualFilter.java in TmxDialect.java e TmxFilter.java, rispettivamente.</p>
+  <p>Aprire il file TMXDialect.java e il filtro TMX in un editor di testo. In entrambi i file, cercare (con discriminazione delle maiuscole/minuscole) e sostituire:</p>
+  <p>"helpandmanual" con "tmx"<br/> "HelpAndManual" con "TMX"<br/> "HELPANDMANUAL" con "TMX"<br/> "Help &amp; Manual" con "TMX"<br/> "Help&amp;Manual" con "TMX"</p>
+  <p>Identificare i tag a livello di paragrafo per il nuovo formato di file. Per scoprire quali dovrebbero essere i tag di paragrafo, esaminare un file di esempio in un editor di testo. In TMX, il tag di paragrafo corrispondente a un segmento è "tu".</p>
+  <p>In TMXDialect.java:</p>
+  <p>Definire i tag di paragrafo, in questo caso modificando la riga:</p>
+  <p>&nbsp;&nbsp;&nbsp;defineParagraphTags(new String[] { "caption", "config-value", "variable", "para", "title", "keyword",
+                "li", });</p>
+  <p>in</p>
+  <p>&nbsp;&nbsp;&nbsp;defineParagraphTags(new String[] { "tu", });</p>
+  <p>È possibile eliminare la riga:</p>
+  <p>  &nbsp;&nbsp;&nbsp;defineShortcut("link", "li");</p>
+  <p>in quanto è irrilevante per TMX, sebbene il nuovo filtro continuerà a funzionare anche se non si elimina.</p>
+  <p>È possibile definire i tag fuori testo. Questi definiscono sottosegmenti che vengono presentati al di fuori del segmento in cui sono contenuti (le note a piè di pagina sono un buon esempio). Per fare questo per il filtro TMX, inserire la riga </p>
+  <p>&nbsp;&nbsp;&nbsp;defineOutOfTurnTags(new String[] { "sub", });</p>
+  <p>sotto la riga</p>
+  <p>&nbsp;&nbsp;&nbsp;defineParagraphTags(new String[] { "tu", });</p>
+  <p>Il filtro continuerà comunque a funzionare anche se non viene inserita.</p>
+  <p>Sotto queste righe, è possibile anche inserire il codice:</p>
+  <p>&nbsp;&nbsp;&nbsp;defineIntactTags(new String[]<br/>
+&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;"header",<br/>
+&nbsp;&nbsp;&nbsp;"prop",<br/>
+&nbsp;&nbsp;&nbsp;"ph",<br/>
+&nbsp;&nbsp;&nbsp;"bpt",<br/>
+&nbsp;&nbsp;&nbsp;"ept",<br/>
+&nbsp;&nbsp;&nbsp;"it",<br/>
+&nbsp;&nbsp;&nbsp;"ut",<br/>
+&nbsp;&nbsp;&nbsp;});</p>
+  <p>Questo codice renderà l'aspetto dei file TMX più ordinato ma, ancora una volta, esso non è assolutamente indispensabile.</p>
+  <p>In TMXFilter.java:</p>
+  <p>Cambiare l'estensione del file, in questo caso in .tmx, modificando la riga:</p>
+  <p>&nbsp;&nbsp;&nbsp;public Instance[] getDefaultInstances() {<br/>
+&nbsp;&nbsp;&nbsp;return new Instance[] { new Instance("*.xml", null, null), new Instance("*.hmxp", null, null), };</p>
+  <p>in:</p>
+  <p>&nbsp;&nbsp;&nbsp;public Instance[] getDefaultInstances() {<br/>
+&nbsp;&nbsp;&nbsp;return new Instance[] { new Instance("*.tmx", null, null), };</p>
+  <p>In /src/org/omegat la cartella, aprire il file Bundle.properties in un editor di testo e individuare le righe</p>
+  <p>&nbsp;&nbsp;&nbsp;# HelpAndManualFilter.java<br/>
+&nbsp;&nbsp;&nbsp;HELPANDMANUAL_FILTER_NAME=Help &amp; Manual Files</p>
+  <p>Sotto di esse, inserire le righe: </p>
+  <p>&nbsp;&nbsp;&nbsp;# TMXFilter.java<br/>
+&nbsp;&nbsp;&nbsp;TMX_FILTER_NAME=TMX files</p>
+  <p>(Se si desidera avviare OmegaT con una lingua di interfaccia utente diversa dall'inglese, apportare la stessa modifica nel file Bundle.properties localizzato interessato.)</p>
+  <p>Nella cartella principale del codice sorgente, aprire il file manifest-template.mf in un editor di testo. Individuare le righe:</p>
+  <p>&nbsp;&nbsp;&nbsp;Name: org.omegat.filters3.xml.helpandmanual.HelpAndManualFilter<br/>
+&nbsp;&nbsp;&nbsp;OmegaT-Plugin: filter</p>
+  <p>Sotto di esse, inserire le righe:</p>
+  <p>&nbsp;&nbsp;&nbsp;Name: org.omegat.filters3.xml.tmx.TMXFilter<br/>
+&nbsp;&nbsp;&nbsp;OmegaT-Plugin: filter</p>
+  <p>Compilare come descritto nella Guida alla compilazione di OmegaT da codice sorgente. Avviare la versione appena compilata. Verificare che in "Opzioni &gt; Filtri dei file" sia presente il nuovo filtro. Per verificare la correttezza del suo funzionamento è possibile inserire un file TMX nella cartella /source di un progetto o, ancora meglio, eseguire una Ricerca di testo &gt; operazione di ricerca file su file TMX.</p>
+  <p>Copyright Marc Prior 2008-2011</p>
 </div>
-
 
 
 
@@ -282,7 +238,7 @@
   </a>
   <div class="container-fluid">
       <div class="col-sm-offset-3 col-sm-2 footer-column">
-        <h4>Connect</h4>
+        <h4>Connetti</h4>
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
@@ -298,15 +254,15 @@
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
-            <li><a href="/it/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
-            <li><a href="/it/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
-            <li><a href="/it/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
-            <li><a href="/it/reviews"><span class="glyphicon glyphicon-heart"></span> Recensioni di OmegaT</a></li>
+            <li><a href="/it/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manuale</a></li>
+            <li><a href="/it/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Esercitazioni</a></li>
+            <li><a href="/it/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> Guide all'uso</a></li>
+            <li><a href="/it/reviews"><span class="glyphicon glyphicon-heart"></span> Recensioni</a></li>
           </ul>
         </div>
       </div>
       <div class="col-sm-2 footer-column">
-        <h4>The OmegaT Project</h4>
+        <h4>Il progetto OmegaT</h4>
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
@@ -314,7 +270,7 @@
             <a href="/it/contact"><span class="glyphicon glyphicon-envelope"></span> Contatti e supporto</a>
             </li>
             <li>
-            <a href="/it/about"><span class="glyphicon glyphicon-question-sign"></span> Chi siamo</a>
+            <a href="/it/about"><span class="glyphicon glyphicon-question-sign"></span> Informazioni su</a>
             </li>
             <li>
             <a href="/it/philosophy"><span class="glyphicon glyphicon-console"></span> Filosofia</a>
