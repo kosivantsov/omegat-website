@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format - OmegaT</title>
+  <title>HowTo - aus OmegaT ins "Trados unbereinigtes RTF"-Format exportieren - OmegaT</title>
 
   
   <link rel="apple-touch-icon" sizes="180x180"    href="/apple-touch-icon.png">
@@ -25,7 +25,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="/assets/omegat-e188fdec47ad1c200f3c9b5f6c90ea2ec93d891f8000cb2144e95e6f34fd09e4.js" type="text/javascript"></script>
 
-  <meta name="description" content="OmegaT is a free open-source translation memory application for professional translators written in Java.">
+  <meta name="description" content="OmegaT ist eine freie, in Java geschriebene OpenSource Translation Memory-Anwendung für professionelle Übersetzer.">
 
   <link rel="canonical" href="http://omegat.org/de/howtos/export_uncleaned_rtf">
 
@@ -41,10 +41,10 @@
 
   <!-- SEO tags -->
   
-  <meta property="og:title"       content="Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format - OmegaT" />
-  <meta property="og:description" content="OmegaT is a free open-source translation memory application for professional translators written in Java." />
+  <meta property="og:title"       content="HowTo - aus OmegaT ins "Trados unbereinigtes RTF"-Format exportieren - OmegaT" />
+  <meta property="og:description" content="OmegaT ist eine freie, in Java geschriebene OpenSource Translation Memory-Anwendung für professionelle Übersetzer." />
   <meta property="og:url"         content="http://omegat.org/de/howtos/export_uncleaned_rtf" />
-  <meta property="og:site_name"   content="OmegaT - The Free Translation Memory Tool" />
+  <meta property="og:site_name"   content="OmegaT - Das freie Translation-Memory-Werkzeug" />
   
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@OmegaTOfficial" />
@@ -54,8 +54,8 @@
     "@type": "WebSite",
     "name": "",
     "url": "http://omegat.org/de",
-    "headline": "Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format",
-    "description": "OmegaT is a free open-source translation memory application for professional translators written in Java.",
+    "headline": "HowTo - aus OmegaT ins "Trados unbereinigtes RTF"-Format exportieren",
+    "description": "OmegaT ist eine freie, in Java geschriebene OpenSource Translation Memory-Anwendung für professionelle Übersetzer.",
     "publisher": {
       "@type": "Organization",
       "logo": {
@@ -87,17 +87,17 @@
     </div>
     <div class="collapse navbar-collapse navbar-right" id="omegat-menu">
       <ul class="nav navbar-nav">
-        <li><a href="/de/download">Download OmegaT</a></li>
+        <li><a href="/de/download">Download</a></li>
       </ul>
       <ul class="nav navbar-nav">
-        <li><a href="/de/resources">Zusätzliche Ressourcen für OmegaT</a></li>
+        <li><a href="/de/resources">Ressourcen</a></li>
         <li><a href="/de/documentation">Dokumentation</a></li>
       </ul>
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span data-toggle="popover" class="language-popover" data-trigger="manual" data-container="body" title="-" data-content="-" data-placement="bottom">
-              Languages<span class="caret"><!----></span> <span class="sr-only">(current)</span>
+              Sprachen<span class="caret"><!----></span> <span class="sr-only">(current)</span>
             </span>
           </a>
           <ul class="dropdown-menu languages">
@@ -168,33 +168,30 @@
 </nav>
 
 
-    <div class="jumbotron jumbo-page titles-howtos-export_uncleaned_rtf"><h1>Howto - Exporting from OmegaT to 'Trados uncleaned RTF' format</h1></div>
+    <div class="jumbotron jumbo-page titles-howtos-export_uncleaned_rtf"><h1>HowTo - aus OmegaT ins "Trados unbereinigtes RTF"-Format exportieren</h1></div>
         
     <div class="container">
-
-<h2>OmegaT HowTo: <br/>Exporting from OmegaT to "Trados uncleaned RTF" format</h2>
-
-<p>This HowTo explains how to produce an "uncleaned RTF" file from an OmegaT project. This format may be a practical interchange format for users of other CAT tools, particularly Trados and Wordfast Classic.</p> 
-
-<p>Points to note:</p>
-<p>This code/procedure combination has not yet been thoroughly tested (though initial reports are promising).</p>
-<p>The script is available for the Windows platform only.</p>
-<p>It only enables translators to generate (i.e. deliver) Trados uncleaned files. It does not enable them to "translate" bilingual files supplied by their customers.</p>
-
-<p><strong>1. Insert Trados segment delimiters</strong></p>
-
-<p>To produce a bilingual OpenOffice.Org file containing the Trados segment delimiters, close the OmegaT project, then run the following AutoIt script (requires Windows) on the project's project_save.tmx file:</p>
-
-<a href="http://www.leuce.com/tempfile/omtautoit/uncleanifyTMX.zip">http://www.leuce.com/tempfile/omtautoit/uncleanifyTMX.zip</a>
-<p><strong>2. Create target documents</strong></p>
-
-<p>Create the target documents as usual and convert the file to Microsoft Word.</p>
-
-<p><strong>3. Apply styles to delimiters</strong></p>
-
-<p>In Microsoft Word, run the following macro to apply the relevant styles to the target document(s):</p>
-
-<p>Private Sub AddTw4winStyles()<br/>
+  <p>Dieses HowTo erklärt, wie man eine "unbereinigte RTF"-Datei aus einem OmegaT-Projekt erstellt. Dieses Format kann ein praktisches Austauschformat für Benutzer anderer CAT-Tools sein, insbesondere Trados und Wordfast Classic.</p>
+  <p>Zu beachtende Punkte:</p>
+  <p>Diese Code- / Prozedur-Kombination wurde noch nicht gründlich getestet (obwohl erste Berichte vielversprechend sind).</p>
+  <p>Das Skript ist nur für die Windows-Plattform verfügbar.</p>
+  <p>Es ermöglicht Übersetzern nur, unbereinigte Dateien für Trados zu erzeugen (d. h. zu liefern). Es ermöglicht ihnen nicht, zweisprachige Dateien ihrer Kunden zu "übersetzen".</p>
+  <p>
+    <strong>1. Fügen Sie Trados-Segmentbegrenzer ein</strong>
+  </p>
+  <p>Um eine zweisprachige OpenOffice.Org-Datei zu erstellen, die die Trados-Segmentbegrenzer enthält, schließen Sie das OmegaT-Projekt, und führen Sie dann das folgende AutoIt-Skript (erfordert Windows) für die Projektdatei des Projekts: project_save.tmx aus:</p>
+  <p>
+    <a href="http://www.leuce.com/autoit/uncleanifyTMX.zip">www.leuce.com/autoit/uncleanifyTMX.zip</a>
+  </p>
+  <p>
+    <strong>2. Zieldateien erstellen</strong>
+  </p>
+  <p>Erstellen Sie die Zieldokumente wie gewohnt und konvertieren Sie die Dateien zu Microsoft Word.</p>
+  <p>
+    <strong>3. Formatierungen auf Trennzeichen anwenden</strong>
+  </p>
+  <p>Führen Sie in Microsoft Word das folgende Makro aus, um die relevanten Formatierungen auf das / die Zieldokument(e) anzuwenden:</p>
+  <p>Private Sub AddTw4winStyles()<br/>
 
 On Error Resume Next<br/>
 
@@ -253,11 +250,8 @@ End With<br/>
 End Sub<br/>
 
 </p>
-
-<p>Copyright Marc Prior 2009-2011</p>
-
+  <p>Copyright Marc Prior 2009-2011</p>
 </div>
-
 
 
 
@@ -268,7 +262,7 @@ End Sub<br/>
   </a>
   <div class="container-fluid">
       <div class="col-sm-offset-3 col-sm-2 footer-column">
-        <h4>Connect</h4>
+        <h4>Verbinden</h4>
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
@@ -284,15 +278,15 @@ End Sub<br/>
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
-            <li><a href="/de/documentation#manual"><span class="glyphicon glyphicon-book"></span> Manual</a></li>
+            <li><a href="/de/documentation#manual"><span class="glyphicon glyphicon-book"></span> Handbuch</a></li>
             <li><a href="/de/documentation#tutorials"><span class="glyphicon glyphicon-user"></span> Tutorials</a></li>
-            <li><a href="/de/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> How-To</a></li>
-            <li><a href="/de/reviews"><span class="glyphicon glyphicon-heart"></span> Reviews von OmegaT</a></a></li>
+            <li><a href="/de/documentation#howto"><span class="glyphicon glyphicon-question-sign"></span> HowTo</a></li>
+            <li><a href="/de/reviews"><span class="glyphicon glyphicon-heart"></span> Bewertungen</a></li>
           </ul>
         </div>
       </div>
       <div class="col-sm-2 footer-column">
-        <h4>The OmegaT Project</h4>
+        <h4>Das OmegaT-Projekt</h4>
         <div class="header-line"><!----></div>
         <div class="footer-links">
           <ul>
@@ -300,10 +294,10 @@ End Sub<br/>
             <a href="/de/contact"><span class="glyphicon glyphicon-envelope"></span> Kontakt und Support</a>
             </li>
             <li>
-            <a href="/de/about"><span class="glyphicon glyphicon-question-sign"></span> Über uns</a>
+            <a href="/de/about"><span class="glyphicon glyphicon-question-sign"></span> Über</a>
             </li>
             <li>
-            <a href="/de/philosophy"><span class="glyphicon glyphicon-console"></span> Philosophy</a>
+            <a href="/de/philosophy"><span class="glyphicon glyphicon-console"></span> Philosophie</a>
             </li>
           </ul>
         </div>
