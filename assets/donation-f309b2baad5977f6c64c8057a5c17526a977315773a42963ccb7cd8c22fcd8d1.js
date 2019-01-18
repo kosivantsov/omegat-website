@@ -1,0 +1,1 @@
+$(function(){$("#donate-button").click(function(){$("#donation-form").submit()});var n=$("#donation-slider");n.rangeslider({polyfill:!1,onInit:function(){$("#amount").val(n[0].value)},onSlide:function(n,o){$("#amount").val(o)}})});
